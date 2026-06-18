@@ -44,16 +44,6 @@
           <h2 class="h4 font-serif text-dark mb-4">Log In to Portal</h2>
           
           <form id="login-form" class="needs-validation" novalidate>
-            <!-- User Role Select -->
-            <div class="mb-3 text-start">
-              <label for="userRole" class="form-label">Select Portal Role</label>
-              <select id="userRole" class="form-select" required>
-                <option value="parent">Parent Portal</option>
-                <option value="coach">Coach Portal</option>
-                <option value="admin">Administrator Portal</option>
-              </select>
-            </div>
-            
             <div class="mb-3 text-start">
               <label for="loginEmail" class="form-label">Email Address</label>
               <input type="email" class="form-control" id="loginEmail" placeholder="name@domain.com" required>
@@ -116,15 +106,11 @@
     document.getElementById('login-form').addEventListener('submit', function(e) {
       if (this.checkValidity()) {
         e.preventDefault();
-        const role = document.getElementById('userRole').value;
-        if (role === 'parent') {
-          window.location.href = 'parent-dashboard.html';
-        } else if (role === 'coach') {
-          window.location.href = 'coach-dashboard.html';
-        } else if (role === 'admin') {
-          window.location.href = 'admin-dashboard.html';
-        }
+        // Since login is just a generic demo form, we can just alert or redirect to index
+        alert("Login successful (Demo). In a real app, this would route to your dashboard.");
+        window.location.href = 'index.html';
       }
+      this.classList.add('was-validated');
     });
   </script>
 

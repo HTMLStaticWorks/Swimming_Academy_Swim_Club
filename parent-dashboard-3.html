@@ -30,9 +30,9 @@
         
         <!-- User Summary -->
         <div class="text-center py-3 mb-4 bg-light bg-opacity-50 rounded">
-          <div class="rounded-circle mx-auto mb-2" style="width: 60px; height: 60px; background: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
-          <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
-          <small class="text-muted">Parent (2 Kids)</small>
+          <div class="rounded-circle mx-auto mb-2" style="width: 60px; height: 60px; background: url('https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
+          <h6 class="mb-0 fw-bold">Alex Pro</h6>
+          <small class="text-muted">Pro Athlete</small>
         </div>
         
         <ul class="nav flex-column gap-2">
@@ -64,32 +64,35 @@
         <!-- SECTION 1: OVERVIEW (Default visible) -->
         <div class="dashboard-section" id="section-overview">
           <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1 class="h3 font-serif">Welcome Back, Sarah!</h1>
+            <h1 class="h3 font-serif">Welcome Back, Alex!</h1>
             <span class="text-muted small">Academic Term: June - August 2026</span>
           </div>
           
           <div class="row g-4">
-            <!-- Child Summary Card -->
+            <!-- Athlete Summary Card -->
             <div class="col-lg-7">
               <div class="card p-4 border-0 shadow-sm">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h5 class="fw-bold mb-0">Swimmer Card</h5>
-                  <span class="badge bg-info text-dark">Active Session</span>
+                  <h5 class="fw-bold mb-0">Athlete Profile</h5>
+                  <span class="badge bg-danger text-white">Pro Session</span>
                 </div>
                 <div class="row align-items-center">
                   <div class="col-sm-8">
-                    <h3 class="font-serif text-info mb-1">Lily Jenkins</h3>
-                    <p class="text-muted small mb-3">Level 4: Freestyle & Backstroke</p>
+                    <h3 class="font-serif text-danger mb-1">Alex Pro</h3>
+                    <p class="text-muted small mb-3">Level: Competitive Team</p>
                     <ul class="list-unstyled d-flex flex-column gap-2 small mb-0">
-                      <li><strong>Assigned Coach:</strong> Coach Emma Stone</li>
-                      <li><strong>Attendance Rate:</strong> 88% (Present 14 / Absent 2)</li>
-                      <li><strong>Next Class:</strong> Saturday, 9:30 AM (Indoor Pool)</li>
+                      <li><strong>Assigned Coach:</strong> Head Coach Ryan</li>
+                      <li><strong>Attendance Rate:</strong> 100%</li>
+                      <li><strong>Next Session:</strong> Monday, 5:30 AM (Olympic Pool)</li>
+                      <li><strong>Focus:</strong> Sprint Intervals & Turn Techniques</li>
                     </ul>
                   </div>
                   <!-- Mini progress chart wrapper -->
                   <div class="col-sm-4 text-center mt-3 mt-sm-0">
-                    <div id="parent-progress-chart-container"></div>
-                    <small class="text-muted d-block mt-2">Level Progression Map</small>
+                    <div class="rounded-circle border border-danger border-3 d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
+                      <span class="fs-4 fw-bold text-danger">PRO</span>
+                    </div>
+                    <small class="text-muted d-block mt-2">Current Tier</small>
                   </div>
                 </div>
               </div>
@@ -104,7 +107,7 @@
                     <span class="fw-bold text-dark small">Coach Emma Stone</span>
                     <span class="text-muted small" style="font-size: 0.8rem;">June 16, 2026</span>
                   </div>
-                  <p class="mb-0 text-muted small">"Lily did fantastic in her freestyle arm recovery drilling today. She is breathing bilaterally with cleaner head rotations. Needs some extra practice on her backstroke flutter kick power."</p>
+                  <p class="mb-0 text-muted small">"Alex did fantastic in his sprint intervals today. He is maintaining pace well but needs some extra practice on his flip turns."</p>
                 </div>
                 <button class="btn btn-sm btn-outline-info mt-auto" onclick="document.querySelector('[data-section=section-progress]').click()">View Skill Checklist</button>
               </div>
@@ -114,7 +117,7 @@
 
         <!-- SECTION 2: LESSON PROGRESS -->
         <div class="dashboard-section d-none" id="section-progress">
-          <h1 class="h3 font-serif mb-4">Lily's Swimming Progress Tracker</h1>
+          <h1 class="h3 font-serif mb-4">Alex's Swimming Progress Tracker</h1>
           
           <div class="row g-4">
             <div class="col-md-8">
@@ -250,8 +253,8 @@
                 <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
                   <li><strong>Plan:</strong> Pro Term Package (3 Months)</li>
                   <li><strong>Active Months:</strong> Jun, Jul, Aug</li>
-                  <li><strong>Billing Parent:</strong> Sarah Jenkins</li>
-                  <li><strong>Assigned Swimmer:</strong> Lily Jenkins</li>
+                  <li><strong>Billing Athlete:</strong> Alex Pro</li>
+                  <li><strong>Assigned Swimmer:</strong> Alex Pro</li>
                 </ul>
               </div>
             </div>
@@ -365,7 +368,7 @@
           <!-- Mock payment fields -->
           <div class="mb-3 text-start">
             <label class="form-label small">Cardholder Name</label>
-            <input type="text" class="form-control form-control-sm" value="Sarah Jenkins" readonly>
+            <input type="text" class="form-control form-control-sm" value="Alex Pro" readonly>
           </div>
           <div class="mb-3 text-start">
             <label class="form-label small">Mock Card Number</label>

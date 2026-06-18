@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Profile | SwimPro Academy</title>
+  <link rel="icon" type="image/gif" href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body class="bg-light-gray d-flex flex-column min-vh-100 justify-content-center py-5">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-11 col-xl-10">
+        <div class="card p-4 p-md-5 border-0 shadow-lg text-center bg-white">
+          
+          <!-- Logo -->
+          <div class="mb-4">
+            <a href="index.html" class="logo-container justify-content-center text-decoration-none">
+              <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+              <span class="logo-text text-dark">SWIMPRO</span>
+            </a>
+          </div>
+
+          <h2 class="h4 font-serif text-dark mb-4">Select Portal View (Demo)</h2>
+          <p class="text-muted small mb-4">Choose a mock profile to preview the different dashboard layouts.</p>
+          
+          <style>
+            .portal-card-btn {
+              background-color: #ffffff;
+              border: 1px solid #dee2e6;
+              border-radius: 0.5rem;
+              transition: all 0.2s ease-in-out;
+              color: inherit;
+              text-decoration: none;
+            }
+            .portal-card-btn:hover {
+              background-color: #f8f9fa; /* Light background */
+              transform: translateY(-3px);
+              border-color: #adb5bd;
+              box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            }
+          </style>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3 justify-content-center">
+            
+            <!-- Admin -->
+            <div class="col">
+              <a href="admin-dashboard.html" class="portal-card-btn p-3 text-center d-flex flex-column align-items-center h-100 w-100">
+                <div class="rounded-circle shadow-sm border border-2 border-dark mb-3" style="width: 64px; height: 64px; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
+                <h6 class="mb-1 fw-bold text-dark">System Admin</h6>
+                <small class="text-muted">Operations & Mgt</small>
+              </a>
+            </div>
+            
+            <!-- Coach -->
+            <div class="col">
+              <a href="coach-dashboard.html" class="portal-card-btn p-3 text-center d-flex flex-column align-items-center h-100 w-100">
+                <div class="rounded-circle shadow-sm border border-2 border-primary mb-3" style="width: 64px; height: 64px; background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
+                <h6 class="mb-1 fw-bold text-dark">Emma Stone</h6>
+                <small class="text-muted">Coach</small>
+              </a>
+            </div>
+
+            <!-- Parent 1 -->
+            <div class="col">
+              <a href="parent-dashboard-1.html" class="portal-card-btn p-3 text-center d-flex flex-column align-items-center h-100 w-100">
+                <div class="rounded-circle shadow-sm border border-2 border-info mb-3" style="width: 64px; height: 64px; background: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
+                <h6 class="mb-1 fw-bold text-dark">Sarah Jenkins</h6>
+                <small class="text-muted">Parent (2 Kids)</small>
+              </a>
+            </div>
+            
+            <!-- Parent 2 -->
+            <div class="col">
+              <a href="parent-dashboard-2.html" class="portal-card-btn p-3 text-center d-flex flex-column align-items-center h-100 w-100">
+                <div class="rounded-circle shadow-sm border border-2 border-success mb-3" style="width: 64px; height: 64px; background: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
+                <h6 class="mb-1 fw-bold text-dark">John Smith</h6>
+                <small class="text-muted">Parent (Family)</small>
+              </a>
+            </div>
+
+            <!-- Pro Athlete -->
+            <div class="col">
+              <a href="parent-dashboard-3.html" class="portal-card-btn p-3 text-center d-flex flex-column align-items-center h-100 w-100">
+                <div class="rounded-circle shadow-sm border border-2 border-danger mb-3" style="width: 64px; height: 64px; background: url('https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
+                <h6 class="mb-1 fw-bold text-dark">Alex Pro</h6>
+                <small class="text-muted">Pro Athlete</small>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

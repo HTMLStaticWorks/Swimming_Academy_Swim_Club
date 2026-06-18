@@ -43,34 +43,43 @@
 
           <h2 class="h4 font-serif text-dark mb-4">Register Parent Account</h2>
           
-          <form id="register-form" class="needs-validation" novalidate onsubmit="event.preventDefault(); if(this.checkValidity()){ alert('Account registered successfully! Redirecting to parent portal.'); window.location.href='parent-dashboard.html'; }">
-            <div class="row g-3 mb-3">
-              <div class="col-md-6 text-start">
-                <label for="regFirst" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="regFirst" required>
-                <div class="invalid-feedback">Required.</div>
-              </div>
-              <div class="col-md-6 text-start">
-                <label for="regLast" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="regLast" required>
-                <div class="invalid-feedback">Required.</div>
-              </div>
+          <form id="register-form" class="needs-validation" novalidate onsubmit="event.preventDefault(); if(this.checkValidity()){ alert('Account registered successfully! Redirecting to login.'); window.location.href='login.html'; }">
+            
+            <div class="mb-3 text-start">
+              <label for="regFirst" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="regFirst" placeholder="Enter first name" required>
+              <div class="invalid-feedback">Required.</div>
+            </div>
+            
+            <div class="mb-3 text-start">
+              <label for="regLast" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="regLast" placeholder="Enter last name" required>
+              <div class="invalid-feedback">Required.</div>
             </div>
             
             <div class="mb-3 text-start">
               <label for="regEmail" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="regEmail" required>
+              <input type="email" class="form-control" id="regEmail" placeholder="name@domain.com" required>
               <div class="invalid-feedback">Valid email required.</div>
             </div>
 
-            <div class="row g-3 mb-4">
-              <div class="col-md-6 text-start">
-                <label for="regPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="regPassword" required>
+            <div class="mb-3 text-start">
+              <label for="regPassword" class="form-label">Password</label>
+              <div class="input-group">
+                <input type="password" class="form-control" id="regPassword" placeholder="Create password" required>
+                <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility('regPassword', 'regPassIcon')">
+                  <i class="bi bi-eye" id="regPassIcon"></i>
+                </button>
               </div>
-              <div class="col-md-6 text-start">
-                <label for="regConfirm" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="regConfirm" required>
+            </div>
+            
+            <div class="mb-4 text-start">
+              <label for="regConfirm" class="form-label">Confirm Password</label>
+              <div class="input-group">
+                <input type="password" class="form-control" id="regConfirm" placeholder="Confirm password" required>
+                <button class="btn btn-outline-secondary" type="button" onclick="togglePasswordVisibility('regConfirm', 'regConfIcon')">
+                  <i class="bi bi-eye" id="regConfIcon"></i>
+                </button>
               </div>
             </div>
 
@@ -126,6 +135,18 @@
         </div>
       `;
       container.appendChild(row);
+    }
+
+    function togglePasswordVisibility(fieldId, iconId) {
+      const passField = document.getElementById(fieldId);
+      const icon = document.getElementById(iconId);
+      if (passField.type === 'password') {
+        passField.type = 'text';
+        icon.className = 'bi bi-eye-slash';
+      } else {
+        passField.type = 'password';
+        icon.className = 'bi bi-eye';
+      }
     }
   </script>
 

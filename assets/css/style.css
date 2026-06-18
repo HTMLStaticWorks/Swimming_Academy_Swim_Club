@@ -385,6 +385,8 @@ body.dark-mode .navbar-custom .navbar-toggler-icon {
   background-color: #fff;
   z-index: 100;
   transition: background-color var(--transition-speed);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .dashboard-main {
   min-height: 100vh;

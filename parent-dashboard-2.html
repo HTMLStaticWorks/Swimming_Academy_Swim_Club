@@ -30,9 +30,9 @@
         
         <!-- User Summary -->
         <div class="text-center py-3 mb-4 bg-light bg-opacity-50 rounded">
-          <div class="rounded-circle mx-auto mb-2" style="width: 60px; height: 60px; background: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
-          <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
-          <small class="text-muted">Parent (2 Kids)</small>
+          <div class="rounded-circle mx-auto mb-2" style="width: 60px; height: 60px; background: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
+          <h6 class="mb-0 fw-bold">John Smith</h6>
+          <small class="text-muted">Parent (Family)</small>
         </div>
         
         <ul class="nav flex-column gap-2">
@@ -64,35 +64,88 @@
         <!-- SECTION 1: OVERVIEW (Default visible) -->
         <div class="dashboard-section" id="section-overview">
           <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1 class="h3 font-serif">Welcome Back, Sarah!</h1>
+            <h1 class="h3 font-serif">Welcome Back, John!</h1>
             <span class="text-muted small">Academic Term: June - August 2026</span>
           </div>
           
           <div class="row g-4">
-            <!-- Child Summary Card -->
+            <!-- Child Summary Cards -->
             <div class="col-lg-7">
-              <div class="card p-4 border-0 shadow-sm">
+              <!-- Swimmer 1 (Kid) -->
+              <div class="card p-4 border-0 shadow-sm mb-4">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h5 class="fw-bold mb-0">Swimmer Card</h5>
+                  <h5 class="fw-bold mb-0">Swimmer Card (Child)</h5>
                   <span class="badge bg-info text-dark">Active Session</span>
                 </div>
                 <div class="row align-items-center">
                   <div class="col-sm-8">
-                    <h3 class="font-serif text-info mb-1">Lily Jenkins</h3>
-                    <p class="text-muted small mb-3">Level 4: Freestyle & Backstroke</p>
+                    <h3 class="font-serif text-info mb-1">Tommy Smith</h3>
+                    <p class="text-muted small mb-3">Level 3: Freestyle Basics</p>
                     <ul class="list-unstyled d-flex flex-column gap-2 small mb-0">
                       <li><strong>Assigned Coach:</strong> Coach Emma Stone</li>
-                      <li><strong>Attendance Rate:</strong> 88% (Present 14 / Absent 2)</li>
-                      <li><strong>Next Class:</strong> Saturday, 9:30 AM (Indoor Pool)</li>
+                      <li><strong>Attendance Rate:</strong> 100% (Present 16 / Absent 0)</li>
+                      <li><strong>Next Class:</strong> Saturday, 9:00 AM</li>
                     </ul>
                   </div>
-                  <!-- Mini progress chart wrapper -->
                   <div class="col-sm-4 text-center mt-3 mt-sm-0">
-                    <div id="parent-progress-chart-container"></div>
-                    <small class="text-muted d-block mt-2">Level Progression Map</small>
+                    <div class="rounded-circle border border-info border-3 d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
+                      <span class="fs-4 fw-bold text-info">L3</span>
+                    </div>
+                    <small class="text-muted d-block mt-2">Current Level</small>
                   </div>
                 </div>
               </div>
+
+              <!-- Swimmer 2 (Wife) -->
+              <div class="card p-4 border-0 shadow-sm mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="fw-bold mb-0">Swimmer Card (Adult)</h5>
+                  <span class="badge bg-success">Active Session</span>
+                </div>
+                <div class="row align-items-center">
+                  <div class="col-sm-8">
+                    <h3 class="font-serif text-success mb-1">Mary Smith</h3>
+                    <p class="text-muted small mb-3">Adult Intermediate</p>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small mb-0">
+                      <li><strong>Assigned Coach:</strong> Coach David</li>
+                      <li><strong>Attendance Rate:</strong> 90% (Present 9 / Absent 1)</li>
+                      <li><strong>Next Class:</strong> Sunday, 8:00 AM</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4 text-center mt-3 mt-sm-0">
+                    <div class="rounded-circle border border-success border-3 d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
+                      <span class="fs-4 fw-bold text-success">INT</span>
+                    </div>
+                    <small class="text-muted d-block mt-2">Current Level</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Swimmer 3 (Himself) -->
+              <div class="card p-4 border-0 shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="fw-bold mb-0">Swimmer Card (Adult)</h5>
+                  <span class="badge bg-primary">Active Session</span>
+                </div>
+                <div class="row align-items-center">
+                  <div class="col-sm-8">
+                    <h3 class="font-serif text-primary mb-1">John Smith</h3>
+                    <p class="text-muted small mb-3">Adult Advanced / Fitness</p>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small mb-0">
+                      <li><strong>Assigned Coach:</strong> Coach David</li>
+                      <li><strong>Attendance Rate:</strong> 85%</li>
+                      <li><strong>Next Class:</strong> Sunday, 9:00 AM</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4 text-center mt-3 mt-sm-0">
+                    <div class="rounded-circle border border-primary border-3 d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
+                      <span class="fs-4 fw-bold text-primary">ADV</span>
+                    </div>
+                    <small class="text-muted d-block mt-2">Current Level</small>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
             <!-- Coach Notes Card -->
@@ -114,7 +167,7 @@
 
         <!-- SECTION 2: LESSON PROGRESS -->
         <div class="dashboard-section d-none" id="section-progress">
-          <h1 class="h3 font-serif mb-4">Lily's Swimming Progress Tracker</h1>
+          <h1 class="h3 font-serif mb-4">Tommy's Swimming Progress Tracker</h1>
           
           <div class="row g-4">
             <div class="col-md-8">
@@ -250,8 +303,8 @@
                 <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
                   <li><strong>Plan:</strong> Pro Term Package (3 Months)</li>
                   <li><strong>Active Months:</strong> Jun, Jul, Aug</li>
-                  <li><strong>Billing Parent:</strong> Sarah Jenkins</li>
-                  <li><strong>Assigned Swimmer:</strong> Lily Jenkins</li>
+                  <li><strong>Billing Parent:</strong> John Smith</li>
+                  <li><strong>Assigned Swimmer:</strong> Tommy Smith</li>
                 </ul>
               </div>
             </div>
@@ -365,7 +418,7 @@
           <!-- Mock payment fields -->
           <div class="mb-3 text-start">
             <label class="form-label small">Cardholder Name</label>
-            <input type="text" class="form-control form-control-sm" value="Sarah Jenkins" readonly>
+            <input type="text" class="form-control form-control-sm" value="John Smith" readonly>
           </div>
           <div class="mb-3 text-start">
             <label class="form-label small">Mock Card Number</label>
