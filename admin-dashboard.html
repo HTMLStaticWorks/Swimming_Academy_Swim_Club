@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Portal | SwimPro Academy</title>
+  <link rel="icon" type="image/gif" href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      
+      <!-- Dashboard Sidebar Navigation -->
+      <nav class="col-md-3 col-xl-2 d-md-block sidebar-nav border-end px-3 py-4">
+        <div class="logo-container mb-4 justify-content-center d-flex">
+          <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+          <span class="logo-text">SWIMPRO</span>
+        </div>
+        
+        <!-- User Summary -->
+        <div class="text-center py-3 mb-4 bg-light bg-opacity-50 rounded">
+          <div class="rounded-circle mx-auto mb-2" style="width: 60px; height: 60px; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
+          <h6 class="mb-0 fw-bold">System Admin</h6>
+          <small class="text-muted">Operations Manager</small>
+        </div>
+        
+        <ul class="nav flex-column gap-2">
+          <li class="nav-item"><a class="nav-link active" href="#" data-section="section-metrics"><i class="bi bi-bar-chart-fill me-2"></i> Overview Metrics</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-section="section-students"><i class="bi bi-people-fill me-2"></i> Student Management</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-section="section-coaches"><i class="bi bi-award-fill me-2"></i> Coach Allocation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-section="section-finances"><i class="bi bi-cash-stack me-2"></i> Fee Tracking</a></li>
+        </ul>
+        
+        <hr class="my-4">
+        
+        <div class="d-flex flex-column gap-2 mb-3">
+          <button id="theme-toggle" class="toggle-btn text-dark border-secondary border-opacity-25" style="border: 1px solid;" aria-label="Toggle Theme">
+            <i class="bi bi-moon-fill"></i><span>Dark Mode</span>
+          </button>
+          <button id="rtl-toggle" class="toggle-btn text-dark border-secondary border-opacity-25" style="border: 1px solid;" aria-label="Toggle Layout Direction">
+            <i class="bi bi-translate"></i><span>RTL</span>
+          </button>
+        </div>
+        
+        <a href="login.html" class="btn btn-outline-danger w-100"><i class="bi bi-box-arrow-right me-2"></i> Logout</a>
+      </nav>
+
+      <!-- Dashboard Main Content Panel -->
+      <main class="col-md-9 ms-sm-auto col-xl-10 px-md-4 py-4 dashboard-main">
+        
+        <!-- SECTION 1: OVERVIEW METRICS -->
+        <div class="dashboard-section" id="section-metrics">
+          <h1 class="h3 font-serif mb-4">Operations Control Center</h1>
+          
+          <div class="row g-3 mb-4">
+            <div class="col-6 col-lg-3">
+              <div class="card p-3 border-0 shadow-sm text-center">
+                <span class="text-muted small">Total Swimmers</span>
+                <h3 class="font-serif fw-bold text-info my-1">1,248</h3>
+                <span class="text-success small"><i class="bi bi-arrow-up-short"></i> +12% this month</span>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="card p-3 border-0 shadow-sm text-center">
+                <span class="text-muted small">Active Coaches</span>
+                <h3 class="font-serif fw-bold text-info my-1">15</h3>
+                <span class="text-muted small">5 Batches / Coach</span>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="card p-3 border-0 shadow-sm text-center">
+                <span class="text-muted small">Outstanding Dues</span>
+                <h3 class="font-serif fw-bold text-danger my-1">$1,480.00</h3>
+                <span class="text-danger small">6 invoices overdue</span>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="card p-3 border-0 shadow-sm text-center">
+                <span class="text-muted small">Monthly Revenue</span>
+                <h3 class="font-serif fw-bold text-success my-1">$18,450</h3>
+                <span class="text-success small"><i class="bi bi-arrow-up-short"></i> +5.4% growth</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card p-4 border-0 shadow-sm mb-4">
+            <h5 class="fw-bold mb-3">Revenue Generation Trend</h5>
+            <div id="admin-revenue-chart" style="height: 200px;"></div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: STUDENT MANAGEMENT -->
+        <div class="dashboard-section d-none" id="section-students">
+          <h1 class="h3 font-serif mb-4">Manage Swimmers</h1>
+          
+          <div class="card p-4 border-0 shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="fw-bold mb-0">Registered Students</h5>
+              <button class="btn btn-sm btn-info text-dark" onclick="alert('Student creation modal triggered...')"><i class="bi bi-plus-circle me-1"></i> Add Swimmer</button>
+            </div>
+            
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle bg-white">
+                <thead class="table-light">
+                  <tr>
+                    <th>Swimmer</th>
+                    <th>Parent Account</th>
+                    <th>Current Level</th>
+                    <th>Assigned Coach</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Lily Jenkins</td>
+                    <td>Sarah Jenkins</td>
+                    <td>Level 4</td>
+                    <td>Emma Stone</td>
+                    <td>
+                      <button class="btn btn-xs btn-outline-secondary"><i class="bi bi-pencil"></i></button>
+                      <button class="btn btn-xs btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Leo Thorne</td>
+                    <td>Marcus Thorne</td>
+                    <td>Level 4</td>
+                    <td>Emma Stone</td>
+                    <td>
+                      <button class="btn btn-xs btn-outline-secondary"><i class="bi bi-pencil"></i></button>
+                      <button class="btn btn-xs btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Ryan Miller</td>
+                    <td>David Miller</td>
+                    <td>Level 7</td>
+                    <td>Liam Davis</td>
+                    <td>
+                      <button class="btn btn-xs btn-outline-secondary"><i class="bi bi-pencil"></i></button>
+                      <button class="btn btn-xs btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: COACH ALLOCATION -->
+        <div class="dashboard-section d-none" id="section-coaches">
+          <h1 class="h3 font-serif mb-4">Coach Batch Allocations</h1>
+          
+          <div class="card p-4 border-0 shadow-sm">
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle bg-white">
+                <thead class="table-light">
+                  <tr>
+                    <th>Coach Name</th>
+                    <th>ASCA Certification</th>
+                    <th>Squad Specialty</th>
+                    <th>Assigned Batch Slots</th>
+                    <th>Management</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Emma Stone</td>
+                    <td>Level 2 Certification</td>
+                    <td>Learn to Swim L1-L4</td>
+                    <td>Mon/Wed/Fri (3-5 PM), Sat (8-10 AM)</td>
+                    <td><button class="btn btn-sm btn-outline-info" onclick="alert('Modifying Emma\'s allocations...')">Assign Slot</button></td>
+                  </tr>
+                  <tr>
+                    <td>Liam Davis</td>
+                    <td>Level 3 Certification</td>
+                    <td>Competitive Squad / fly Specialist</td>
+                    <td>Mon/Wed/Fri (6-8 AM), Tue/Thu (7-9 AM)</td>
+                    <td><button class="btn btn-sm btn-outline-info" onclick="alert('Modifying Liam\'s allocations...')">Assign Slot</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: FINANCES -->
+        <div class="dashboard-section d-none" id="section-finances">
+          <h1 class="h3 font-serif mb-4">Fee Tracking & Reconciliation</h1>
+          
+          <div class="card p-4 border-0 shadow-sm">
+            <div class="table-responsive">
+              <table class="table table-bordered align-middle bg-white">
+                <thead class="table-light">
+                  <tr>
+                    <th>Parent Account</th>
+                    <th>Assigned Plan</th>
+                    <th>Amount Dues</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sarah Jenkins</td>
+                    <td>Pro Term Plan</td>
+                    <td>$240.00</td>
+                    <td><span class="badge bg-danger">Pending Dues</span></td>
+                    <td><button class="btn btn-sm btn-info text-dark" onclick="alert('Sending notification alert to Sarah Jenkins...')">Remind Parent</button></td>
+                  </tr>
+                  <tr>
+                    <td>Marcus Thorne</td>
+                    <td>Standard Monthly</td>
+                    <td>$80.00</td>
+                    <td><span class="badge bg-success">Paid</span></td>
+                    <td><button class="btn btn-sm btn-outline-secondary" disabled>Reminded</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levels & Pricing | SwimPro Academy</title>
+  <link rel="icon" type="image/gif" href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
+  <meta name="description" content="View our structured 7 levels progression roadmap and monthly/annual subscription plans.">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Header / Sticky Navbar -->
+  <header class="navbar navbar-expand-xl navbar-dark navbar-custom sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand logo-container" href="index.html">
+        <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+        <span class="logo-text">SWIMPRO</span>
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="pricing.html">Fees</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <!-- Theme & RTL Toggles -->
+          <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Theme">
+            <i class="bi bi-moon-fill"></i>
+          </button>
+          <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle Layout Direction">
+            <span>RTL</span>
+          </button>
+          
+          <a href="login.html" class="btn btn-custom-secondary px-3 py-2">Login</a>
+          <a href="parent-dashboard.html" class="btn btn-custom-primary px-3 py-2">Portal</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="py-5 bg-dark-blue text-center">
+    <div class="container py-4">
+      <h1 class="font-serif">Levels & Pricing Plans</h1>
+      <p class="lead opacity-75">Clear, milestone-based evaluations combined with transparent packages.</p>
+    </div>
+  </section>
+
+  <!-- Progression Level Details -->
+  <section class="py-6 bg-white" id="levels-progression">
+    <div class="container py-5">
+      <h2 class="font-serif text-center mb-5">Curriculum Skill Breakdown</h2>
+      
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered align-middle text-center">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col" style="width: 15%;">Level</th>
+              <th scope="col" style="width: 25%;">Title</th>
+              <th scope="col" style="width: 60%;">Skills Mastered to Advance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge bg-secondary">Level 1</span></td>
+              <td class="fw-bold">Water Confidence</td>
+              <td>Submerging mouth, nose, and eyes. Blowing bubbles, back float support, and safety exits.</td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-secondary">Level 2</span></td>
+              <td class="fw-bold">Floating & Kicking</td>
+              <td>Independent front and back floats (5s), flutter kick basics, and rolling over.</td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-secondary">Level 3</span></td>
+              <td class="fw-bold">Freestyle Basics</td>
+              <td>Side breathing coordination, continuous flutter kick (15m), freestyle arm sweep.</td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-info">Level 4</span></td>
+              <td class="fw-bold text-info">Freestyle & Backstroke</td>
+              <td>Refining backstroke arm movement, swimming 25 meters, and treading water (1 min).</td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-secondary">Level 5</span></td>
+              <td class="fw-bold">Breaststroke</td>
+              <td>Breaststroke whip kick timing, coordination of glide, and basic survival floats.</td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-secondary">Level 6</span></td>
+              <td class="fw-bold">Butterfly</td>
+              <td>Dolphin kick body wave coordination, synchronized arm strokes, and 50m endurance.</td>
+            </tr>
+            <tr>
+              <td><span class="badge bg-warning text-dark">Level 7</span></td>
+              <td class="fw-bold text-warning">Competitive Readiness</td>
+              <td>Lane rules, diving starts, flip turns, and continuous 100m multi-stroke swim.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Cards (Exactly 3 cards - Rule: Middle plan highlighted as Primary) -->
+  <section class="py-6 bg-light-gray" id="pricing-plans">
+    <div class="container py-5">
+      <div class="row g-4 justify-content-center align-items-stretch">
+        <!-- Plan 1: Secondary -->
+        <div class="col-md-4">
+          <div class="card card-custom border-secondary border-opacity-25 h-100">
+            <div class="text-center mb-4">
+              <h3 class="h4 font-serif">Standard Monthly</h3>
+              <p class="text-muted small">Ideal for casual learning</p>
+              <h2 class="font-serif fw-bold mt-2">$80.00 <span class="fs-6 fw-normal text-muted">/ month</span></h2>
+            </div>
+            <hr>
+            <ul class="list-unstyled d-flex flex-column gap-3 text-muted my-4">
+              <li><i class="bi bi-check-circle text-info me-2"></i> 2 Sessions / Week</li>
+              <li><i class="bi bi-check-circle text-info me-2"></i> Standard Parent Portal Logs</li>
+              <li><i class="bi bi-check-circle text-info me-2"></i> 5:1 Swimmer-to-Coach Ratio</li>
+              <li><i class="bi bi-x-circle text-danger me-2"></i> <del>Free Squad Cap & Goggles</del></li>
+            </ul>
+            <div class="card-cta mt-auto w-100">
+              <a href="booking.html" class="btn btn-custom-secondary w-100">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Plan 2: Primary (Highlighted) -->
+        <div class="col-md-4">
+          <div class="card card-custom border-info border-2 h-100" style="background-color: rgba(13, 202, 240, 0.03); transform: scale(1.03);">
+            <div class="position-absolute top-0 end-0 bg-info text-dark fw-bold px-3 py-1 rounded-bl text-uppercase small" style="border-bottom-left-radius: 6px;">Popular</div>
+            <div class="text-center mb-4">
+              <h3 class="h4 font-serif text-info">Pro Term (3 Months)</h3>
+              <p class="text-muted small">Most chosen for steady progress</p>
+              <h2 class="font-serif fw-bold mt-2">$210.00 <span class="fs-6 fw-normal text-muted">/ term</span></h2>
+            </div>
+            <hr>
+            <ul class="list-unstyled d-flex flex-column gap-3 text-muted my-4">
+              <li><i class="bi bi-check-circle-fill text-info me-2"></i> 3 Sessions / Week</li>
+              <li><i class="bi bi-check-circle-fill text-info me-2"></i> Full Progress Tracker</li>
+              <li><i class="bi bi-check-circle-fill text-info me-2"></i> Priority Batch Selection</li>
+              <li><i class="bi bi-check-circle-fill text-info me-2"></i> Free Silicone Cap & Towel</li>
+            </ul>
+            <div class="card-cta mt-auto w-100">
+              <a href="booking.html" class="btn btn-custom-primary w-100">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Plan 3: Secondary -->
+        <div class="col-md-4">
+          <div class="card card-custom border-secondary border-opacity-25 h-100">
+            <div class="text-center mb-4">
+              <h3 class="h4 font-serif">Squad Private</h3>
+              <p class="text-muted small">Customized direct acceleration</p>
+              <h2 class="font-serif fw-bold mt-2">$450.00 <span class="fs-6 fw-normal text-muted">/ month</span></h2>
+            </div>
+            <hr>
+            <ul class="list-unstyled d-flex flex-column gap-3 text-muted my-4">
+              <li><i class="bi bi-check-circle text-info me-2"></i> 1-on-1 Dedicated Lessons</li>
+              <li><i class="bi bi-check-circle text-info me-2"></i> Daily SMS Progress Reports</li>
+              <li><i class="bi bi-check-circle text-info me-2"></i> Flexible Hour Rescheduling</li>
+              <li><i class="bi bi-check-circle text-info me-2"></i> Custom Performance Video Reviews</li>
+            </ul>
+            <div class="card-cta mt-auto w-100">
+              <a href="booking.html" class="btn btn-custom-secondary w-100">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5 border-top border-secondary border-opacity-10">
+    <div class="container py-4">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand logo-container mb-3" href="#">
+            <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+            <span class="logo-text">SWIMPRO</span>
+          </a>
+          <p class="text-light opacity-50 small mt-2">Nurturing safe, confident, and outstanding swimmers through customized training plans and state-of-the-art facilities.</p>
+        </div>
+        
+        <div class="col-6 col-lg-2 offset-lg-1">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="about.html" class="text-light opacity-75 text-decoration-none">About Academy</a></li>
+            <li><a href="services.html" class="text-light opacity-75 text-decoration-none">Swim Programs</a></li>
+            <li><a href="pricing.html" class="text-light opacity-75 text-decoration-none">Levels & Fees</a></li>
+            <li><a href="booking.html" class="text-light opacity-75 text-decoration-none">Timetable</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-6 col-lg-2">
+          <h6 class="fw-bold mb-3">Portals</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="parent-dashboard.html" class="text-light opacity-75 text-decoration-none">Parent Portal</a></li>
+            <li><a href="coach-dashboard.html" class="text-light opacity-75 text-decoration-none">Coach Portal</a></li>
+            <li><a href="admin-dashboard.html" class="text-light opacity-75 text-decoration-none">Administrator</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3">
+          <h6 class="fw-bold mb-3">Contact Support</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-light opacity-75">
+            <li><i class="bi bi-geo-alt me-2"></i>120 Ocean Lane, Marina District</li>
+            <li><i class="bi bi-telephone me-2"></i>+1 (555) SWIM-PRO</li>
+            <li><i class="bi bi-envelope me-2"></i>info@swimproacademy.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-top border-secondary border-opacity-10 mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 small text-light opacity-50">&copy; 2026 SwimPro Academy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Portal | SwimPro Academy</title>
+  <link rel="icon" type="image/gif" href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      
+      <!-- Dashboard Sidebar Navigation -->
+      <nav class="col-md-3 col-xl-2 d-md-block sidebar-nav border-end px-3 py-4">
+        <div class="logo-container mb-4 justify-content-center d-flex">
+          <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+          <span class="logo-text">SWIMPRO</span>
+        </div>
+        
+        <!-- User Summary -->
+        <div class="text-center py-3 mb-4 bg-light bg-opacity-50 rounded">
+          <div class="rounded-circle mx-auto mb-2" style="width: 60px; height: 60px; background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
+          <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
+          <small class="text-muted">Parent Account</small>
+        </div>
+        
+        <ul class="nav flex-column gap-2">
+          <li class="nav-item"><a class="nav-link active" href="#" data-section="section-overview"><i class="bi bi-grid-1x2-fill me-2"></i> Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-section="section-progress"><i class="bi bi-graph-up-arrow me-2"></i> Lesson Progress</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-section="section-attendance"><i class="bi bi-calendar-check-fill me-2"></i> Attendance Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-section="section-fees"><i class="bi bi-credit-card-fill me-2"></i> Term Fees & Billing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-section="section-achievements"><i class="bi bi-award-fill me-2"></i> Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-section="section-notifications"><i class="bi bi-bell-fill me-2"></i> Notifications <span class="badge bg-danger rounded-pill float-end">2</span></a></li>
+        </ul>
+        
+        <hr class="my-4">
+        
+        <div class="d-flex flex-column gap-2 mb-3">
+          <button id="theme-toggle" class="toggle-btn text-dark border-secondary border-opacity-25" style="border: 1px solid;" aria-label="Toggle Theme">
+            <i class="bi bi-moon-fill"></i><span>Dark Mode</span>
+          </button>
+          <button id="rtl-toggle" class="toggle-btn text-dark border-secondary border-opacity-25" style="border: 1px solid;" aria-label="Toggle Layout Direction">
+            <i class="bi bi-translate"></i><span>RTL</span>
+          </button>
+        </div>
+        
+        <a href="login.html" class="btn btn-outline-danger w-100"><i class="bi bi-box-arrow-right me-2"></i> Logout</a>
+      </nav>
+
+      <!-- Dashboard Main Content Panel -->
+      <main class="col-md-9 ms-sm-auto col-xl-10 px-md-4 py-4 dashboard-main">
+        
+        <!-- SECTION 1: OVERVIEW (Default visible) -->
+        <div class="dashboard-section" id="section-overview">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="h3 font-serif">Welcome Back, Sarah!</h1>
+            <span class="text-muted small">Academic Term: June - August 2026</span>
+          </div>
+          
+          <div class="row g-4">
+            <!-- Child Summary Card -->
+            <div class="col-lg-7">
+              <div class="card p-4 border-0 shadow-sm">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="fw-bold mb-0">Swimmer Card</h5>
+                  <span class="badge bg-info text-dark">Active Session</span>
+                </div>
+                <div class="row align-items-center">
+                  <div class="col-sm-8">
+                    <h3 class="font-serif text-info mb-1">Lily Jenkins</h3>
+                    <p class="text-muted small mb-3">Level 4: Freestyle & Backstroke</p>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small mb-0">
+                      <li><strong>Assigned Coach:</strong> Coach Emma Stone</li>
+                      <li><strong>Attendance Rate:</strong> 88% (Present 14 / Absent 2)</li>
+                      <li><strong>Next Class:</strong> Saturday, 9:30 AM (Indoor Pool)</li>
+                    </ul>
+                  </div>
+                  <!-- Mini progress chart wrapper -->
+                  <div class="col-sm-4 text-center mt-3 mt-sm-0">
+                    <div id="parent-progress-chart-container"></div>
+                    <small class="text-muted d-block mt-2">Level Progression Map</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Coach Notes Card -->
+            <div class="col-lg-5">
+              <div class="card p-4 border-0 shadow-sm h-100">
+                <h5 class="fw-bold mb-3"><i class="bi bi-chat-text-fill text-info me-2"></i>Coach Notes</h5>
+                <div class="bg-light p-3 rounded mb-3">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-bold text-dark small">Coach Emma Stone</span>
+                    <span class="text-muted small" style="font-size: 0.8rem;">June 16, 2026</span>
+                  </div>
+                  <p class="mb-0 text-muted small">"Lily did fantastic in her freestyle arm recovery drilling today. She is breathing bilaterally with cleaner head rotations. Needs some extra practice on her backstroke flutter kick power."</p>
+                </div>
+                <button class="btn btn-sm btn-outline-info mt-auto" onclick="document.querySelector('[data-section=section-progress]').click()">View Skill Checklist</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: LESSON PROGRESS -->
+        <div class="dashboard-section d-none" id="section-progress">
+          <h1 class="h3 font-serif mb-4">Lily's Swimming Progress Tracker</h1>
+          
+          <div class="row g-4">
+            <div class="col-md-8">
+              <div class="card p-4 border-0 shadow-sm">
+                <h5 class="fw-bold mb-3">Current Level 4 Evaluation Checklist</h5>
+                <p class="text-muted small">Swimmers must check off all items to advance to Level 5 (Breaststroke).</p>
+                
+                <ul class="list-group list-group-flush mt-3">
+                  <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                    <div>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i> 25 Meters Continuous Freestyle
+                    </div>
+                    <span class="badge bg-success">Passed</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                    <div>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i> Bilateral Breathing Mechanics
+                    </div>
+                    <span class="badge bg-success">Passed</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                    <div>
+                      <i class="bi bi-clock-history text-warning me-2"></i> Treading Water for 1 minute
+                    </div>
+                    <span class="badge bg-warning text-dark">In Progress</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                    <div>
+                      <i class="bi bi-circle text-muted me-2"></i> Backstroke Arm Recovery and Kick Power
+                    </div>
+                    <span class="badge bg-secondary">Unchecked</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="card p-4 border-0 shadow-sm">
+                <h5 class="fw-bold mb-3">Level Roadmap</h5>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0 text-muted small">
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i> Level 1: Water Confidence</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i> Level 2: Floating & Kicking</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i> Level 3: Freestyle Basics</li>
+                  <li class="text-dark fw-bold"><i class="bi bi-arrow-right-short text-info me-1 fs-5"></i> Level 4: Freestyle & Backstroke</li>
+                  <li><i class="bi bi-circle text-muted me-2"></i> Level 5: Breaststroke</li>
+                  <li><i class="bi bi-circle text-muted me-2"></i> Level 6: Butterfly</li>
+                  <li><i class="bi bi-circle text-muted me-2"></i> Level 7: Competitive Readiness</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: ATTENDANCE -->
+        <div class="dashboard-section d-none" id="section-attendance">
+          <h1 class="h3 font-serif mb-4">Attendance Calendar</h1>
+          
+          <div class="card p-4 border-0 shadow-sm">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h5 class="fw-bold mb-0">June 2026 logs</h5>
+              <div class="d-flex gap-3 small">
+                <span><i class="bi bi-square-fill text-success opacity-75 me-1"></i> Present</span>
+                <span><i class="bi bi-square-fill text-danger opacity-75 me-1"></i> Absent</span>
+                <span><i class="bi bi-square-fill text-secondary opacity-25 me-1"></i> Scheduled</span>
+              </div>
+            </div>
+            
+            <div class="attendance-grid mb-3">
+              <!-- Calendar Header -->
+              <div class="text-center fw-bold text-muted small">Mon</div>
+              <div class="text-center fw-bold text-muted small">Tue</div>
+              <div class="text-center fw-bold text-muted small">Wed</div>
+              <div class="text-center fw-bold text-muted small">Thu</div>
+              <div class="text-center fw-bold text-muted small">Fri</div>
+              <div class="text-center fw-bold text-muted small">Sat</div>
+              <div class="text-center fw-bold text-muted small">Sun</div>
+              
+              <!-- June Days -->
+              <div class="attendance-day attendance-future">1</div>
+              <div class="attendance-day attendance-future">2</div>
+              <div class="attendance-day attendance-present">3</div>
+              <div class="attendance-day attendance-future">4</div>
+              <div class="attendance-day attendance-future">5</div>
+              <div class="attendance-day attendance-present">6</div>
+              <div class="attendance-day attendance-future">7</div>
+              
+              <div class="attendance-day attendance-future">8</div>
+              <div class="attendance-day attendance-future">9</div>
+              <div class="attendance-day attendance-present">10</div>
+              <div class="attendance-day attendance-future">11</div>
+              <div class="attendance-day attendance-future">12</div>
+              <div class="attendance-day attendance-absent">13</div>
+              <div class="attendance-day attendance-future">14</div>
+              
+              <div class="attendance-day attendance-future">15</div>
+              <div class="attendance-day attendance-future">16</div>
+              <div class="attendance-day attendance-present">17</div>
+              <div class="attendance-day attendance-future">18</div>
+              <div class="attendance-day attendance-future">19</div>
+              <div class="attendance-day attendance-future">20</div>
+              <div class="attendance-day attendance-future">21</div>
+              
+              <div class="attendance-day attendance-future">22</div>
+              <div class="attendance-day attendance-future">23</div>
+              <div class="attendance-day attendance-future">24</div>
+              <div class="attendance-day attendance-future">25</div>
+              <div class="attendance-day attendance-future">26</div>
+              <div class="attendance-day attendance-future">27</div>
+              <div class="attendance-day attendance-future">28</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: FEES -->
+        <div class="dashboard-section d-none" id="section-fees">
+          <h1 class="h3 font-serif mb-4">Term Fees & Invoices</h1>
+          
+          <div class="row g-4 mb-4">
+            <div class="col-md-6">
+              <div class="card p-4 border-0 shadow-sm text-center">
+                <h6 class="text-muted small">Outstanding Balance</h6>
+                <h2 class="font-serif fw-bold text-danger my-2" id="outstanding-dues-amount">$240.00</h2>
+                <p class="text-muted small">Term 2 Dues (June - August)</p>
+                <div class="mt-3" id="pay-now-action-row">
+                  <button class="btn btn-custom-primary" data-bs-toggle="modal" data-bs-target="#paymentModal">Pay Invoice Now</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="card p-4 border-0 shadow-sm">
+                <h5 class="fw-bold mb-3">Subscription Details</h5>
+                <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
+                  <li><strong>Plan:</strong> Pro Term Package (3 Months)</li>
+                  <li><strong>Active Months:</strong> Jun, Jul, Aug</li>
+                  <li><strong>Billing Parent:</strong> Sarah Jenkins</li>
+                  <li><strong>Assigned Swimmer:</strong> Lily Jenkins</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h5 class="fw-bold mb-3">Payment History</h5>
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle bg-white shadow-sm" id="payment-history-table">
+              <thead class="table-light">
+                <tr>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Invoice</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>March 02, 2026</td>
+                  <td>Term 1 Subscription Fees</td>
+                  <td>$210.00</td>
+                  <td><span class="badge bg-success">Paid</span></td>
+                  <td><button class="btn btn-sm btn-outline-secondary" onclick="window.print()"><i class="bi bi-download"></i></button></td>
+                </tr>
+                <tr>
+                  <td>December 05, 2025</td>
+                  <td>Registration Fee + Swimmer Cap kit</td>
+                  <td>$50.00</td>
+                  <td><span class="badge bg-success">Paid</span></td>
+                  <td><button class="btn btn-sm btn-outline-secondary" onclick="window.print()"><i class="bi bi-download"></i></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 5: ACHIEVEMENTS -->
+        <div class="dashboard-section d-none" id="section-achievements">
+          <h1 class="h3 font-serif mb-4">Child Badges & Achievements</h1>
+          
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card p-4 border-0 shadow-sm text-center">
+                <div class="text-warning fs-1 mb-2"><i class="bi bi-award-fill"></i></div>
+                <h5 class="font-serif">Level 3 Certificate</h5>
+                <p class="text-muted small">Freestyle Basics Certification</p>
+                <button class="btn btn-sm btn-outline-info mt-3" onclick="window.print()">Download Certificate</button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card p-4 border-0 shadow-sm text-center">
+                <div class="text-warning fs-1 mb-2"><i class="bi bi-award-fill"></i></div>
+                <h5 class="font-serif">Level 2 Certificate</h5>
+                <p class="text-muted small">Floating & Kicking Certification</p>
+                <button class="btn btn-sm btn-outline-info mt-3" onclick="window.print()">Download Certificate</button>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card p-4 border-0 shadow-sm text-center">
+                <div class="text-warning fs-1 mb-2"><i class="bi bi-award-fill"></i></div>
+                <h5 class="font-serif">Level 1 Certificate</h5>
+                <p class="text-muted small">Water Confidence Certification</p>
+                <button class="btn btn-sm btn-outline-info mt-3" onclick="window.print()">Download Certificate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 6: NOTIFICATIONS -->
+        <div class="dashboard-section d-none" id="section-notifications">
+          <h1 class="h3 font-serif mb-4">Notifications & Announcements</h1>
+          
+          <div class="list-group shadow-sm">
+            <div class="list-group-item p-3">
+              <div class="d-flex justify-content-between mb-1">
+                <h6 class="fw-bold mb-0 text-dark">Invoice Pending</h6>
+                <small class="text-muted">2 days ago</small>
+              </div>
+              <p class="text-muted mb-0 small">Term 2 billing details generated. Outstanding due of $240.00 is payable by June 30.</p>
+            </div>
+            <div class="list-group-item p-3">
+              <div class="d-flex justify-content-between mb-1">
+                <h6 class="fw-bold mb-0 text-dark">Upcoming Batch Schedule</h6>
+                <small class="text-muted">5 days ago</small>
+              </div>
+              <p class="text-muted mb-0 small">Please note the pool will close on Saturday evening at 5:00 PM for water filtration sanitization.</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Fee Payment Simulation Modal -->
+  <div class="modal fade" id="paymentModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-serif fw-bold" id="paymentModalLabel">Checkout Simulator</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted small">Simulating a secure checkout integration via Razorpay / Stripe.</p>
+          <div class="p-3 bg-light rounded border mb-3 text-center">
+            <small class="text-muted">Total Payable Amount</small>
+            <h3 class="font-serif fw-bold text-dark mt-1">$240.00</h3>
+          </div>
+          
+          <!-- Mock payment fields -->
+          <div class="mb-3 text-start">
+            <label class="form-label small">Cardholder Name</label>
+            <input type="text" class="form-control form-control-sm" value="Sarah Jenkins" readonly>
+          </div>
+          <div class="mb-3 text-start">
+            <label class="form-label small">Mock Card Number</label>
+            <input type="text" class="form-control form-control-sm" value="4111 2222 3333 4444" readonly>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-custom-primary" id="confirm-payment-btn">Process Mock Payment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

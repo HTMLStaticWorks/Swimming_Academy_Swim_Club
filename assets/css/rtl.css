@@ -1,0 +1,43 @@
+/* 
+   Swimming Academy & Swim Club - RTL Overrides
+   Applied when html has dir="rtl" attribute
+*/
+
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .ms-auto {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+
+html[dir="rtl"] .me-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+/* Adjust back to top button position for RTL */
+html[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 30px;
+}
+
+/* Rotate icons that indicate direction */
+html[dir="rtl"] .bi-chevron-right::before {
+  content: "\f279"; /* Chevron left icon */
+}
+html[dir="rtl"] .bi-arrow-right::before {
+  content: "\f12f"; /* Arrow left icon */
+}
+
+/* Form floating label adjustments */
+html[dir="rtl"] .form-floating > label {
+  right: 0;
+  left: auto;
+}
+html[dir="rtl"] .form-floating > .form-control:focus ~ label,
+html[dir="rtl"] .form-floating > .form-control:not(:placeholder-shown) ~ label,
+html[dir="rtl"] .form-floating > .form-select ~ label {
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.5rem);
+}

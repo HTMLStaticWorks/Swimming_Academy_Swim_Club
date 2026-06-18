@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swim Programs | SwimPro Academy</title>
+  <link rel="icon" type="image/gif" href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
+  <meta name="description" content="Explore our learn-to-swim classes, squad training, adult swim sessions, and private lessons.">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Header / Sticky Navbar -->
+  <header class="navbar navbar-expand-xl navbar-dark navbar-custom sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand logo-container" href="index.html">
+        <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+        <span class="logo-text">SWIMPRO</span>
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Fees</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <!-- Theme & RTL Toggles -->
+          <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Theme">
+            <i class="bi bi-moon-fill"></i>
+          </button>
+          <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle Layout Direction">
+            <span>RTL</span>
+          </button>
+          
+          <a href="login.html" class="btn btn-custom-secondary px-3 py-2">Login</a>
+          <a href="parent-dashboard.html" class="btn btn-custom-primary px-3 py-2">Portal</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="py-5 bg-dark-blue text-center">
+    <div class="container py-4">
+      <h1 class="font-serif">Our Swimming Programs</h1>
+      <p class="lead opacity-75">Curriculums engineered for every age group, skill level, and swim goal.</p>
+    </div>
+  </section>
+
+  <!-- Program details grids -->
+  <section class="py-6 bg-white">
+    <div class="container py-5">
+      <div class="row g-4">
+        <!-- Program 1 -->
+        <div class="col-lg-6">
+          <div class="card p-4 h-100 border shadow-sm">
+            <img src="assets/img/learn_to_swim.png" class="img-fluid rounded mb-3" alt="Learn to swim class">
+            <h3 class="font-serif text-info">Learn to Swim (Ages 3-12)</h3>
+            <p class="text-muted">A step-by-step approach to make kids water-safe and proficient in four swim styles. Classes are grouped into Beginner, Intermediate, and Advanced lanes.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="fw-bold">$80 / Month</span>
+              <a href="service-details.html?prog=learn-to-swim" class="btn btn-outline-info">View Details & Schedule</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Program 2 -->
+        <div class="col-lg-6">
+          <div class="card p-4 h-100 border shadow-sm">
+            <img src="assets/img/competitive_training.png" class="img-fluid rounded mb-3" alt="Competitive Swim Training">
+            <h3 class="font-serif text-info">Competitive Swim Training</h3>
+            <p class="text-muted">For swimmers who have graduated from Level 7. Focuses on lap speed, threshold building, dive starts, flip turns, and regional/state championships preparation.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="fw-bold">$120 / Month</span>
+              <a href="service-details.html?prog=competitive" class="btn btn-outline-info">View Details & Schedule</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="col-lg-6">
+          <div class="card p-4 h-100 border shadow-sm">
+            <img src="assets/img/adult_lessons.png" class="img-fluid rounded mb-3" alt="Adult Swimming Lessons">
+            <h3 class="font-serif text-info">Adult Lessons (Ages 18+)</h3>
+            <p class="text-muted">It's never too late to learn. We offer sessions for absolute beginners to conquer fear of depth, alongside fitness tracks for swimming conditioning.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="fw-bold">$90 / Month</span>
+              <a href="service-details.html?prog=adult" class="btn btn-outline-info">View Details & Schedule</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 4 -->
+        <div class="col-lg-6">
+          <div class="card p-4 h-100 border shadow-sm">
+            <img src="assets/img/private_coaching.png" class="img-fluid rounded mb-3" alt="Private swim coaching">
+            <h3 class="font-serif text-info">Private 1-on-1 Coaching</h3>
+            <p class="text-muted">Accelerate your progression. Ideal for overcoming plateaus, detailing stroke dynamics, or fitting training into a highly demanding schedule.</p>
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="fw-bold">$60 / Session</span>
+              <a href="service-details.html?prog=private" class="btn btn-outline-info">View Details & Schedule</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5 border-top border-secondary border-opacity-10">
+    <div class="container py-4">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand logo-container mb-3" href="#">
+            <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+            <span class="logo-text">SWIMPRO</span>
+          </a>
+          <p class="text-light opacity-50 small mt-2">Nurturing safe, confident, and outstanding swimmers through customized training plans and state-of-the-art facilities.</p>
+        </div>
+        
+        <div class="col-6 col-lg-2 offset-lg-1">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="about.html" class="text-light opacity-75 text-decoration-none">About Academy</a></li>
+            <li><a href="services.html" class="text-light opacity-75 text-decoration-none">Swim Programs</a></li>
+            <li><a href="pricing.html" class="text-light opacity-75 text-decoration-none">Levels & Fees</a></li>
+            <li><a href="booking.html" class="text-light opacity-75 text-decoration-none">Timetable</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-6 col-lg-2">
+          <h6 class="fw-bold mb-3">Portals</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="parent-dashboard.html" class="text-light opacity-75 text-decoration-none">Parent Portal</a></li>
+            <li><a href="coach-dashboard.html" class="text-light opacity-75 text-decoration-none">Coach Portal</a></li>
+            <li><a href="admin-dashboard.html" class="text-light opacity-75 text-decoration-none">Administrator</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3">
+          <h6 class="fw-bold mb-3">Contact Support</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-light opacity-75">
+            <li><i class="bi bi-geo-alt me-2"></i>120 Ocean Lane, Marina District</li>
+            <li><i class="bi bi-telephone me-2"></i>+1 (555) SWIM-PRO</li>
+            <li><i class="bi bi-envelope me-2"></i>info@swimproacademy.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-top border-secondary border-opacity-10 mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 small text-light opacity-50">&copy; 2026 SwimPro Academy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Pool Launching | SwimPro Academy</title>
+  <link rel="icon" type="image/gif" href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body class="bg-dark text-white d-flex align-items-center justify-content-center min-vh-100" style="background: linear-gradient(rgba(10, 37, 64, 0.9), rgba(10, 37, 64, 0.95)), url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat;">
+
+  <div class="container text-center py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <span class="badge bg-info bg-opacity-20 text-aqua px-3 py-2 rounded-pill mb-3 text-uppercase fw-bold tracking-wider">Coming Soon</span>
+        <h1 class="display-3 font-serif fw-bold text-white mb-3">Our New Indoor Facility is Launching</h1>
+        <p class="lead text-light opacity-75 mb-5">We are building a new Olympic-standard indoor pool featuring UV purification and a glass parent observation lounge.</p>
+        
+        <!-- Timer Grid -->
+        <div class="row g-3 justify-content-center mb-5">
+          <div class="col-3 col-md-2">
+            <div class="p-3 bg-white bg-opacity-10 rounded">
+              <h3 class="mb-0 fw-bold text-info" id="days-box">45</h3>
+              <small class="text-light opacity-50">Days</small>
+            </div>
+          </div>
+          <div class="col-3 col-md-2">
+            <div class="p-3 bg-white bg-opacity-10 rounded">
+              <h3 class="mb-0 fw-bold text-info" id="hours-box">12</h3>
+              <small class="text-light opacity-50">Hours</small>
+            </div>
+          </div>
+          <div class="col-3 col-md-2">
+            <div class="p-3 bg-white bg-opacity-10 rounded">
+              <h3 class="mb-0 fw-bold text-info" id="mins-box">34</h3>
+              <small class="text-light opacity-50">Mins</small>
+            </div>
+          </div>
+          <div class="col-3 col-md-2">
+            <div class="p-3 bg-white bg-opacity-10 rounded">
+              <h3 class="mb-0 fw-bold text-info" id="secs-box">56</h3>
+              <small class="text-light opacity-50">Secs</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notification form -->
+        <div class="card p-4 border-0 bg-white bg-opacity-10" style="backdrop-filter: blur(10px);">
+          <h5 class="mb-3">Get Notified When Registration Opens</h5>
+          <form class="needs-validation d-flex gap-2" novalidate id="coming-soon-form" onsubmit="event.preventDefault(); if(this.checkValidity()){ alert('You have been added to our VIP waitlist!'); this.reset(); this.classList.remove('was-validated'); }">
+            <input type="email" class="form-control bg-transparent text-white border-secondary py-3" placeholder="Enter your email address" required aria-label="Waitlist Email">
+            <button type="submit" class="btn btn-custom-primary px-4">Join Waitlist</button>
+          </form>
+        </div>
+        
+        <div class="mt-4">
+          <a href="index.html" class="text-info text-decoration-none small"><i class="bi bi-arrow-left me-1"></i>Back to Main Site</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple countdown logic
+    let targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 45);
+    
+    function updateCountdown() {
+      let now = new Date();
+      let diff = targetDate - now;
+      
+      let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      let secs = Math.floor((diff % (1000 * 60)) / 1000);
+      
+      document.getElementById('days-box').textContent = days;
+      document.getElementById('hours-box').textContent = hours;
+      document.getElementById('mins-box').textContent = mins;
+      document.getElementById('secs-box').textContent = secs;
+    }
+    
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>

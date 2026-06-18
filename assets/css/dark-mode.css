@@ -1,0 +1,121 @@
+/* 
+   Swimming Academy & Swim Club - Dark Mode Overrides
+   Applied when body has the class .dark-mode
+*/
+
+body.dark-mode {
+  --site-bg: #0A192F;
+  --section-light-bg: #112240;
+  --section-dark-bg: #030d1a;
+  --section-navy-bg: #020c1b;
+  --card-bg: #112240;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --text-primary: #F8F9FA;
+  --text-muted: #ADB5BD;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --navbar-bg: #030d1a;
+  --navbar-link: rgba(255, 255, 255, 0.8);
+  --hero-bg: #0A192F;
+  --hero-text: #0DCAF0;
+  --hero-lead-text: #ADB5BD;
+  --hero-overlay: rgba(10, 25, 47, 0.85);
+  --hero-overlay-end: rgba(10, 25, 47, 0.95);
+  --aqua-text: #0DCAF0;
+
+  background-color: var(--site-bg);
+  color: var(--text-primary);
+}
+
+body.dark-mode p,
+body.dark-mode .text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Navbar theme changes */
+body.dark-mode .navbar-custom {
+  background-color: var(--navbar-bg) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Card theme changes */
+body.dark-mode .card,
+body.dark-mode .card-custom {
+  background-color: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .card-title,
+body.dark-mode .card-body h3,
+body.dark-mode .card-body h5 {
+  color: var(--text-primary) !important;
+}
+
+/* Forms styling */
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #172A45;
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+}
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+  background-color: #1e3a5f;
+  color: #fff;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.25rem rgba(13, 202, 240, 0.25);
+}
+
+/* Sidebar and Portals */
+body.dark-mode .sidebar-nav {
+  background-color: #112240 !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+body.dark-mode .sidebar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+body.dark-mode .sidebar-nav .nav-link.active,
+body.dark-mode .sidebar-nav .nav-link:hover {
+  color: var(--secondary-color) !important;
+  background-color: rgba(13, 202, 240, 0.08);
+}
+body.dark-mode .dashboard-main {
+  background-color: var(--site-bg);
+}
+
+/* Modal styling in dark mode */
+body.dark-mode .modal-content {
+  background-color: #112240;
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .btn-close {
+  filter: invert(1);
+}
+
+/* Calendar styling in dark mode */
+body.dark-mode .attendance-future {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+}
+
+/* Table styling in dark mode */
+body.dark-mode .table {
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+body.dark-mode .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Alerts */
+body.dark-mode .alert-info {
+  background-color: rgba(13, 202, 240, 0.1);
+  border-color: rgba(13, 202, 240, 0.2);
+  color: var(--secondary-color);
+}

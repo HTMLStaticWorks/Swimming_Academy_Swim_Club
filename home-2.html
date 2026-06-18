@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwimPro Academy | Premium Swim School & Swim Club</title>
+  <link rel="icon" type="image/gif" href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
+  <meta name="description" content="Structured level progression and transparent parent communication tools to professionalize your child's swim journey. Book a free trial today!">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Header / Sticky Navbar -->
+  <header class="navbar navbar-expand-xl navbar-dark navbar-custom sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand logo-container" href="index.html">
+        <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+        <span class="logo-text">SWIMPRO</span>
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="home-2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Fees</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <!-- Theme & RTL Toggles -->
+          <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Theme">
+            <i class="bi bi-moon-fill"></i>
+          </button>
+          <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle Layout Direction">
+            <span>RTL</span>
+          </button>
+          
+          <a href="login.html" class="btn btn-custom-secondary px-3 py-2">Login</a>
+          <a href="parent-dashboard.html" class="btn btn-custom-primary px-3 py-2">Portal</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Centered Classic Hero Section -->
+  <section class="py-6 hero-section-classic text-center d-flex align-items-center position-relative" style="background: linear-gradient(var(--hero-overlay), var(--hero-overlay-end)), url('https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat; min-height: 80vh;">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <span class="badge px-3 py-2 rounded-pill mb-3 text-uppercase fw-bold tracking-wider" style="background-color: rgba(13, 202, 240, 0.15) !important; color: #0DCAF0 !important;">Premium Swim School</span>
+          <h1 class="display-3 font-serif mb-3">Dive Into Excellence</h1>
+          <p class="lead opacity-75 mb-5">Providing top-tier facilities, internationally certified lifesavers, and structured levels to build lifelong aquatic safety and racing skills.</p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="booking.html" class="btn btn-custom-primary px-4 py-3">Book Free Trial</a>
+            <a href="about.html" class="btn btn-custom-secondary px-4 py-3">Explore Facilities</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid of Highlight Features -->
+  <section class="py-6 bg-light-gray">
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-4 border-0 shadow-sm text-center">
+            <div class="text-info fs-1 mb-3"><i class="bi bi-shield-lock-fill"></i></div>
+            <h4 class="font-serif">Uncompromised Safety</h4>
+            <p class="text-muted small">We prioritize small swimmer-to-coach groups, maintaining active guards on the pool deck at all times.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 border-0 shadow-sm text-center">
+            <div class="text-info fs-1 mb-3"><i class="bi bi-thermometer-half"></i></div>
+            <h4 class="font-serif">Climate Controlled Pools</h4>
+            <p class="text-muted small">Both our learn-to-swim and competitive lanes are temperature-regulated all year long.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 border-0 shadow-sm text-center">
+            <div class="text-info fs-1 mb-3"><i class="bi bi-calendar-event-fill"></i></div>
+            <h4 class="font-serif">Flexible Scheduling</h4>
+            <p class="text-muted small">We accommodate busy households with weekday evening sessions and morning weekend slots.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Tour Showcase -->
+  <section class="py-6 bg-white">
+    <div class="container py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1470&auto=format&fit=crop" class="img-fluid rounded shadow" alt="Pool deck">
+        </div>
+        <div class="col-lg-6">
+          <span class="text-aqua fw-bold text-uppercase tracking-wider small">Virtual Tour</span>
+          <h2 class="font-serif mt-2 mb-3">Take a Look Inside Our Premium Facility</h2>
+          <p class="text-muted mb-4">Our pool layout supports multiple squads simultaneously without lane congestion. Fully equipped sanitization blocks, dry gyms for strength training, and parent viewing lounges are ready for you.</p>
+          <ul class="list-unstyled d-flex flex-column gap-2 text-muted">
+            <li><i class="bi bi-check-lg text-info me-2"></i> Semi-Olympic 25-meter Indoor Pool</li>
+            <li><i class="bi bi-check-lg text-info me-2"></i> UV Sanitization filtration running 24/7</li>
+            <li><i class="bi bi-check-lg text-info me-2"></i> Premium child lockers and changing suites</li>
+            <li><i class="bi bi-check-lg text-info me-2"></i> Glass-walled parent gallery with café</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5 border-top border-secondary border-opacity-10">
+    <div class="container py-4">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand logo-container mb-3" href="#">
+            <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+            <span class="logo-text">SWIMPRO</span>
+          </a>
+          <p class="text-light opacity-50 small mt-2">Nurturing safe, confident, and outstanding swimmers through customized training plans and state-of-the-art facilities.</p>
+          <div class="d-flex gap-3 fs-5 mt-4">
+            <a href="#" class="text-info"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-info"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-info"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-info"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-6 col-lg-2 offset-lg-1">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="about.html" class="text-light opacity-75 text-decoration-none">About Academy</a></li>
+            <li><a href="services.html" class="text-light opacity-75 text-decoration-none">Swim Programs</a></li>
+            <li><a href="pricing.html" class="text-light opacity-75 text-decoration-none">Levels & Fees</a></li>
+            <li><a href="booking.html" class="text-light opacity-75 text-decoration-none">Timetable</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-6 col-lg-2">
+          <h6 class="fw-bold mb-3">Portals</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="parent-dashboard.html" class="text-light opacity-75 text-decoration-none">Parent Portal</a></li>
+            <li><a href="coach-dashboard.html" class="text-light opacity-75 text-decoration-none">Coach Portal</a></li>
+            <li><a href="admin-dashboard.html" class="text-light opacity-75 text-decoration-none">Administrator</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3">
+          <h6 class="fw-bold mb-3">Contact Support</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-light opacity-75">
+            <li><i class="bi bi-geo-alt me-2"></i>120 Ocean Lane, Marina District</li>
+            <li><i class="bi bi-telephone me-2"></i>+1 (555) SWIM-PRO</li>
+            <li><i class="bi bi-envelope me-2"></i>info@swimproacademy.com</li>
+            <li><i class="bi bi-whatsapp me-2"></i>+1 (555) 902-7946</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-top border-secondary border-opacity-10 mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 small text-light opacity-50">&copy; 2026 SwimPro Academy. All rights reserved.</p>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="text-light opacity-50 text-decoration-none">Privacy Policy</a>
+          <a href="#" class="text-light opacity-50 text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academy Blog | SwimPro Academy</title>
+  <link rel="icon" type="image/gif" href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
+  <meta name="description" content="Read our latest news, stroke tutorials, training advice, and healthy nutrition tips for swimmers.">
+  
+  <!-- Bootstrap 5 CDN -->
+  <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Header / Sticky Navbar -->
+  <header class="navbar navbar-expand-xl navbar-dark navbar-custom sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand logo-container" href="index.html">
+        <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+        <span class="logo-text">SWIMPRO</span>
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Fees</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <!-- Theme & RTL Toggles -->
+          <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Theme">
+            <i class="bi bi-moon-fill"></i>
+          </button>
+          <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle Layout Direction">
+            <span>RTL</span>
+          </button>
+          
+          <a href="login.html" class="btn btn-custom-secondary px-3 py-2">Login</a>
+          <a href="parent-dashboard.html" class="btn btn-custom-primary px-3 py-2">Portal</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="py-5 bg-dark-blue text-center">
+    <div class="container py-4">
+      <h1 class="font-serif">News & Swim Tips</h1>
+      <p class="lead opacity-75">Articles from our coaches to boost your techniques and water habits.</p>
+    </div>
+  </section>
+
+  <!-- Blog List -->
+  <section class="py-6 bg-white">
+    <div class="container py-5">
+      <div class="row g-4">
+        <!-- Article 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-custom">
+            <img src="https://images.unsplash.com/photo-1560090143-1b37560cc799?q=80&w=1470&auto=format&fit=crop" class="card-custom-img" alt="Toddler in pool">
+            <div class="d-flex justify-content-between mb-2">
+              <span class="badge bg-info text-dark">Safety</span>
+              <small class="text-muted">June 14, 2026</small>
+            </div>
+            <h3 class="h4 font-serif">5 Vital Water Safety Rules For Toddlers</h3>
+            <p class="text-muted small">Explore fundamental steps to introduce toddlers to shallow water environments safely and build comfort before lessons begin.</p>
+            <a href="blog-details.html?id=1" class="btn btn-sm btn-outline-info card-cta mt-3">Read Full Article</a>
+          </div>
+        </div>
+        
+        <!-- Article 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-custom">
+            <img src="https://images.unsplash.com/photo-1508215885820-4585e56135c8?q=80&w=1374&auto=format&fit=crop" class="card-custom-img" alt="Swimmer side breathing">
+            <div class="d-flex justify-content-between mb-2">
+              <span class="badge bg-info text-dark">Technique</span>
+              <small class="text-muted">May 29, 2026</small>
+            </div>
+            <h3 class="h4 font-serif">Mastering Side Breathing In Freestyle</h3>
+            <p class="text-muted small">Struggling with breathing coordination? Coach Emma breaks down bilateral timing drills to keep you swimming in a straight path.</p>
+            <a href="blog-details.html?id=2" class="btn btn-sm btn-outline-info card-cta mt-3">Read Full Article</a>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-custom">
+            <img src="https://images.unsplash.com/photo-1476137682720-25d3b2d76155?q=80&w=1470&auto=format&fit=crop" class="card-custom-img" alt="Squad nutrition prep">
+            <div class="d-flex justify-content-between mb-2">
+              <span class="badge bg-info text-dark">Nutrition</span>
+              <small class="text-muted">April 18, 2026</small>
+            </div>
+            <h3 class="h4 font-serif">Nutrition Planning For Swim Meets</h3>
+            <p class="text-muted small">High-stamina training calls for structured eating. Read what to feed young competitors before, during, and after squad trials.</p>
+            <a href="blog-details.html?id=3" class="btn btn-sm btn-outline-info card-cta mt-3">Read Full Article</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5 border-top border-secondary border-opacity-10">
+    <div class="container py-4">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand logo-container mb-3" href="#">
+            <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+            <span class="logo-text">SWIMPRO</span>
+          </a>
+          <p class="text-light opacity-50 small mt-2">Nurturing safe, confident, and outstanding swimmers through customized training plans and state-of-the-art facilities.</p>
+        </div>
+        
+        <div class="col-6 col-lg-2 offset-lg-1">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="about.html" class="text-light opacity-75 text-decoration-none">About Academy</a></li>
+            <li><a href="services.html" class="text-light opacity-75 text-decoration-none">Swim Programs</a></li>
+            <li><a href="pricing.html" class="text-light opacity-75 text-decoration-none">Levels & Fees</a></li>
+            <li><a href="booking.html" class="text-light opacity-75 text-decoration-none">Timetable</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-6 col-lg-2">
+          <h6 class="fw-bold mb-3">Portals</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="parent-dashboard.html" class="text-light opacity-75 text-decoration-none">Parent Portal</a></li>
+            <li><a href="coach-dashboard.html" class="text-light opacity-75 text-decoration-none">Coach Portal</a></li>
+            <li><a href="admin-dashboard.html" class="text-light opacity-75 text-decoration-none">Administrator</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3">
+          <h6 class="fw-bold mb-3">Contact Support</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-light opacity-75">
+            <li><i class="bi bi-geo-alt me-2"></i>120 Ocean Lane, Marina District</li>
+            <li><i class="bi bi-telephone me-2"></i>+1 (555) SWIM-PRO</li>
+            <li><i class="bi bi-envelope me-2"></i>info@swimproacademy.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-top border-secondary border-opacity-10 mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 small text-light opacity-50">&copy; 2026 SwimPro Academy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

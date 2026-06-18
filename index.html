@@ -1,1 +1,479 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwimPro Academy | Premium Swim School & Swim Club</title>
+  <link rel="icon" type="image/gif" href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
+  <meta name="description"
+    content="Structured level progression and transparent parent communication tools to professionalize your child's swim journey. Book a free trial today!">
+
+  <!-- Bootstrap 5 CDN -->
+  <link id="bootstrap-link" rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+
+  <!-- Header / Sticky Navbar -->
+  <header class="navbar navbar-expand-xl navbar-dark navbar-custom sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand logo-container" href="index.html">
+        <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+        <span class="logo-text">SWIMPRO</span>
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Fees</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-3">
+          <!-- Theme & RTL Toggles -->
+          <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Theme">
+            <i class="bi bi-moon-fill"></i>
+          </button>
+          <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle Layout Direction">
+            <span>RTL</span>
+          </button>
+
+          <a href="login.html" class="btn btn-custom-secondary px-3 py-2">Login</a>
+          <a href="parent-dashboard.html" class="btn btn-custom-primary px-3 py-2">Portal</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Split Hero Section (Editorial Version A) -->
+  <section class="hero-section overflow-hidden position-relative">
+    <div class="container-fluid p-0">
+      <div class="row g-0 hero-row">
+        <!-- Visual Column -->
+        <div class="col-lg-6 hero-visual-col d-none d-lg-block">
+          <div class="hero-bg-image"
+            style="background-image: url('https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?q=60&w=800&auto=format&fit=crop&fm=webp');">
+          </div>
+          <div class="position-absolute w-100 h-100 bg-black"
+            style="opacity: 0.45; background: linear-gradient(to right, transparent, var(--hero-bg));"></div>
+        </div>
+
+        <!-- Copy Column -->
+        <div class="col-lg-6 hero-copy-col p-4 p-xl-5">
+          <div class="py-2">
+            <span
+              class="badge bg-info bg-opacity-10 text-aqua px-3 py-2 rounded-pill mb-3 text-uppercase fw-bold tracking-wider">Now
+              Enrolling Batches</span>
+            <h1 class="display-3 text-info font-serif mb-3">Swim Pro Academy</h1>
+            <p class="lead mb-4 opacity-75">Olympic-standard coaching, structured level progression, and real-time parent tracking.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="pricing.html" class="btn btn-custom-primary px-4 py-3">Explore Levels</a>
+              <a href="booking.html" class="btn btn-custom-secondary px-4 py-3">Book Free Trial Class</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Adjacent Stats & Trust Bar -->
+  <div class="container my-5">
+    <div class="py-4 px-3 bg-dark-blue border border-secondary border-opacity-25 shadow-lg rounded-4">
+      <div class="row g-4 text-center justify-content-center align-items-center">
+        <div class="col-6 col-md-3">
+          <h3 class="text-aqua mb-1 fw-bold font-serif fs-2">1200+</h3>
+          <small class="text-white-50 text-uppercase tracking-wider fw-semibold" style="font-size: 0.8rem; display: block;">Active Swimmers</small>
+        </div>
+        <div class="col-6 col-md-3 border-start border-secondary border-opacity-25">
+          <h3 class="text-aqua mb-1 fw-bold font-serif fs-2">7 Levels</h3>
+          <small class="text-white-50 text-uppercase tracking-wider fw-semibold" style="font-size: 0.8rem; display: block;">Structured System</small>
+        </div>
+        <div class="col-6 col-md-3 border-start border-secondary border-opacity-25">
+          <h3 class="text-aqua mb-1 fw-bold font-serif fs-2">15+</h3>
+          <small class="text-white-50 text-uppercase tracking-wider fw-semibold" style="font-size: 0.8rem; display: block;">Certified Coaches</small>
+        </div>
+        <div class="col-6 col-md-3 border-start border-secondary border-opacity-25">
+          <span class="badge bg-info bg-opacity-20 text-aqua px-2 py-1 rounded mb-1 text-uppercase fw-bold tracking-wider" style="font-size: 0.75rem;">Safety First</span>
+          <h4 class="font-serif mb-0 text-white fs-5">1:5 Instructor Ratio</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Programs Section -->
+  <section class="py-6 bg-light-gray" id="programs">
+    <div class="container py-5">
+      <div class="text-center max-w-2xl mx-auto mb-5">
+        <span class="text-aqua fw-bold text-uppercase tracking-wider small">Our Offerings</span>
+        <h2 class="font-serif mt-2 mb-3">Structured Programs for All Ages</h2>
+        <p class="text-muted">Whether building initial water confidence or training for national competitive events, we
+          have a specialized squad for you.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-custom">
+            <img src="assets/img/learn_to_swim.png"
+              alt="Learn to swim classes" class="card-custom-img">
+            <h3 class="h4 font-serif">Learn to Swim</h3>
+            <p class="text-muted small">Beginner, Intermediate, and Advanced classes for children aged 3+. Focuses on
+              safety, mechanics, and core strokes.</p>
+            <a href="services.html" class="btn btn-sm btn-outline-info card-cta mt-4">Learn More</a>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-custom animate-hover">
+            <img src="assets/img/competitive_training.png"
+              alt="Competitive swim training" class="card-custom-img">
+            <h3 class="h4 font-serif">Competitive Training</h3>
+            <p class="text-muted small">Squad practices, stamina, race pace strategy, and preparation for local and
+              state championships.</p>
+            <a href="services.html" class="btn btn-sm btn-outline-info card-cta mt-4">Learn More</a>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-custom">
+            <img src="assets/img/adult_lessons.png"
+              alt="Adult swimming lessons" class="card-custom-img">
+            <h3 class="h4 font-serif">Adult Lessons</h3>
+            <p class="text-muted small">Tailored training for adult beginners seeking water safety or experienced
+              swimmers looking for cardio workouts.</p>
+            <a href="services.html" class="btn btn-sm btn-outline-info card-cta mt-4">Learn More</a>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-custom">
+            <img src="assets/img/private_coaching.png"
+              alt="Private swim coaching" class="card-custom-img">
+            <h3 class="h4 font-serif">Private Coaching</h3>
+            <p class="text-muted small">1-on-1 private attention with expert coaches to accelerate progression or solve
+              specific stroke defects.</p>
+            <a href="services.html" class="btn btn-sm btn-outline-info card-cta mt-4">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-6 bg-white">
+    <div class="container py-5">
+      <!-- Section Header on Top -->
+      <div class="text-center max-w-2xl mx-auto mb-5">
+        <span class="text-aqua fw-bold text-uppercase tracking-wider small">The SwimPro Advantage</span>
+        <h2 class="font-serif mt-2 mb-3">Engineered for Safety, Excellence, and Fun</h2>
+        <p class="text-muted">We are more than a pool. Our certified curriculum breaks down stroke mechanics
+          step-by-step so students build muscle memory without feeling overwhelmed.</p>
+      </div>
+
+      <!-- Video and Advantages Stacked Vertically -->
+      <div class="row g-5 justify-content-center">
+        <!-- Video Column -->
+        <div class="col-12 col-lg-10 mb-4">
+          <div class="position-relative">
+            <video class="w-100 rounded shadow-lg" controls poster="assets/img/competitive_training.png" style="max-height: 480px; object-fit: cover;">
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-swimming-in-a-pool-1869-large.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <!-- Details Column -->
+        <div class="col-12 col-lg-10">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="d-flex gap-3">
+                <div class="bg-info bg-opacity-15 p-3 rounded-circle text-aqua d-flex align-items-center justify-content-center flex-shrink-0"
+                  style="width: 55px; height: 55px;">
+                  <i class="bi bi-shield-check fs-4"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1">Safety Standards</h5>
+                  <p class="text-muted small mb-0">Fully certified lifeguards on duty at all times, coupled with strict
+                    teacher-student ratios.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex gap-3">
+                <div class="bg-info bg-opacity-15 p-3 rounded-circle text-aqua d-flex align-items-center justify-content-center flex-shrink-0"
+                  style="width: 55px; height: 55px;">
+                  <i class="bi bi-award fs-4"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1">Level Badging</h5>
+                  <p class="text-muted small mb-0">A clear 7-tier roadmap ensures children progress at their own speed with
+                    verified certificates.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="d-flex gap-3">
+                <div class="bg-info bg-opacity-15 p-3 rounded-circle text-aqua d-flex align-items-center justify-content-center flex-shrink-0"
+                  style="width: 55px; height: 55px;">
+                  <i class="bi bi-device-ssd fs-4"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1">Parent Portal</h5>
+                  <p class="text-muted small mb-0">Track attendance logs, review weekly coach notes, and pay invoices instantly
+                    from any mobile device.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Level Progression Map -->
+  <section class="py-6 bg-light-gray" id="levels">
+    <div class="container py-5">
+      <div class="text-center max-w-2xl mx-auto mb-5">
+        <span class="text-aqua fw-bold text-uppercase tracking-wider small">Our Path to Mastery</span>
+        <h2 class="font-serif mt-2 mb-3">The Swimming Progression Levels</h2>
+        <p class="text-muted">We track every student's skills through 7 structured level tiers. Here is the path your
+          child will follow:</p>
+      </div>
+
+      <div class="row g-3 justify-content-center">
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100 p-3 border-0 shadow-sm text-center">
+            <span class="badge bg-secondary mb-2 align-self-center">Level 1</span>
+            <h5 class="font-serif">Water Confidence</h5>
+            <p class="text-muted small mb-0">Submersion, breath control, and safety rules.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100 p-3 border-0 shadow-sm text-center">
+            <span class="badge bg-secondary mb-2 align-self-center">Level 2</span>
+            <h5 class="font-serif">Floating & Kicking</h5>
+            <p class="text-muted small mb-0">Front and back floats, flutter kicking.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100 p-3 border-0 shadow-sm text-center">
+            <span class="badge bg-secondary mb-2 align-self-center">Level 3</span>
+            <h5 class="font-serif">Freestyle Basics</h5>
+            <p class="text-muted small mb-0">Introduction to side breathing and freestyle arm actions.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100 p-3 border-0 shadow-sm text-center border-info border"
+            style="background-color: rgba(13, 202, 240, 0.05);">
+            <span class="badge bg-info mb-2 align-self-center">Level 4</span>
+            <h5 class="font-serif text-info">Freestyle & Backstroke</h5>
+            <p class="text-muted small mb-0">Consolidating strokes up to 25 meters distance.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100 p-3 border-0 shadow-sm text-center">
+            <span class="badge bg-secondary mb-2 align-self-center">Level 5</span>
+            <h5 class="font-serif">Breaststroke</h5>
+            <p class="text-muted small mb-0">Kick coordination and timing basics.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100 p-3 border-0 shadow-sm text-center">
+            <span class="badge bg-secondary mb-2 align-self-center">Level 6</span>
+            <h5 class="font-serif">Butterfly</h5>
+            <p class="text-muted small mb-0">Dolphin kicking and complete fly body mechanics.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <div class="card h-100 p-3 border-0 shadow-sm text-center">
+            <span class="badge bg-warning text-dark mb-2 align-self-center">Level 7</span>
+            <h5 class="font-serif text-warning">Competitive Readiness</h5>
+            <p class="text-muted small mb-0">Endurance testing, flip turns, and lane etiquette. Ready for club squads!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="pricing.html" class="btn btn-custom-primary">View Detailed Levels Page & Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-6 bg-white">
+    <div class="container py-5">
+      <div class="text-center max-w-2xl mx-auto mb-5">
+        <span class="text-aqua fw-bold text-uppercase tracking-wider small">Parent Feedback</span>
+        <h2 class="font-serif mt-2 mb-3">What Parents Say About Us</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-4 border-0 shadow-sm bg-light-gray">
+            <div class="d-flex text-warning gap-1 mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-muted italic">"The parent portal dashboard changed the game. I can log in, view my daughter's
+              Level 3 skills checklist, and see exactly what she needs to master. The feedback is detailed."</p>
+            <div class="mt-4 border-top pt-3 d-flex align-items-center gap-3">
+              <div class="bg-secondary rounded-circle"
+                style="width:40px; height:40px; background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop') center/cover;">
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
+                <small class="text-muted">Parent of Lily (Age 7)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 border-0 shadow-sm bg-light-gray">
+            <div class="d-flex text-warning gap-1 mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-muted italic">"Safety was my absolute top priority. The coaches here are extremely gentle but
+              firm. My son was terrified of putting his face in the water, now he's doing backstrokes!"</p>
+            <div class="mt-4 border-top pt-3 d-flex align-items-center gap-3">
+              <div class="bg-secondary rounded-circle"
+                style="width:40px; height:40px; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop') center/cover;">
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">Marcus Thorne</h6>
+                <small class="text-muted">Parent of Leo (Age 5)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4 border-0 shadow-sm bg-light-gray">
+            <div class="d-flex text-warning gap-1 mb-3">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-muted italic">"Excellent coaching! Coach Liam helped my son prepare for high school squad
+              selections. The training plans are solid and payments are extremely straightforward."</p>
+            <div class="mt-4 border-top pt-3 d-flex align-items-center gap-3">
+              <div class="bg-secondary rounded-circle"
+                style="width:40px; height:40px; background: url('https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=120&auto=format&fit=crop') center/cover;">
+              </div>
+              <div>
+                <h6 class="mb-0 fw-bold">David Miller</h6>
+                <small class="text-muted">Parent of Ryan (Age 14)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup Form -->
+  <section class="py-6 bg-navy-dark">
+    <div class="container py-5">
+      <!-- Full width heading on top (single line) -->
+      <h2 class="font-serif text-info mb-4 text-center">Join the SwimPro Community</h2>
+      
+      <!-- Row with info on one side, fields on the other -->
+      <div class="row align-items-center g-4 justify-content-center">
+        <div class="col-lg-5 col-12">
+          <p class="opacity-75 mb-0 text-lg-start text-center">Get priority batch enrollment alerts, competition schedules, and swim technique tips directly in your inbox.</p>
+        </div>
+        <div class="col-lg-5 col-12">
+          <form class="needs-validation d-flex gap-2" novalidate id="newsletter-form">
+            <input type="email" class="form-control py-3" placeholder="Enter your email address" required
+              aria-label="Email Address">
+            <button type="submit" class="btn btn-custom-primary px-4">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5 border-top border-secondary border-opacity-10">
+    <div class="container py-4">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand logo-container mb-3" href="#">
+            <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+            <span class="logo-text">SWIMPRO</span>
+          </a>
+          <p class="text-light opacity-50 small mt-2">Nurturing safe, confident, and outstanding swimmers through
+            customized training plans and state-of-the-art facilities.</p>
+          <div class="d-flex gap-3 fs-5 mt-4">
+            <a href="#" class="text-info"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-info"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-info"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-info"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2 offset-lg-1">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="about.html" class="text-light opacity-75 text-decoration-none">About Academy</a></li>
+            <li><a href="services.html" class="text-light opacity-75 text-decoration-none">Swim Programs</a></li>
+            <li><a href="pricing.html" class="text-light opacity-75 text-decoration-none">Levels & Fees</a></li>
+            <li><a href="booking.html" class="text-light opacity-75 text-decoration-none">Timetable</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6 class="fw-bold mb-3">Portals</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="parent-dashboard.html" class="text-light opacity-75 text-decoration-none">Parent Portal</a>
+            </li>
+            <li><a href="coach-dashboard.html" class="text-light opacity-75 text-decoration-none">Coach Portal</a></li>
+            <li><a href="admin-dashboard.html" class="text-light opacity-75 text-decoration-none">Administrator</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h6 class="fw-bold mb-3">Contact Support</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-light opacity-75">
+            <li><i class="bi bi-geo-alt me-2"></i>120 Ocean Lane, Marina District</li>
+            <li><i class="bi bi-telephone me-2"></i>+1 (555) SWIM-PRO</li>
+            <li><i class="bi bi-envelope me-2"></i>info@swimproacademy.com</li>
+            <li><i class="bi bi-whatsapp me-2"></i>+1 (555) 902-7946</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="border-top border-secondary border-opacity-10 mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 small text-light opacity-50">&copy; 2026 SwimPro Academy. All rights reserved.</p>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="text-light opacity-50 text-decoration-none">Privacy Policy</a>
+          <a href="#" class="text-light opacity-50 text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
