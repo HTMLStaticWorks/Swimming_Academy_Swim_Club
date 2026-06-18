@@ -59,7 +59,7 @@
   </header>
 
   <!-- Banner Section -->
-  <section class="py-5 bg-dark-blue text-center">
+  <section class="py-5 inner-page-hero text-center" style="background: linear-gradient(rgba(10, 37, 64, 0.75), rgba(10, 37, 64, 0.75)), url('assets/img/pricing_hero.jpg');">
     <div class="container py-4">
       <h1 class="font-serif">Levels & Pricing Plans</h1>
       <p class="lead opacity-75">Clear, milestone-based evaluations combined with transparent packages.</p>
@@ -123,12 +123,12 @@
   </section>
 
   <!-- Pricing Cards (Exactly 3 cards - Rule: Middle plan highlighted as Primary) -->
-  <section class="py-6 bg-light-gray" id="pricing-plans">
-    <div class="container py-5">
+  <section class="py-3 bg-light-gray" id="pricing-plans">
+    <div class="container">
       <div class="row g-4 justify-content-center align-items-stretch">
         <!-- Plan 1: Secondary -->
-        <div class="col-md-4">
-          <div class="card card-custom border-secondary border-opacity-25 h-100">
+        <div class="col-lg-4 col-md-6 d-flex">
+          <div class="card card-custom border-secondary border-opacity-25 h-100 d-flex flex-column">
             <div class="text-center mb-4">
               <h3 class="h4 font-serif">Standard Monthly</h3>
               <p class="text-muted small">Ideal for casual learning</p>
@@ -141,15 +141,15 @@
               <li><i class="bi bi-check-circle text-info me-2"></i> 5:1 Swimmer-to-Coach Ratio</li>
               <li><i class="bi bi-x-circle text-danger me-2"></i> <del>Free Squad Cap & Goggles</del></li>
             </ul>
-            <div class="card-cta mt-auto w-100">
+            <div class="pricing-card-btn">
               <a href="booking.html" class="btn btn-custom-secondary w-100">Enroll Now</a>
             </div>
           </div>
         </div>
         
         <!-- Plan 2: Primary (Highlighted) -->
-        <div class="col-md-4">
-          <div class="card card-custom border-info border-2 h-100" style="background-color: rgba(13, 202, 240, 0.03); transform: scale(1.03);">
+        <div class="col-lg-4 col-md-6 d-flex">
+          <div class="card card-custom border-info border-2 h-100 d-flex flex-column" style="background-color: rgba(13, 202, 240, 0.03);">
             <div class="position-absolute top-0 end-0 bg-info text-dark fw-bold px-3 py-1 rounded-bl text-uppercase small" style="border-bottom-left-radius: 6px;">Popular</div>
             <div class="text-center mb-4">
               <h3 class="h4 font-serif text-info">Pro Term (3 Months)</h3>
@@ -163,15 +163,15 @@
               <li><i class="bi bi-check-circle-fill text-info me-2"></i> Priority Batch Selection</li>
               <li><i class="bi bi-check-circle-fill text-info me-2"></i> Free Silicone Cap & Towel</li>
             </ul>
-            <div class="card-cta mt-auto w-100">
+            <div class="pricing-card-btn">
               <a href="booking.html" class="btn btn-custom-primary w-100">Enroll Now</a>
             </div>
           </div>
         </div>
         
         <!-- Plan 3: Secondary -->
-        <div class="col-md-4">
-          <div class="card card-custom border-secondary border-opacity-25 h-100">
+        <div class="col-lg-4 col-md-6 d-flex">
+          <div class="card card-custom border-secondary border-opacity-25 h-100 d-flex flex-column">
             <div class="text-center mb-4">
               <h3 class="h4 font-serif">Squad Private</h3>
               <p class="text-muted small">Customized direct acceleration</p>
@@ -184,11 +184,176 @@
               <li><i class="bi bi-check-circle text-info me-2"></i> Flexible Hour Rescheduling</li>
               <li><i class="bi bi-check-circle text-info me-2"></i> Custom Performance Video Reviews</li>
             </ul>
-            <div class="card-cta mt-auto w-100">
+            <div class="pricing-card-btn">
               <a href="booking.html" class="btn btn-custom-secondary w-100">Enroll Now</a>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included In Every Plan -->
+  <section class="py-3 bg-white" id="included-perks">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="font-serif">What's Included In Every Plan</h2>
+        <p class="lead text-muted mx-auto" style="max-width: 600px;">No matter which plan you choose, every swimmer gets access to these core benefits from day one.</p>
+      </div>
+      <div class="row g-4">
+        <!-- Perk 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-custom text-center h-100 border-0" style="background-color: var(--section-light-bg);">
+            <div class="mb-3">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
+                <i class="bi bi-shield-check text-white" style="font-size:1.6rem;"></i>
+              </span>
+            </div>
+            <h4 class="font-serif mb-2">Certified Coaches</h4>
+            <p class="text-muted small mb-0">Every session is led by nationally certified swim instructors with lifeguard and CPR credentials.</p>
+          </div>
+        </div>
+        <!-- Perk 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-custom text-center h-100 border-0" style="background-color: var(--section-light-bg);">
+            <div class="mb-3">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
+                <i class="bi bi-clipboard2-pulse text-white" style="font-size:1.6rem;"></i>
+              </span>
+            </div>
+            <h4 class="font-serif mb-2">Progress Assessments</h4>
+            <p class="text-muted small mb-0">Monthly level evaluations ensure swimmers advance at the right pace with clear milestone tracking.</p>
+          </div>
+        </div>
+        <!-- Perk 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-custom text-center h-100 border-0" style="background-color: var(--section-light-bg);">
+            <div class="mb-3">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
+                <i class="bi bi-person-badge text-white" style="font-size:1.6rem;"></i>
+              </span>
+            </div>
+            <h4 class="font-serif mb-2">Parent Portal Access</h4>
+            <p class="text-muted small mb-0">Real-time attendance logs, session notes, and direct messaging with your child's assigned coach.</p>
+          </div>
+        </div>
+        <!-- Perk 4 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-custom text-center h-100 border-0" style="background-color: var(--section-light-bg);">
+            <div class="mb-3">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
+                <i class="bi bi-arrow-repeat text-white" style="font-size:1.6rem;"></i>
+              </span>
+            </div>
+            <h4 class="font-serif mb-2">Makeup Sessions</h4>
+            <p class="text-muted small mb-0">Missed a class? Reschedule up to 2 makeup sessions per month at no additional charge.</p>
+          </div>
+        </div>
+        <!-- Perk 5 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-custom text-center h-100 border-0" style="background-color: var(--section-light-bg);">
+            <div class="mb-3">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
+                <i class="bi bi-droplet-half text-white" style="font-size:1.6rem;"></i>
+              </span>
+            </div>
+            <h4 class="font-serif mb-2">Heated Pool Facility</h4>
+            <p class="text-muted small mb-0">Year-round temperature-controlled pools maintained at optimal comfort for all age groups.</p>
+          </div>
+        </div>
+        <!-- Perk 6 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card card-custom text-center h-100 border-0" style="background-color: var(--section-light-bg);">
+            <div class="mb-3">
+              <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
+                <i class="bi bi-award text-white" style="font-size:1.6rem;"></i>
+              </span>
+            </div>
+            <h4 class="font-serif mb-2">Level-Up Certificates</h4>
+            <p class="text-muted small mb-0">Swimmers receive a signed certificate and badge upon completing each of the 7 progression levels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plan Comparison Matrix -->
+  <section class="py-3 bg-light-gray" id="plan-comparison">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="font-serif">Find Your Perfect Fit</h2>
+        <p class="lead text-muted mx-auto" style="max-width: 600px;">Compare features side by side to see which plan matches your swimmer's goals and schedule.</p>
+      </div>
+      <div class="table-responsive">
+        <table class="table align-middle text-center" style="border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: var(--border-radius-custom); border: 1px solid var(--card-border);">
+          <thead>
+            <tr style="background: linear-gradient(135deg, #0A2540 0%, #0d3a5c 100%); color: #fff;">
+              <th class="text-start ps-4 py-3" style="width: 40%; border: none;">Feature</th>
+              <th class="py-3" style="border: none;">Standard</th>
+              <th class="py-3" style="border: none; background: rgba(13,202,240,0.15); color: #fff;">Pro Term</th>
+              <th class="py-3" style="border: none;">Private</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-start ps-4 py-3 fw-bold compare-feature">Sessions Per Week</td>
+              <td class="py-3 compare-val">2</td>
+              <td class="py-3 compare-highlight">3</td>
+              <td class="py-3 compare-val">Unlimited</td>
+            </tr>
+            <tr class="compare-alt-row">
+              <td class="text-start ps-4 py-3 fw-bold compare-feature">Swimmer-to-Coach Ratio</td>
+              <td class="py-3 compare-val">5 : 1</td>
+              <td class="py-3 compare-highlight">3 : 1</td>
+              <td class="py-3 compare-val">1 : 1</td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4 py-3 fw-bold compare-feature">Progress Reports</td>
+              <td class="py-3 compare-val">Monthly</td>
+              <td class="py-3 compare-highlight">Weekly</td>
+              <td class="py-3 compare-val">Daily</td>
+            </tr>
+            <tr class="compare-alt-row">
+              <td class="text-start ps-4 py-3 fw-bold compare-feature">Makeup Sessions</td>
+              <td class="py-3 compare-val">2 / month</td>
+              <td class="py-3 compare-highlight">4 / month</td>
+              <td class="py-3 compare-val">Unlimited</td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4 py-3 fw-bold compare-feature">Video Performance Review</td>
+              <td class="py-3"><i class="bi bi-x-lg text-danger"></i></td>
+              <td class="py-3 compare-highlight-bg"><i class="bi bi-x-lg text-danger"></i></td>
+              <td class="py-3"><i class="bi bi-check-lg text-success fw-bold" style="font-size:1.2rem;"></i></td>
+            </tr>
+            <tr class="compare-alt-row">
+              <td class="text-start ps-4 py-3 fw-bold compare-feature">Priority Batch Selection</td>
+              <td class="py-3"><i class="bi bi-x-lg text-danger"></i></td>
+              <td class="py-3 compare-highlight-bg"><i class="bi bi-check-lg text-success fw-bold" style="font-size:1.2rem;"></i></td>
+              <td class="py-3"><i class="bi bi-check-lg text-success fw-bold" style="font-size:1.2rem;"></i></td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4 py-3 fw-bold compare-feature">Free Swim Gear Kit</td>
+              <td class="py-3"><i class="bi bi-x-lg text-danger"></i></td>
+              <td class="py-3 compare-highlight-bg"><i class="bi bi-check-lg text-success fw-bold" style="font-size:1.2rem;"></i></td>
+              <td class="py-3"><i class="bi bi-check-lg text-success fw-bold" style="font-size:1.2rem;"></i></td>
+            </tr>
+            <tr class="compare-alt-row">
+              <td class="text-start ps-4 py-3 fw-bold compare-feature">Flexible Rescheduling</td>
+              <td class="py-3"><i class="bi bi-x-lg text-danger"></i></td>
+              <td class="py-3 compare-highlight-bg"><i class="bi bi-x-lg text-danger"></i></td>
+              <td class="py-3"><i class="bi bi-check-lg text-success fw-bold" style="font-size:1.2rem;"></i></td>
+            </tr>
+            <tr>
+              <td class="text-start ps-4 py-3 fw-bold compare-feature">Competition Prep Coaching</td>
+              <td class="py-3"><i class="bi bi-x-lg text-danger"></i></td>
+              <td class="py-3 compare-highlight-bg"><i class="bi bi-dash-lg compare-val"></i></td>
+              <td class="py-3"><i class="bi bi-check-lg text-success fw-bold" style="font-size:1.2rem;"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center mt-4">
+        <p class="text-muted small"><i class="bi bi-info-circle me-1"></i> Still unsure? <a href="contact.html" class="text-decoration-none" style="color: var(--secondary-color); font-weight: 500;">Talk to our team</a> and we'll help you pick the right plan.</p>
       </div>
     </div>
   </section>

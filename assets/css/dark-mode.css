@@ -119,3 +119,40 @@ body.dark-mode .alert-info {
   border-color: rgba(13, 202, 240, 0.2);
   color: var(--secondary-color);
 }
+
+/* Plan Comparison Table in dark mode - high specificity to beat Bootstrap */
+body.dark-mode #plan-comparison table.table {
+  color: #F8F9FA !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark-mode #plan-comparison table.table td,
+body.dark-mode #plan-comparison table.table th {
+  color: #F8F9FA !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+body.dark-mode #plan-comparison table.table td.compare-feature {
+  color: #ffffff !important;
+}
+body.dark-mode #plan-comparison table.table td.compare-val {
+  color: #ADB5BD !important;
+}
+body.dark-mode #plan-comparison table.table td.compare-highlight {
+  background: rgba(13, 202, 240, 0.10) !important;
+  color: #ffffff !important;
+}
+body.dark-mode #plan-comparison table.table td.compare-highlight-bg {
+  background: rgba(13, 202, 240, 0.10) !important;
+}
+body.dark-mode #plan-comparison table.table tr.compare-alt-row {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+body.dark-mode #plan-comparison table.table > thead > tr > th {
+  color: #ffffff !important;
+}
+body.dark-mode #plan-comparison table.table tbody {
+  background-color: #112240 !important;
+}
+body.dark-mode #plan-comparison table.table > :not(caption) > * > * {
+  background-color: transparent;
+  box-shadow: none;
+}

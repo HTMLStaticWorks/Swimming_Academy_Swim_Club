@@ -65,12 +65,12 @@
         <div class="col-lg-8">
           <div class="bg-white p-4 p-md-5 rounded shadow-sm">
             <h1 class="font-serif text-info mb-3" id="program-title">Learn to Swim (Ages 3-12)</h1>
-            <p class="lead text-muted mb-4">Our signature youth curriculum designed to take children from absolute water hesitancy to complete multi-stroke swimming safety and speed.</p>
+            <p class="lead text-muted mb-4" id="program-lead">Our signature youth curriculum designed to take children from absolute water hesitancy to complete multi-stroke swimming safety and speed.</p>
             
             <img src="https://images.unsplash.com/photo-1560090143-1b37560cc799?q=80&w=1470&auto=format&fit=crop" class="img-fluid rounded mb-4" alt="Program banner" id="program-img">
             
             <h3 class="font-serif mt-5 mb-3">What is Covered in this Program</h3>
-            <p class="text-muted">Our child-centric coaches break down the mechanics of the body's buoyancy and limb coordinations across various levels:</p>
+            <p class="text-muted" id="program-intro">Our child-centric coaches break down the mechanics of the body's buoyancy and limb coordinations across various levels:</p>
             
             <div class="accordion my-4" id="curriculumAccordion">
               <div class="accordion-item border-0 mb-3 shadow-sm rounded overflow-hidden">
@@ -118,33 +118,35 @@
           <div class="card p-4 border-0 shadow-sm bg-white mb-4">
             <h4 class="font-serif text-info mb-3">Quick Facts</h4>
             <ul class="list-unstyled d-flex flex-column gap-3 text-muted">
-              <li><i class="bi bi-clock-fill text-info me-2"></i> <strong>Duration:</strong> 45 Mins / Session</li>
-              <li><i class="bi bi-people-fill text-info me-2"></i> <strong>Class Size:</strong> Max 5 Swimmers</li>
-              <li><i class="bi bi-calendar-check-fill text-info me-2"></i> <strong>Frequency:</strong> 2 or 3 Days / Week</li>
-              <li><i class="bi bi-award-fill text-info me-2"></i> <strong>Requirement:</strong> Age 3 to 12 Years</li>
+              <li><i class="bi bi-clock-fill text-info me-2"></i> <strong>Duration:</strong> <span id="fact-duration">45 Mins / Session</span></li>
+              <li><i class="bi bi-people-fill text-info me-2"></i> <strong>Class Size:</strong> <span id="fact-size">Max 5 Swimmers</span></li>
+              <li><i class="bi bi-calendar-check-fill text-info me-2"></i> <strong>Frequency:</strong> <span id="fact-frequency">2 or 3 Days / Week</span></li>
+              <li><i class="bi bi-award-fill text-info me-2"></i> <strong>Requirement:</strong> <span id="fact-requirement">Age 3 to 12 Years</span></li>
             </ul>
             <hr>
             <div class="text-center my-3">
               <h5 class="text-muted small">Subscription Fee</h5>
-              <h3 class="font-serif fw-bold text-dark">$80.00 <span class="fs-6 fw-normal text-muted">/ month</span></h3>
+              <h3 class="font-serif fw-bold text-dark" id="program-price">$80.00 <span class="fs-6 fw-normal text-muted">/ month</span></h3>
             </div>
             <a href="booking.html" class="btn btn-custom-primary w-100 py-3">Book Free Trial Class</a>
           </div>
           
           <div class="card p-4 border-0 shadow-sm bg-white">
             <h4 class="font-serif text-info mb-3">Assigned Coaches</h4>
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="rounded-circle" style="width: 55px; height: 55px; background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
-              <div>
-                <h6 class="mb-0 fw-bold">Coach Emma Stone</h6>
-                <small class="text-muted">ASCA Level 2 Certified</small>
+            <div id="coaches-container">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="rounded-circle" style="width: 55px; height: 55px; background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
+                <div>
+                  <h6 class="mb-0 fw-bold">Coach Emma Stone</h6>
+                  <small class="text-muted">ASCA Level 2 Certified</small>
+                </div>
               </div>
-            </div>
-            <div class="d-flex align-items-center gap-3">
-              <div class="rounded-circle" style="width: 55px; height: 55px; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
-              <div>
-                <h6 class="mb-0 fw-bold">Coach Liam Davis</h6>
-                <small class="text-muted">Former State Medalist</small>
+              <div class="d-flex align-items-center gap-3">
+                <div class="rounded-circle" style="width: 55px; height: 55px; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
+                <div>
+                  <h6 class="mb-0 fw-bold">Coach Liam Davis</h6>
+                  <small class="text-muted">Former State Medalist</small>
+                </div>
               </div>
             </div>
           </div>
@@ -204,5 +206,229 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JavaScript -->
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const programsData = {
+        'learn-to-swim': {
+          title: 'Learn to Swim (Ages 3-12)',
+          lead: 'Our signature youth curriculum designed to take children from absolute water hesitancy to complete multi-stroke swimming safety and speed.',
+          img: 'assets/img/learn_to_swim.png',
+          intro: 'Our child-centric coaches break down the mechanics of the body\'s buoyancy and limb coordinations across various levels:',
+          phases: [
+            { title: 'Phase 1: Water Safety & Confidence (Levels 1 & 2)', body: 'Conquering depth panic, blowing bubbles, submerging mouth and eyes safely, floating comfortably on the front and back without assistance, and basic kicking patterns.' },
+            { title: 'Phase 2: Stroke Mechanics & Coordination (Levels 3, 4 & 5)', body: 'Introducing unilateral side breathing, breaststroke arm pull-outs, freestyle strokes up to 25 meters, and backstroke flutter kick alignment.' },
+            { title: 'Phase 3: Advanced Endurance & Skills (Levels 6 & 7)', body: 'Perfecting the dolphin kick and butterfly arm cycle, mastering flip turns at lane ends, swimming continuous 100-meter laps, and starting blocks safety.' }
+          ],
+          duration: '45 Mins / Session',
+          size: 'Max 5 Swimmers',
+          frequency: '2 or 3 Days / Week',
+          requirement: 'Age 3 to 12 Years',
+          price: '$80.00 <span class="fs-6 fw-normal text-muted">/ month</span>',
+          coaches: [
+            { name: 'Coach Emma Stone', role: 'ASCA Level 2 Certified', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop' },
+            { name: 'Coach Liam Davis', role: 'Former State Medalist', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop' }
+          ]
+        },
+        'competitive': {
+          title: 'Competitive Swim Training',
+          lead: 'Advanced training engineered for junior swimmers aiming for high-speed performance, endurance, and racing refinement.',
+          img: 'assets/img/competitive_training.png',
+          intro: 'Our program is designed for club swimmers to excel in league meets, focusing on high-efficiency hydrodynamics:',
+          phases: [
+            { title: 'Phase 1: Speed & Stroke Refinement', body: 'Diving deep into stroke efficiency, hydrodynamics, and optimizing starts, underwater dolphin kicks, and turns.' },
+            { title: 'Phase 2: Threshold & Conditioning', body: 'Lactate threshold sets, high-intensity intervals, and targeted aerobic capacity building to handle long-distance heats.' },
+            { title: 'Phase 3: Meet & Championship Prep', body: 'Mental coaching, race strategy, taper phase planning, and simulated timing runs for local and regional meets.' }
+          ],
+          duration: '60 Mins / Session',
+          size: 'Max 8 Swimmers',
+          frequency: '3 to 5 Days / Week',
+          requirement: 'Graduation from Level 7',
+          price: '$120.00 <span class="fs-6 fw-normal text-muted">/ month</span>',
+          coaches: [
+            { name: 'Coach Sarah Jenkins', role: 'Olympic Trials Semifinalist', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=120&auto=format&fit=crop' },
+            { name: 'Coach Liam Davis', role: 'Former State Medalist', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop' }
+          ]
+        },
+        'adult': {
+          title: 'Adult Lessons (Ages 18+)',
+          lead: 'A supportive and low-pressure program built for adults of all horizons—from non-swimmers to those wanting stroke refinement.',
+          img: 'assets/img/adult_lessons.png',
+          intro: 'Tailored for adults to learn at their own pace with expert instructions and specialized safety guidance:',
+          phases: [
+            { title: 'Phase 1: Overcoming Fear & Buoyancy Basics', body: 'Learning relaxation techniques in shallow water, face submersion, gliding, floating, and building basic leg power.' },
+            { title: 'Phase 2: Freestyle & Deep Water Skills', body: 'Mastering rhythmic side breathing, treading water in deep lanes, and basic backstroke/freestyle.' },
+            { title: 'Phase 3: Swimming for Fitness', body: 'Interval swimming, building lap stamina, improving flip turns, and learning additional strokes like breaststroke.' }
+          ],
+          duration: '45 Mins / Session',
+          size: 'Max 6 Swimmers',
+          frequency: '1 or 2 Days / Week',
+          requirement: 'Ages 18+',
+          price: '$90.00 <span class="fs-6 fw-normal text-muted">/ month</span>',
+          coaches: [
+            { name: 'Coach Emma Stone', role: 'ASCA Level 2 Certified', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop' },
+            { name: 'Coach Sarah Jenkins', role: 'Olympic Trials Semifinalist', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=120&auto=format&fit=crop' }
+          ]
+        },
+        'private': {
+          title: 'Private 1-on-1 Coaching',
+          lead: 'Direct individualized instruction designed to accelerate your learning curve and solve specific technique challenges.',
+          img: 'assets/img/private_coaching.png',
+          intro: 'Completely customized lane allocation to target your individual performance and technique improvement:',
+          phases: [
+            { title: 'Phase 1: Skill Diagnostic', body: 'A complete video and performance diagnostic assessment by your coach to isolate biomechanical issues.' },
+            { title: 'Phase 2: Customized Drill Plan', body: 'Custom workouts specifically targeting stroke coordination, body position, breathing, or starting speed.' },
+            { title: 'Phase 3: Goal Validation', body: 'Re-testing, speed analysis, and customized take-home training sheets to maintain your new skills.' }
+          ],
+          duration: '30 to 60 Mins',
+          size: '1-on-1 (Private)',
+          frequency: 'Flexible Scheduling',
+          requirement: 'Open to all ages',
+          price: '$60.00 <span class="fs-6 fw-normal text-muted">/ session</span>',
+          coaches: [
+            { name: 'Coach Liam Davis', role: 'Former State Medalist', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop' },
+            { name: 'Coach Sarah Jenkins', role: 'Olympic Trials Semifinalist', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=120&auto=format&fit=crop' }
+          ]
+        },
+        'toddler': {
+          title: 'Junior Swim Class (Toddlers & Preschool)',
+          lead: 'An early childhood introduction program focused on building positive water association, breath control, and safety.',
+          img: 'assets/img/kid_class.jpg',
+          intro: 'Introduces water adaptation concepts through group singing, toys, and playful activities in warm water:',
+          phases: [
+            { title: 'Phase 1: Parent-Child Bonding & Splash Play', body: 'Fun songs, water games, and gentle splash movements to build positive feelings towards the pool.' },
+            { title: 'Phase 2: Breath Control & Submersion Basics', body: 'Teaching toddlers how to blow bubbles, submerge mouth, and do assisted breath-holding.' },
+            { title: 'Phase 3: Independent Floats & Safety Kicks', body: 'Basic back floats, assisted dog paddle patterns, and learning how to hold the pool wall for safety.' }
+          ],
+          duration: '30 Mins / Session',
+          size: 'Max 4 Swimmers',
+          frequency: '1 or 2 Days / Week',
+          requirement: 'Parent accompanied (Ages 1-4)',
+          price: '$75.00 <span class="fs-6 fw-normal text-muted">/ month</span>',
+          coaches: [
+            { name: 'Coach Emma Stone', role: 'ASCA Level 2 Certified', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop' },
+            { name: 'Coach Liam Davis', role: 'Former State Medalist', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop' }
+          ]
+        },
+        'advanced-squad': {
+          title: 'Advanced Performance Squads',
+          lead: 'Intense athletic training designed for club swimmers seeking state, regional, or national championships qualifications.',
+          img: 'assets/img/training.jpg',
+          intro: 'A comprehensive athletic framework that merges land workouts with state-of-the-art endurance coaching:',
+          phases: [
+            { title: 'Phase 1: Dryland Strength & Mobility', body: 'Targeted core activation, shoulder mobility exercises, and explosive power workouts on land before entering the pool.' },
+            { title: 'Phase 2: Aerobic Threshold Intervals', body: 'Extended pacing sets, target speed repeats, and lactic acid tolerance development under exact timers.' },
+            { title: 'Phase 3: Elite Starts, Turns, & Video Analysis', body: 'High-speed camera stroke analysis, drag profiles evaluation, and refining the finest margins of dive starts and turns.' }
+          ],
+          duration: '90 Mins / Session',
+          size: 'Max 10 Swimmers',
+          frequency: '4 to 6 Days / Week',
+          requirement: 'Coach evaluation / tryouts',
+          price: '$140.00 <span class="fs-6 fw-normal text-muted">/ month</span>',
+          coaches: [
+            { name: 'Coach Sarah Jenkins', role: 'Olympic Trials Semifinalist', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=120&auto=format&fit=crop' },
+            { name: 'Coach Liam Davis', role: 'Former State Medalist', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop' }
+          ]
+        },
+        'masters': {
+          title: 'Master Swim & Stroke Clinic',
+          lead: 'An structured program for triathletes, open-water swimmers, and active adults looking to swim with high biomechanical efficiency.',
+          img: 'assets/img/adult_lesson.jpg',
+          intro: 'Focused clinics targeting the mechanics of hydrodynamics, rhythmic breathing, and endurance sets:',
+          phases: [
+            { title: 'Phase 1: Bio-mechanics & Drag Mitigation', body: 'Identifying key drag areas in your stroke, perfecting head position, and building an efficient core line in the water.' },
+            { title: 'Phase 2: Rhythmic Breathing & Catch', body: 'Training symmetrical bilateral breathing and optimizing your catch phase for maximum propulsion.' },
+            { title: 'Phase 3: Event & Triathlon Strategy', body: 'Open water simulator drills, drafting strategies, pack swimming confidence, and pacing for specific event goals.' }
+          ],
+          duration: '60 Mins / Session',
+          size: 'Max 8 Swimmers',
+          frequency: '2 or 3 Days / Week',
+          requirement: 'Able to swim 100m continuously',
+          price: '$95.00 <span class="fs-6 fw-normal text-muted">/ month</span>',
+          coaches: [
+            { name: 'Coach Sarah Jenkins', role: 'Olympic Trials Semifinalist', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=120&auto=format&fit=crop' },
+            { name: 'Coach Emma Stone', role: 'ASCA Level 2 Certified', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop' }
+          ]
+        },
+        'seniors': {
+          title: 'Senior Water Aerobics & Therapy',
+          lead: 'A gentle, warm-water fitness class structured for older adults to improve joint function, muscle tone, and general stamina.',
+          img: 'assets/img/old_lessons.jpg',
+          intro: 'Therapeutic movements designed to build functional mobility and strength in a welcoming environment:',
+          phases: [
+            { title: 'Phase 1: Warm-up & Flexibility Exercises', body: 'Low-impact stretches, walking drills in heated shallow lanes, and light joint articulation movements.' },
+            { title: 'Phase 2: Resistance & Strength Building', body: 'Utilizing pool noodles, aquatic dumbbells, and water viscosity to build safe muscle tone without bone stress.' },
+            { title: 'Phase 3: Cardiovascular Health & Social Fun', body: 'Gentle heart-rate exercises, balancing drills, and community activities to keep workouts enjoyable.' }
+          ],
+          duration: '45 Mins / Session',
+          size: 'Max 12 Swimmers',
+          frequency: '2 or 3 Days / Week',
+          requirement: 'Age 60+ or therapeutic referral',
+          price: '$70.00 <span class="fs-6 fw-normal text-muted">/ month</span>',
+          coaches: [
+            { name: 'Coach Emma Stone', role: 'ASCA Level 2 Certified', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop' },
+            { name: 'Coach Liam Davis', role: 'Former State Medalist', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop' }
+          ]
+        }
+      };
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const prog = urlParams.get('prog') || 'learn-to-swim';
+      const data = programsData[prog] || programsData['learn-to-swim'];
+
+      // Update basic fields
+      document.getElementById('program-title').textContent = data.title;
+      document.getElementById('program-lead').textContent = data.lead;
+      document.getElementById('program-img').src = data.img;
+      document.getElementById('program-img').alt = data.title;
+      document.getElementById('program-intro').textContent = data.intro;
+
+      // Update quick facts
+      document.getElementById('fact-duration').textContent = data.duration;
+      document.getElementById('fact-size').textContent = data.size;
+      document.getElementById('fact-frequency').textContent = data.frequency;
+      document.getElementById('fact-requirement').textContent = data.requirement;
+
+      // Update price
+      document.getElementById('program-price').innerHTML = data.price;
+
+      // Update curriculum accordion
+      const accordion = document.getElementById('curriculumAccordion');
+      accordion.innerHTML = '';
+      data.phases.forEach((phase, index) => {
+        const idCollapse = `collapse_${index}`;
+        const item = document.createElement('div');
+        item.className = 'accordion-item border-0 mb-3 shadow-sm rounded overflow-hidden';
+        item.innerHTML = `
+          <h4 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${idCollapse}">
+              ${phase.title}
+            </button>
+          </h4>
+          <div id="${idCollapse}" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
+            <div class="accordion-body text-muted">
+              ${phase.body}
+            </div>
+          </div>
+        `;
+        accordion.appendChild(item);
+      });
+
+      // Update coaches
+      const coachesContainer = document.getElementById('coaches-container');
+      coachesContainer.innerHTML = '';
+      data.coaches.forEach((coach, index) => {
+        const item = document.createElement('div');
+        item.className = `d-flex align-items-center gap-3 ${index < data.coaches.length - 1 ? 'mb-3' : ''}`;
+        item.innerHTML = `
+          <div class="rounded-circle" style="width: 55px; height: 55px; background: url('${coach.img}') center/cover;"></div>
+          <div>
+            <h6 class="mb-0 fw-bold">${coach.name}</h6>
+            <small class="text-muted">${coach.role}</small>
+          </div>
+        `;
+        coachesContainer.appendChild(item);
+      });
+    });
+  </script>
 </body>
 </html>

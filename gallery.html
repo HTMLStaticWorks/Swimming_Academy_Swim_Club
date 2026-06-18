@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | SwimPro Academy</title>
-  <link rel="icon" type="image/gif" href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
-  <meta name="description" content="Browse photos of our facilities, active lessons, swimming competitions, and achievements.">
-  
+  <link rel="icon" type="image/gif"
+    href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
+  <meta name="description"
+    content="Browse photos of our facilities, active lessons, swimming competitions, and achievements.">
+
   <!-- Bootstrap 5 CDN -->
-  <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link id="bootstrap-link" rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  
+
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark-mode.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
+
 <body>
 
   <!-- Header / Sticky Navbar -->
   <header class="navbar navbar-expand-xl navbar-dark navbar-custom sticky-top py-3">
     <div class="container">
       <a class="navbar-brand logo-container" href="index.html">
-        <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+        <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif"
+          alt="SwimPro Logo" class="logo-image">
         <span class="logo-text">SWIMPRO</span>
       </a>
-      
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -41,7 +48,7 @@
           <li class="nav-item"><a class="nav-link" href="pricing.html">Fees</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-        
+
         <div class="d-flex align-items-center gap-3">
           <!-- Theme & RTL Toggles -->
           <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Theme">
@@ -50,7 +57,7 @@
           <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle Layout Direction">
             <span>RTL</span>
           </button>
-          
+
           <a href="login.html" class="btn btn-custom-secondary px-3 py-2">Login</a>
           <a href="parent-dashboard.html" class="btn btn-custom-primary px-3 py-2">Portal</a>
         </div>
@@ -59,7 +66,8 @@
   </header>
 
   <!-- Banner Section -->
-  <section class="py-5 bg-dark-blue text-center">
+  <section class="py-5 inner-page-hero text-center"
+    style="background: linear-gradient(rgba(10, 37, 64, 0.75), rgba(10, 37, 64, 0.75)), url('assets/img/gallery_hero.jpg');">
     <div class="container py-4">
       <h1 class="font-serif">Our Media Gallery</h1>
       <p class="lead opacity-75">Capturing key milestones, safety drills, championships, and our clean facilities.</p>
@@ -71,60 +79,341 @@
     <div class="container py-5">
       <!-- Filter tabs -->
       <div class="d-flex justify-content-center gap-2 mb-5 flex-wrap">
-        <button class="btn btn-sm btn-info px-4 py-2" onclick="alert('Filtering: All photos')">All Media</button>
-        <button class="btn btn-sm btn-outline-secondary px-4 py-2" onclick="alert('Filtering: Facilities')">Facilities</button>
-        <button class="btn btn-sm btn-outline-secondary px-4 py-2" onclick="alert('Filtering: Classes')">Classes</button>
-        <button class="btn btn-sm btn-outline-secondary px-4 py-2" onclick="alert('Filtering: Competitions')">Competitions</button>
-        <button class="btn btn-sm btn-outline-secondary px-4 py-2" onclick="alert('Filtering: Achievements')">Achievements</button>
+        <button class="btn btn-sm btn-info px-4 py-2 filter-btn" onclick="filterGallery('all', this)">All Media</button>
+        <button class="btn btn-sm btn-outline-secondary px-4 py-2 filter-btn"
+          onclick="filterGallery('facilities', this)">Facilities</button>
+        <button class="btn btn-sm btn-outline-secondary px-4 py-2 filter-btn"
+          onclick="filterGallery('classes', this)">Classes</button>
+        <button class="btn btn-sm btn-outline-secondary px-4 py-2 filter-btn"
+          onclick="filterGallery('competitions', this)">Competitions</button>
+        <button class="btn btn-sm btn-outline-secondary px-4 py-2 filter-btn"
+          onclick="filterGallery('achievements', this)">Achievements</button>
       </div>
-      
+
+      <!-- Style overrides for uniform gallery and animations -->
+      <style>
+        .gallery-card {
+          overflow: hidden;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          border: 1px solid var(--card-border);
+          background-color: var(--card-bg);
+          border-radius: var(--border-radius-custom);
+          height: 100%;
+        }
+
+        .gallery-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+        }
+
+        .gallery-img-container {
+          overflow: hidden;
+          border-radius: calc(var(--border-radius-custom) - 1px) calc(var(--border-radius-custom) - 1px) 0 0;
+          height: 220px;
+        }
+
+        .gallery-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.4s ease;
+        }
+
+        .gallery-card:hover .gallery-img {
+          transform: scale(1.06);
+        }
+
+        .gallery-item {
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+      </style>
+
       <!-- Image grids -->
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="card p-2 border shadow-sm">
-            <img src="https://images.unsplash.com/photo-1560090143-1b37560cc799?q=80&w=1470&auto=format&fit=crop" class="img-fluid rounded" alt="Active class session">
-            <div class="p-2 text-center">
-              <h6 class="mb-0 fw-bold">Active Coaching (Learn to Swim)</h6>
+      <div class="row g-4" id="gallery-grid">
+        <!-- FACILITIES (4) -->
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="competitions">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/competitive_training.png" class="gallery-img" alt="Competitive Training">
             </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card p-2 border shadow-sm">
-            <img src="https://images.unsplash.com/photo-1476137682720-25d3b2d76155?q=80&w=1470&auto=format&fit=crop" class="img-fluid rounded" alt="Championship squad">
-            <div class="p-2 text-center">
+            <div class="p-3 text-center">
               <h6 class="mb-0 fw-bold">Championship Squad Prep</h6>
+              <span class="badge bg-warning-subtle text-warning-emphasis mt-2 small">Competition</span>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card p-2 border shadow-sm">
-            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1470&auto=format&fit=crop" class="img-fluid rounded" alt="Semi-Olympic indoor pool">
-            <div class="p-2 text-center">
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="facilities">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/facility_parent_lounge.png" class="gallery-img" alt="Observation Lounge">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">Observation Lounge</h6>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis mt-2 small">Facility</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="classes">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/adult_lessons.png" class="gallery-img" alt="Adult Swim Lanes">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">Adult Swim Wellness</h6>
+              <span class="badge bg-primary-subtle text-primary-emphasis mt-2 small">Class</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="achievements">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/milestone_foundation.png" class="gallery-img" alt="Foundation Milestone">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">Foundation Milestones</h6>
+              <span class="badge bg-success-subtle text-success-emphasis mt-2 small">Achievement</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CLASSES (4) -->
+
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="facilities">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/facility_video_lab.png" class="gallery-img" alt="Video Analysis Lab">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">Video Analysis Lab</h6>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis mt-2 small">Facility</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="achievements">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/milestone_growth.png" class="gallery-img" alt="Growth Milestone">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">Growth Graduation</h6>
+              <span class="badge bg-success-subtle text-success-emphasis mt-2 small">Achievement</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="competitions">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/NationalRelay.jpg" class="gallery-img" alt="Championship Race Start">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">National Relay Start</h6>
+              <span class="badge bg-warning-subtle text-warning-emphasis mt-2 small">Competition</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="classes">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/kid_class.jpg" class="gallery-img" alt="Toddler Swim Class">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">Toddler Water Intro</h6>
+              <span class="badge bg-primary-subtle text-primary-emphasis mt-2 small">Class</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMPETITIONS (4) -->
+
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="facilities">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/facility_olympic_pool.png" class="gallery-img" alt="Semi-Olympic Indoor Pool">
+            </div>
+            <div class="p-3 text-center">
               <h6 class="mb-0 fw-bold">Semi-Olympic Indoor Pool</h6>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis mt-2 small">Facility</span>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card p-2 border shadow-sm">
-            <img src="https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?q=80&w=1470&auto=format&fit=crop" class="img-fluid rounded" alt="Adult wellness swim">
-            <div class="p-2 text-center">
-              <h6 class="mb-0 fw-bold">Adult Swim Wellness Lanes</h6>
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="competitions">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/training.jpg" class="gallery-img" alt="Squad Training Drill">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">High Intensity Drills</h6>
+              <span class="badge bg-warning-subtle text-warning-emphasis mt-2 small">Competition</span>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card p-2 border shadow-sm">
-            <img src="https://images.unsplash.com/photo-1508215885820-4585e56135c8?q=80&w=1374&auto=format&fit=crop" class="img-fluid rounded" alt="Swim progression certificates">
-            <div class="p-2 text-center">
-              <h6 class="mb-0 fw-bold">Level Evaluation Ceremoney</h6>
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="classes">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/private_coaching.png" class="gallery-img" alt="Private Coaching">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">1-on-1 Private Lessons</h6>
+              <span class="badge bg-primary-subtle text-primary-emphasis mt-2 small">Class</span>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card p-2 border shadow-sm">
-            <img src="https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?q=80&w=1470&auto=format&fit=crop" class="img-fluid rounded" alt="Active lifeguarding">
-            <div class="p-2 text-center">
-              <h6 class="mb-0 fw-bold">Active Safety Monitoring</h6>
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="achievements">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/annualcup.jpg" class="gallery-img" alt="Annual Cup Winners">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">Annual Academy Cup</h6>
+              <span class="badge bg-success-subtle text-success-emphasis mt-2 small">Achievement</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACHIEVEMENTS (4) -->
+
+
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="classes">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/learn_to_swim.png" class="gallery-img" alt="Active Coaching">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">Learn to Swim Class</h6>
+              <span class="badge bg-primary-subtle text-primary-emphasis mt-2 small">Class</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="facilities">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/premiumsuites.jpg" class="gallery-img" alt="Modern Changing Suites">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">Premium Changing Suites</h6>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis mt-2 small">Facility</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="achievements">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="assets/img/goldmedal.jpg" class="gallery-img" alt="Gold Medal Ceremony">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">Gold Medal Honors</h6>
+              <span class="badge bg-success-subtle text-success-emphasis mt-2 small">Achievement</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 gallery-item" data-category="competitions">
+          <div class="gallery-card p-2 shadow-sm">
+            <div class="gallery-img-container">
+              <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&q=80&w=800"
+                class="gallery-img" alt="National Junior Meet">
+            </div>
+            <div class="p-3 text-center">
+              <h6 class="mb-0 fw-bold">Junior Meet Finals</h6>
+              <span class="badge bg-warning-subtle text-warning-emphasis mt-2 small">Competition</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Filter Script -->
+  <script>
+    function filterGallery(category, button) {
+      // Update active button state
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('btn-info');
+        btn.classList.add('btn-outline-secondary');
+      });
+      button.classList.add('btn-info');
+      button.classList.remove('btn-outline-secondary');
+
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.classList.remove('d-none');
+          // Smooth fade in
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 50);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.9)';
+          item.classList.add('d-none');
+        }
+      });
+    }
+  </script>
+
+  <!-- Behind the Lens — Featured Moment Spotlight -->
+  <section class="py-6 bg-dark-blue">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <span class="badge bg-info text-dark px-3 py-2 mb-3" style="font-size: 0.8rem; letter-spacing: 0.08em;">EXCLUSIVE</span>
+        <h2 class="font-serif mb-3">Behind the Lens</h2>
+        <p class="lead mx-auto" style="max-width: 640px;">Every photograph captures a moment of dedication, triumph, and the joy of the water. Here are the stories behind our most iconic shots.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Featured large image -->
+        <div class="col-lg-7">
+          <div class="position-relative overflow-hidden rounded" style="height: 100%; min-height: 400px;">
+            <img src="assets/img/competitive_training.png" alt="Featured: Championship relay finish"
+              style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;"
+              onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+            <div class="position-absolute bottom-0 start-0 w-100 p-4"
+              style="background: linear-gradient(transparent, rgba(10, 25, 47, 0.92));">
+              <span class="badge bg-warning text-dark mb-2">📸 Photo of the Month</span>
+              <h4 class="text-white mb-1 fw-bold">The Final Touch — 2026 Inter-Academy Relay</h4>
+              <p class="text-white-50 small mb-0">Captured at the 0.03-second margin that clinched gold for our U-16 relay team. Photographer: Coach Liam.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story cards -->
+        <div class="col-lg-5 d-flex flex-column gap-4">
+          <div class="card-custom p-4 flex-fill">
+            <div class="d-flex align-items-start gap-3">
+              <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width: 50px; height: 50px; background: rgba(13, 202, 240, 0.12);">
+                <i class="bi bi-camera-fill" style="font-size: 1.3rem; color: var(--secondary-color);"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Volunteer Photographers Welcome</h6>
+                <p class="small mb-0">Parents and members are invited to contribute photos from meets, practice sessions, and academy events. Selected shots are featured here monthly.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-custom p-4 flex-fill">
+            <div class="d-flex align-items-start gap-3">
+              <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width: 50px; height: 50px; background: rgba(13, 202, 240, 0.12);">
+                <i class="bi bi-film" style="font-size: 1.3rem; color: var(--secondary-color);"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Video Analysis Archives</h6>
+                <p class="small mb-0">Our coaching team records every competitive event. Athletes can access their stroke breakdowns and race replays through the Parent Portal.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-custom p-4 flex-fill">
+            <div class="d-flex align-items-start gap-3">
+              <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width: 50px; height: 50px; background: rgba(13, 202, 240, 0.12);">
+                <i class="bi bi-share" style="font-size: 1.3rem; color: var(--secondary-color);"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Share Your Story</h6>
+                <p class="small mb-0">Tag us on social media with <strong>#SwimProMoments</strong> for a chance to be featured in next month's gallery spotlight.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -132,18 +421,108 @@
     </div>
   </section>
 
+  <!-- Gallery by the Numbers — Media Stats -->
+  <section class="py-6 bg-white position-relative overflow-hidden">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="font-serif mb-3">Gallery by the Numbers</h2>
+        <p class="lead mx-auto" style="max-width: 600px;">A snapshot of our growing visual archive documenting every stroke, every win, and every milestone.</p>
+      </div>
+
+      <div class="row g-4 text-center">
+        <div class="col-6 col-lg-3">
+          <div class="card-custom p-4 text-center">
+            <div class="rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3"
+              style="width: 64px; height: 64px; background: linear-gradient(135deg, rgba(13, 202, 240, 0.15), rgba(13, 202, 240, 0.05));">
+              <i class="bi bi-images" style="font-size: 1.6rem; color: var(--secondary-color);"></i>
+            </div>
+            <h2 class="fw-bold mb-1 counter-number" data-target="2400" style="color: var(--secondary-color);">0</h2>
+            <p class="small mb-0">Photos Archived</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="card-custom p-4 text-center">
+            <div class="rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3"
+              style="width: 64px; height: 64px; background: linear-gradient(135deg, rgba(40, 167, 69, 0.15), rgba(40, 167, 69, 0.05));">
+              <i class="bi bi-trophy" style="font-size: 1.6rem; color: #28a745;"></i>
+            </div>
+            <h2 class="fw-bold mb-1 counter-number" data-target="86" style="color: #28a745;">0</h2>
+            <p class="small mb-0">Events Covered</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="card-custom p-4 text-center">
+            <div class="rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3"
+              style="width: 64px; height: 64px; background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 193, 7, 0.05));">
+              <i class="bi bi-camera-reels" style="font-size: 1.6rem; color: #ffc107;"></i>
+            </div>
+            <h2 class="fw-bold mb-1 counter-number" data-target="310" style="color: #ffc107;">0</h2>
+            <p class="small mb-0">Race Videos</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="card-custom p-4 text-center">
+            <div class="rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3"
+              style="width: 64px; height: 64px; background: linear-gradient(135deg, rgba(220, 53, 69, 0.15), rgba(220, 53, 69, 0.05));">
+              <i class="bi bi-people" style="font-size: 1.6rem; color: #dc3545;"></i>
+            </div>
+            <h2 class="fw-bold mb-1 counter-number" data-target="15" style="color: #dc3545;">0</h2>
+            <p class="small mb-0">Volunteer Photographers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counter Animation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const counters = document.querySelectorAll('.counter-number');
+      const observerOptions = { threshold: 0.4 };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000;
+            const startTime = performance.now();
+
+            function updateCounter(currentTime) {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              counter.textContent = Math.floor(eased * target).toLocaleString() + (target >= 100 ? '+' : '');
+              if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+              } else {
+                counter.textContent = target.toLocaleString() + '+';
+              }
+            }
+            requestAnimationFrame(updateCounter);
+            observer.unobserve(counter);
+          }
+        });
+      }, observerOptions);
+
+      counters.forEach(counter => observer.observe(counter));
+    });
+  </script>
+
   <!-- Footer -->
   <footer class="bg-dark text-white py-5 border-top border-secondary border-opacity-10">
     <div class="container py-4">
       <div class="row g-4">
         <div class="col-lg-4">
           <a class="navbar-brand logo-container mb-3" href="#">
-            <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+            <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif"
+              alt="SwimPro Logo" class="logo-image">
             <span class="logo-text">SWIMPRO</span>
           </a>
-          <p class="text-light opacity-50 small mt-2">Nurturing safe, confident, and outstanding swimmers through customized training plans and state-of-the-art facilities.</p>
+          <p class="text-light opacity-50 small mt-2">Nurturing safe, confident, and outstanding swimmers through
+            customized training plans and state-of-the-art facilities.</p>
         </div>
-        
+
         <div class="col-6 col-lg-2 offset-lg-1">
           <h6 class="fw-bold mb-3">Quick Links</h6>
           <ul class="list-unstyled d-flex flex-column gap-2 small">
@@ -153,16 +532,17 @@
             <li><a href="booking.html" class="text-light opacity-75 text-decoration-none">Timetable</a></li>
           </ul>
         </div>
-        
+
         <div class="col-6 col-lg-2">
           <h6 class="fw-bold mb-3">Portals</h6>
           <ul class="list-unstyled d-flex flex-column gap-2 small">
-            <li><a href="parent-dashboard.html" class="text-light opacity-75 text-decoration-none">Parent Portal</a></li>
+            <li><a href="parent-dashboard.html" class="text-light opacity-75 text-decoration-none">Parent Portal</a>
+            </li>
             <li><a href="coach-dashboard.html" class="text-light opacity-75 text-decoration-none">Coach Portal</a></li>
             <li><a href="admin-dashboard.html" class="text-light opacity-75 text-decoration-none">Administrator</a></li>
           </ul>
         </div>
-        
+
         <div class="col-lg-3">
           <h6 class="fw-bold mb-3">Contact Support</h6>
           <ul class="list-unstyled d-flex flex-column gap-2 small text-light opacity-75">
@@ -172,8 +552,9 @@
           </ul>
         </div>
       </div>
-      
-      <div class="border-top border-secondary border-opacity-10 mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+
+      <div
+        class="border-top border-secondary border-opacity-10 mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
         <p class="mb-0 small text-light opacity-50">&copy; 2026 SwimPro Academy. All rights reserved.</p>
       </div>
     </div>
@@ -184,4 +565,5 @@
   <!-- Custom JavaScript -->
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

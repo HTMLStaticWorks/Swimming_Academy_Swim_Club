@@ -221,13 +221,59 @@ body.dark-mode .navbar-custom .navbar-toggler-icon {
   align-self: center;
 }
 
+/* Pricing card button - always pinned to bottom */
+.pricing-card-btn {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  width: 100%;
+}
+
+/* Comparison table classes */
+.compare-feature {
+  color: var(--text-primary);
+}
+.compare-val {
+  color: var(--text-muted);
+}
+.compare-highlight {
+  background: rgba(13, 202, 240, 0.04);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.compare-highlight-bg {
+  background: rgba(13, 202, 240, 0.04);
+}
+.compare-alt-row {
+  background-color: var(--section-light-bg);
+}
+#plan-comparison .table tbody {
+  background-color: var(--card-bg);
+}
+
 /* Premium micro-animations */
 .hover-scale {
   transition: transform var(--transition-speed);
 }
 .hover-scale:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
 }
+
+/* Social Icons */
+.social-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0DCAF0, #0A2540);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(13, 202, 240, 0.4);
+}
+
 
 /* Theme Switcher and RTL Toggle Items */
 .toggle-btn {
@@ -295,6 +341,10 @@ body.dark-mode .navbar-custom .navbar-toggler-icon {
 }
 .bg-white {
   background-color: var(--site-bg) !important;
+}
+.py-6 {
+  padding-top: 4.5rem !important;
+  padding-bottom: 4.5rem !important;
 }
 
 /* Theme-aware text inside components */
@@ -439,7 +489,7 @@ body.dark-mode .navbar-custom .navbar-toggler-icon {
   .hero-section {
     min-height: auto;
     background: linear-gradient(var(--hero-overlay), var(--hero-overlay-end)), 
-                url('https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?q=50&w=600&auto=format&fit=crop&fm=webp') center/cover no-repeat;
+                url('../img/index_hero.jpg') center/cover no-repeat;
   }
   
   .hero-row {
@@ -462,5 +512,108 @@ body.dark-mode .navbar-custom .navbar-toggler-icon {
 .hero-section-classic p, .hero-section-classic .lead {
   color: var(--hero-lead-text) !important;
 }
+
+/* Inner Page Hero/Banners styling */
+.inner-page-hero {
+  position: relative;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  transition: background var(--transition-speed);
+}
+.inner-page-hero h1,
+.inner-page-hero p,
+.inner-page-hero .lead {
+  color: #ffffff !important;
+}
+body.dark-mode .inner-page-hero {
+  /* Dynamic overlay in dark mode to blend with dark mode bg */
+  background-blend-mode: multiply;
+  background-color: rgba(10, 25, 47, 0.4);
+}
+
+.hero-text-shadow {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1), 0 0 15px rgba(255, 255, 255, 1), 0 1px 3px rgba(255, 255, 255, 0.9);
+  /* Make text color very strong in light mode */
+  color: #02122b !important;
+  font-weight: 500 !important;
+}
+body.dark-mode .hero-text-shadow {
+  text-shadow: 0 0 8px rgba(10, 25, 47, 1), 0 0 15px rgba(10, 25, 47, 1), 0 1px 3px rgba(10, 25, 47, 0.9);
+  color: #ffffff !important;
+}
+
+/* Ensure classic hero secondary button stands out against light pool water details in both modes */
+.hero-section-classic .btn-custom-secondary {
+  background-color: rgba(10, 25, 47, 0.75) !important;
+  color: #ffffff !important;
+  border-color: rgba(10, 25, 47, 0.75) !important;
+}
+.hero-section-classic .btn-custom-secondary:hover {
+  background-color: var(--secondary-color) !important;
+  color: #000000 !important;
+  border-color: var(--secondary-color) !important;
+}
+
+/* Facilities Cards Styling */
+.facility-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius-custom);
+  overflow: hidden;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  height: 100%;
+}
+.facility-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.facility-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+}
+.facility-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed) ease-in-out;
+}
+.facility-card:hover .facility-img {
+  transform: scale(1.06);
+}
+.facility-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Milestones Timeline Styling */
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.timeline-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+}
+.timeline-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed) ease-in-out;
+}
+.timeline-img-wrapper:hover .timeline-img-hover {
+  transform: scale(1.05);
+}
+
 
 
