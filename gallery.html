@@ -93,12 +93,25 @@
       <!-- Style overrides for uniform gallery and animations -->
       <style>
         .gallery-card {
+          display: flex;
+          flex-direction: column;
           overflow: hidden;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           border: 1px solid var(--card-border);
           background-color: var(--card-bg);
           border-radius: var(--border-radius-custom);
           height: 100%;
+        }
+
+        .gallery-card > .p-3 {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+        }
+
+        .gallery-card .badge {
+          margin-top: auto !important;
+          align-self: center;
         }
 
         .gallery-card:hover {

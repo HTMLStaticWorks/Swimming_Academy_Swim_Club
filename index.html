@@ -70,7 +70,7 @@
     <div class="container-fluid p-0">
       <div class="row g-0 hero-row">
         <!-- Visual Column -->
-        <div class="col-lg-6 hero-visual-col d-none d-lg-block">
+        <div class="col-xl-6 hero-visual-col order-2 order-xl-1">
           <div class="hero-bg-image" style="background-image: url('assets/img/index_hero.jpg');">
           </div>
           <div class="position-absolute w-100 h-100 bg-black"
@@ -78,17 +78,21 @@
         </div>
 
         <!-- Copy Column -->
-        <div class="col-lg-6 hero-copy-col p-4 p-xl-5">
-          <div class="py-2">
+        <div class="col-xl-6 hero-copy-col p-4 p-xl-5 text-center text-xl-start order-1 order-xl-2">
+          <div class="py-2 w-100">
             <span
               class="badge bg-info bg-opacity-10 text-aqua px-3 py-2 rounded-pill mb-3 text-uppercase fw-bold tracking-wider">Now
               Enrolling Batches</span>
             <h1 class="display-3 text-info font-serif mb-3">Swim Pro Academy</h1>
             <p class="lead mb-4 opacity-75">Olympic-standard coaching, structured level progression, and real-time
               parent tracking.</p>
-            <div class="d-flex flex-wrap gap-3">
-              <a href="pricing.html" class="btn btn-custom-primary px-4 py-3">Explore Levels</a>
-              <a href="booking.html" class="btn btn-custom-secondary px-4 py-3">Book Free Trial Class</a>
+            <div class="d-flex justify-content-center justify-content-xl-start">
+              <div class="d-grid gap-3 d-md-flex">
+                <a href="pricing.html" class="btn btn-custom-primary px-4 py-3" style="min-width: 210px;">Explore
+                  Levels</a>
+                <a href="booking.html" class="btn btn-custom-secondary px-4 py-3" style="min-width: 210px;">Book Free
+                  Trial Class</a>
+              </div>
             </div>
           </div>
         </div>
@@ -127,7 +131,7 @@
 
   <!-- Programs Section -->
   <section class="py-6 bg-light-gray" id="programs">
-    <div class="container py-5">
+    <div class="container">
       <div class="text-center max-w-2xl mx-auto mb-5">
         <span class="text-aqua fw-bold text-uppercase tracking-wider small">Our Offerings</span>
         <h2 class="font-serif mt-2 mb-3">Structured Programs for All Ages</h2>
@@ -137,43 +141,52 @@
 
       <div class="row g-4">
         <!-- Card 1 -->
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-          <div class="card-custom h-100 text-center w-100">
-            <img src="assets/img/learn_to_swim.png" alt="Learn to swim classes" class="card-custom-img">
-            <h3 class="h4 font-serif">Learn to Swim</h3>
-            <p class="text-muted small">Beginner, Intermediate, and Advanced classes for children aged 3+. Focuses on
-              safety, mechanics, and core strokes.</p>
-            <a href="services.html" class="btn btn-sm btn-outline-info card-cta mt-auto">Learn More</a>
+        <div class="col-md-6 col-xl-3 d-flex align-items-stretch">
+          <div class="card-custom h-100 text-center w-100 p-0 overflow-hidden">
+            <img src="assets/img/learn_to_swim.png" alt="Learn to swim classes" class="card-custom-img m-0">
+            <div class="p-4 d-flex flex-column h-100">
+              <h3 class="h4 font-serif">Learn to Swim</h3>
+              <p class="text-muted small">Beginner, Intermediate, and Advanced classes for children aged 3+. Focuses on
+                safety, mechanics, and core strokes.</p>
+              <a href="services.html" class="btn btn-sm btn-outline-info card-cta mt-auto">Learn More</a>
+            </div>
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-          <div class="card-custom animate-hover h-100 text-center w-100">
-            <img src="assets/img/competitive_training.png" alt="Competitive swim training" class="card-custom-img">
-            <h3 class="h4 font-serif">Competitive Training</h3>
-            <p class="text-muted small">Squad practices, stamina, race pace strategy, and preparation for local and
-              state championships.</p>
-            <a href="services.html" class="btn btn-sm btn-outline-info card-cta mt-auto">Learn More</a>
+        <div class="col-md-6 col-xl-3 d-flex align-items-stretch">
+          <div class="card-custom animate-hover h-100 text-center w-100 p-0 overflow-hidden">
+            <img src="assets/img/competitive_training.png" alt="Competitive swim training" class="card-custom-img m-0">
+            <div class="p-4 d-flex flex-column h-100">
+              <h3 class="h4 font-serif">Competitive Training</h3>
+              <p class="text-muted small">Squad practices, stamina, race pace strategy, and preparation for local and
+                state championships.</p>
+              <a href="services.html" class="btn btn-sm btn-outline-info card-cta mt-auto">Learn More</a>
+            </div>
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-          <div class="card-custom h-100 text-center w-100">
-            <img src="assets/img/adult_lessons.png" alt="Adult swimming lessons" class="card-custom-img">
-            <h3 class="h4 font-serif">Adult Lessons</h3>
-            <p class="text-muted small">Tailored training for adult beginners seeking water safety or experienced
-              swimmers looking for cardio workouts.</p>
-            <a href="services.html" class="btn btn-sm btn-outline-info card-cta mt-auto">Learn More</a>
+        <div class="col-md-6 col-xl-3 d-flex align-items-stretch">
+          <div class="card-custom h-100 text-center w-100 p-0 overflow-hidden">
+            <img src="assets/img/adult_lessons.png" alt="Adult swimming lessons" class="card-custom-img m-0">
+            <div class="p-4 d-flex flex-column h-100">
+              <h3 class="h4 font-serif">Adult Lessons</h3>
+              <p class="text-muted small">Tailored training for adult beginners seeking water safety or experienced
+                swimmers looking for cardio workouts.</p>
+              <a href="services.html" class="btn btn-sm btn-outline-info card-cta mt-auto">Learn More</a>
+            </div>
           </div>
         </div>
         <!-- Card 4 -->
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
-          <div class="card-custom h-100 text-center w-100">
-            <img src="assets/img/private_coaching.png" alt="Private swim coaching" class="card-custom-img">
-            <h3 class="h4 font-serif">Private Coaching</h3>
-            <p class="text-muted small">1-on-1 private attention with expert coaches to accelerate progression or solve
-              specific stroke defects.</p>
-            <a href="services.html" class="btn btn-sm btn-outline-info card-cta mt-auto">Learn More</a>
+        <div class="col-md-6 col-xl-3 d-flex align-items-stretch">
+          <div class="card-custom h-100 text-center w-100 p-0 overflow-hidden">
+            <img src="assets/img/private_coaching.png" alt="Private swim coaching" class="card-custom-img m-0">
+            <div class="p-4 d-flex flex-column h-100">
+              <h3 class="h4 font-serif">Private Coaching</h3>
+              <p class="text-muted small">1-on-1 private attention with expert coaches to accelerate progression or
+                solve
+                specific stroke defects.</p>
+              <a href="services.html" class="btn btn-sm btn-outline-info card-cta mt-auto">Learn More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -182,7 +195,7 @@
 
   <!-- Why Choose Us -->
   <section class="py-6 bg-white">
-    <div class="container py-5">
+    <div class="container">
       <!-- Section Header on Top -->
       <div class="text-center max-w-2xl mx-auto mb-5">
         <span class="text-aqua fw-bold text-uppercase tracking-wider small">The SwimPro Advantage</span>
@@ -265,7 +278,7 @@
 
   <!-- Level Progression Map -->
   <section class="py-6 bg-light-gray" id="levels">
-    <div class="container py-5">
+    <div class="container">
       <div class="text-center max-w-2xl mx-auto mb-5">
         <span class="text-aqua fw-bold text-uppercase tracking-wider small">Our Path to Mastery</span>
         <h2 class="font-serif mt-2 mb-3">The Swimming Progression Levels</h2>
@@ -334,7 +347,7 @@
 
   <!-- Testimonials Section -->
   <section class="py-6 bg-white">
-    <div class="container py-5">
+    <div class="container">
       <div class="text-center max-w-2xl mx-auto mb-5">
         <span class="text-aqua fw-bold text-uppercase tracking-wider small">Parent Feedback</span>
         <h2 class="font-serif mt-2 mb-3">What Parents Say About Us</h2>
@@ -347,8 +360,9 @@
               <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
             </div>
-            <p class="text-muted italic">"The parent portal dashboard changed the game. I can log in, view my daughter's
-              Level 3 skills checklist, and see exactly what she needs to master. The feedback is detailed."</p>
+            <p class="text-muted italic">"The parent portal dashboard changed the game. I can log in and view my
+              daughter's
+              Level 3 skills checklist, and also I see exactly what she needs to master. The feedback is detailed."</p>
             <div class="mt-4 border-top pt-3 d-flex align-items-center gap-3">
               <div class="bg-secondary rounded-circle"
                 style="width:40px; height:40px; background: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop') center/cover;">
@@ -367,7 +381,8 @@
                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
             </div>
             <p class="text-muted italic">"Safety was my absolute top priority. The coaches here are extremely gentle but
-              firm. My son was terrified of putting his face in the water, now he's doing backstrokes!"</p>
+              firm. My son was terrified of putting his face in the water but now he's doing backstrokes with an ease!"
+            </p>
             <div class="mt-4 border-top pt-3 d-flex align-items-center gap-3">
               <div class="bg-secondary rounded-circle"
                 style="width:40px; height:40px; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop') center/cover;">
@@ -386,7 +401,9 @@
                 class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
             </div>
             <p class="text-muted italic">"Excellent coaching! Coach Liam helped my son prepare for high school squad
-              selections. The training plans are solid and payments are extremely straightforward."</p>
+              selections. The training plans are solid and the payments are also extremely pretty and also
+              straightforward."
+            </p>
             <div class="mt-4 border-top pt-3 d-flex align-items-center gap-3">
               <div class="bg-secondary rounded-circle"
                 style="width:40px; height:40px; background: url('https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=120&auto=format&fit=crop') center/cover;">
@@ -404,7 +421,7 @@
 
   <!-- Newsletter Signup Form -->
   <section class="py-6 bg-navy-dark">
-    <div class="container py-5">
+    <div class="container">
       <!-- Full width heading on top (single line) -->
       <h2 class="font-serif text-info mb-4 text-center">Join the SwimPro Community</h2>
 
