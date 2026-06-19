@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Contact Us | SwimPro Academy</title>
-  <link rel="icon" type="image/gif"
-    href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
   <meta name="description"
     content="Get in touch with SwimPro Academy. Find our address, support numbers, WhatsApp link, and maps.">
 
@@ -135,8 +135,8 @@
         </div>
 
         <!-- Contact Form -->
-        <div class="col-lg-7">
-          <div class="card p-4 p-md-5 border-0 shadow-sm bg-light-gray">
+        <div class="col-lg-7 d-flex align-items-stretch">
+          <div class="card p-4 p-md-5 border-0 shadow-sm bg-light-gray w-100">
             <h3 class="font-serif mb-4">Send Us an Inquiry</h3>
             <form class="needs-validation" novalidate id="contact-form"
               onsubmit="event.preventDefault(); if(this.checkValidity()) { alert('Message sent successfully! Our coordinator will contact you shortly.'); this.reset(); this.classList.remove('was-validated'); }">
@@ -194,8 +194,8 @@
       </div>
       <div class="row g-4">
         <!-- Location 1: Marina HQ -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card card-custom h-100 border-0 overflow-hidden p-0">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card card-custom h-100 border-0 overflow-hidden p-0 w-100">
             <div style="height: 220px; overflow: hidden;">
               <img src="assets/img/location_marina.png" alt="Marina District Center"
                 style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s;"
@@ -207,7 +207,7 @@
                   style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0, #0A2540);">
                   <i class="bi bi-geo-alt-fill text-white" style="font-size:0.85rem;"></i>
                 </span>
-                <h5 class="fw-bold mb-0" style="color: var(--text-primary);">Marina District HQ</h5>
+                <h5 class="fw-bold mb-0" style="color: var(--text-primary);">Marina Dist. HQ</h5>
               </div>
               <p class="small mb-2" style="color: var(--text-muted);">120 Ocean Lane, Marina District, San Francisco, CA
                 94123</p>
@@ -223,8 +223,8 @@
         </div>
 
         <!-- Location 2: Downtown -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card card-custom h-100 border-0 overflow-hidden p-0">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card card-custom h-100 border-0 overflow-hidden p-0 w-100">
             <div style="height: 220px; overflow: hidden;">
               <img src="assets/img/facility_olympic_pool.png" alt="Downtown Training Center"
                 style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s;"
@@ -236,7 +236,7 @@
                   style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0, #0A2540);">
                   <i class="bi bi-geo-alt-fill text-white" style="font-size:0.85rem;"></i>
                 </span>
-                <h5 class="fw-bold mb-0" style="color: var(--text-primary);">Downtown Training Center</h5>
+                <h5 class="fw-bold mb-0" style="color: var(--text-primary);">Downtown Center</h5>
               </div>
               <p class="small mb-2" style="color: var(--text-muted);">45 Harbor Boulevard, Downtown, San Francisco, CA
                 94105</p>
@@ -252,8 +252,8 @@
         </div>
 
         <!-- Location 3: Bayview -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card card-custom h-100 border-0 overflow-hidden p-0">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card card-custom h-100 border-0 overflow-hidden p-0 w-100">
             <div style="height: 220px; overflow: hidden;">
               <img src="assets/img/facility_parent_lounge.png" alt="Bayview Aquatic Club"
                 style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s;"
@@ -265,7 +265,7 @@
                   style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0, #0A2540);">
                   <i class="bi bi-geo-alt-fill text-white" style="font-size:0.85rem;"></i>
                 </span>
-                <h5 class="fw-bold mb-0" style="color: var(--text-primary);">Bayview Aquatic Club</h5>
+                <h5 class="fw-bold mb-0" style="color: var(--text-primary);">Aquatic Bay Club</h5>
               </div>
               <p class="small mb-2" style="color: var(--text-muted);">88 Shoreline Drive, Bayview, San Francisco, CA
                 94124</p>
@@ -284,7 +284,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-5 border-top border-secondary border-opacity-10">
+  <footer class="footer-custom py-5 border-top border-secondary border-opacity-10">
     <div class="container py-4">
       <div class="row g-4">
         <div class="col-lg-4">
@@ -293,43 +293,54 @@
               alt="SwimPro Logo" class="logo-image">
             <span class="logo-text">SWIMPRO</span>
           </a>
-          <p class="text-light opacity-50 small mt-2">Nurturing safe, confident, and outstanding swimmers through
+          <p class="footer-text opacity-75 small mt-2">Nurturing safe, confident, and outstanding swimmers through
             customized training plans and state-of-the-art facilities.</p>
+          <div class="d-flex gap-3 fs-5 mt-4">
+            <a href="#" class="social-icon-link"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-link"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-link"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-icon-link"><i class="bi bi-twitter-x"></i></a>
+          </div>
         </div>
 
         <div class="col-6 col-lg-2 offset-lg-1">
           <h6 class="fw-bold mb-3">Quick Links</h6>
           <ul class="list-unstyled d-flex flex-column gap-2 small">
-            <li><a href="about.html" class="text-light opacity-75 text-decoration-none">About Academy</a></li>
-            <li><a href="services.html" class="text-light opacity-75 text-decoration-none">Swim Programs</a></li>
-            <li><a href="pricing.html" class="text-light opacity-75 text-decoration-none">Levels & Fees</a></li>
-            <li><a href="booking.html" class="text-light opacity-75 text-decoration-none">Timetable</a></li>
+            <li><a href="about.html" class="footer-link text-decoration-none">About Academy</a></li>
+            <li><a href="services.html" class="footer-link text-decoration-none">Swim Programs</a></li>
+            <li><a href="pricing.html" class="footer-link text-decoration-none">Levels & Fees</a></li>
+            <li><a href="booking.html" class="footer-link text-decoration-none">Timetable</a></li>
           </ul>
         </div>
 
         <div class="col-6 col-lg-2">
           <h6 class="fw-bold mb-3">Portals</h6>
           <ul class="list-unstyled d-flex flex-column gap-2 small">
-            <li><a href="parent-dashboard.html" class="text-light opacity-75 text-decoration-none">Parent Portal</a>
+            <li><a href="parent-dashboard.html" class="footer-link text-decoration-none">Parent Portal</a>
             </li>
-            <li><a href="coach-dashboard.html" class="text-light opacity-75 text-decoration-none">Coach Portal</a></li>
-            <li><a href="admin-dashboard.html" class="text-light opacity-75 text-decoration-none">Administrator</a></li>
+            <li><a href="coach-dashboard.html" class="footer-link text-decoration-none">Coach Portal</a></li>
+            <li><a href="admin-dashboard.html" class="footer-link text-decoration-none">Administrator</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3">
           <h6 class="fw-bold mb-3">Contact Support</h6>
-          <ul class="list-unstyled d-flex flex-column gap-2 small text-light opacity-75">
+          <ul class="list-unstyled d-flex flex-column gap-2 small footer-text opacity-75">
             <li><i class="bi bi-geo-alt me-2"></i>120 Ocean Lane, Marina District</li>
             <li><i class="bi bi-telephone me-2"></i>+1 (555) SWIM-PRO</li>
             <li><i class="bi bi-envelope me-2"></i>info@swimproacademy.com</li>
+            <li><i class="bi bi-whatsapp me-2"></i>+1 (555) 902-7946</li>
           </ul>
         </div>
       </div>
 
       <div
         class="border-top border-secondary border-opacity-10 mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
-        <p class="mb-0 small text-light opacity-50">&copy; 2026 SwimPro Academy. All rights reserved.</p>
+        <p class="mb-0 small footer-text opacity-75">&copy; 2026 SwimPro Academy. All rights reserved.</p>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="footer-link opacity-75 text-decoration-none">Privacy Policy</a>
+          <a href="#" class="footer-link opacity-75 text-decoration-none">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>

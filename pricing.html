@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Levels & Pricing | SwimPro Academy</title>
-  <link rel="icon" type="image/gif" href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
-  <meta name="description" content="View our structured 7 levels progression roadmap and monthly/annual subscription plans.">
-  
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+  <meta name="description"
+    content="View our structured 7 levels progression roadmap and monthly/annual subscription plans.">
+
   <!-- Bootstrap 5 CDN -->
-  <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link id="bootstrap-link" rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark-mode.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    #pricing-plans .card:not(.border-info) .btn-custom-secondary:hover {
+      background-color: var(--secondary-color);
+      color: #000000 !important;
+      border-color: var(--secondary-color);
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- Header / Sticky Navbar -->
   <header class="navbar navbar-expand-xl navbar-dark navbar-custom sticky-top py-3">
     <div class="container">
       <a class="navbar-brand logo-container" href="index.html">
-        <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+        <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif"
+          alt="SwimPro Logo" class="logo-image">
         <span class="logo-text">SWIMPRO</span>
       </a>
-      
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -41,7 +55,7 @@
           <li class="nav-item"><a class="nav-link active" href="pricing.html">Fees</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-        
+
         <div class="d-flex align-items-center gap-3">
           <!-- Theme & RTL Toggles -->
           <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Theme">
@@ -50,7 +64,7 @@
           <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle Layout Direction">
             <span>RTL</span>
           </button>
-          
+
           <a href="login.html" class="btn btn-custom-secondary px-3 py-2">Login</a>
           <a href="portal.html" class="btn btn-custom-primary px-3 py-2">Portal</a>
         </div>
@@ -59,7 +73,8 @@
   </header>
 
   <!-- Banner Section -->
-  <section class="py-5 inner-page-hero text-center" style="background: linear-gradient(rgba(10, 37, 64, 0.75), rgba(10, 37, 64, 0.75)), url('assets/img/pricing_hero.jpg');">
+  <section class="py-5 inner-page-hero text-center"
+    style="background: linear-gradient(rgba(10, 37, 64, 0.75), rgba(10, 37, 64, 0.75)), url('assets/img/pricing_hero.jpg');">
     <div class="container py-4">
       <h1 class="font-serif">Levels & Pricing Plans</h1>
       <p class="lead opacity-75">Clear, milestone-based evaluations combined with transparent packages.</p>
@@ -70,7 +85,7 @@
   <section class="py-6 bg-white" id="levels-progression">
     <div class="container py-5">
       <h2 class="font-serif text-center mb-5">Curriculum Skill Breakdown</h2>
-      
+
       <div class="table-responsive">
         <table class="table table-striped table-bordered align-middle text-center">
           <thead class="table-dark">
@@ -128,7 +143,7 @@
       <div class="row g-4 justify-content-center align-items-stretch">
         <!-- Plan 1: Secondary -->
         <div class="col-lg-4 col-md-6 d-flex">
-          <div class="card card-custom border-secondary border-opacity-25 h-100 d-flex flex-column">
+          <div class="card card-custom border-secondary border-opacity-25 h-100 d-flex flex-column w-100">
             <div class="text-center mb-4">
               <h3 class="h4 font-serif">Standard Monthly</h3>
               <p class="text-muted small">Ideal for casual learning</p>
@@ -146,11 +161,18 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Plan 2: Primary (Highlighted) -->
         <div class="col-lg-4 col-md-6 d-flex">
-          <div class="card card-custom border-info border-2 h-100 d-flex flex-column" style="background-color: rgba(13, 202, 240, 0.03);">
-            <div class="position-absolute top-0 end-0 bg-info text-dark fw-bold px-3 py-1 rounded-bl text-uppercase small" style="border-bottom-left-radius: 6px;">Popular</div>
+          <div class="card card-custom border-info border-2 h-100 d-flex flex-column w-100"
+            style="background-color: rgba(13, 202, 240, 0.03);">
+            <!-- <div
+              class="position-absolute top-0 end-0 bg-info text-dark fw-bold px-2 py-1 rounded-bl text-uppercase small"
+              style="border-bottom-left-radius: 6px;">Popular</div> -->
+            <div class="position-absolute top-0 end-0 bg-info text-dark fw-bold px-2 py-0 text-uppercase small"
+              style="border-bottom-left-radius: 6px;">
+              Popular
+            </div>
             <div class="text-center mb-4">
               <h3 class="h4 font-serif text-info">Pro Term (3 Months)</h3>
               <p class="text-muted small">Most chosen for steady progress</p>
@@ -168,10 +190,10 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Plan 3: Secondary -->
         <div class="col-lg-4 col-md-6 d-flex">
-          <div class="card card-custom border-secondary border-opacity-25 h-100 d-flex flex-column">
+          <div class="card card-custom border-secondary border-opacity-25 h-100 d-flex flex-column w-100">
             <div class="text-center mb-4">
               <h3 class="h4 font-serif">Squad Private</h3>
               <p class="text-muted small">Customized direct acceleration</p>
@@ -198,79 +220,98 @@
     <div class="container">
       <div class="text-center mb-4">
         <h2 class="font-serif">What's Included In Every Plan</h2>
-        <p class="lead text-muted mx-auto" style="max-width: 600px;">No matter which plan you choose, every swimmer gets access to these core benefits from day one.</p>
+        <p class="lead text-muted mx-auto" style="max-width: 600px;">No matter which plan you choose, every swimmer gets
+          access to these core benefits from day one.</p>
       </div>
       <div class="row g-4">
         <!-- Perk 1 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card card-custom text-center h-100 border-0" style="background-color: var(--section-light-bg);">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card card-custom text-center h-100 border-0 w-100"
+            style="background-color: var(--section-light-bg);">
             <div class="mb-3">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
+              <span
+                style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
                 <i class="bi bi-shield-check text-white" style="font-size:1.6rem;"></i>
               </span>
             </div>
             <h4 class="font-serif mb-2">Certified Coaches</h4>
-            <p class="text-muted small mb-0">Every session is led by nationally certified swim instructors with lifeguard and CPR credentials.</p>
+            <p class="text-muted small mb-0">Every session is led by nationally certified swim instructors with
+              lifeguard and CPR credentials.</p>
           </div>
         </div>
         <!-- Perk 2 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card card-custom text-center h-100 border-0" style="background-color: var(--section-light-bg);">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card card-custom text-center h-100 border-0 w-100"
+            style="background-color: var(--section-light-bg);">
             <div class="mb-3">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
+              <span
+                style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
                 <i class="bi bi-clipboard2-pulse text-white" style="font-size:1.6rem;"></i>
               </span>
             </div>
             <h4 class="font-serif mb-2">Progress Assessments</h4>
-            <p class="text-muted small mb-0">Monthly level evaluations ensure swimmers advance at the right pace with clear milestone tracking.</p>
+            <p class="text-muted small mb-0">Monthly level evaluations ensure swimmers advance at the right pace with
+              clear milestone tracking.</p>
           </div>
         </div>
         <!-- Perk 3 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card card-custom text-center h-100 border-0" style="background-color: var(--section-light-bg);">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card card-custom text-center h-100 border-0 w-100"
+            style="background-color: var(--section-light-bg);">
             <div class="mb-3">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
+              <span
+                style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
                 <i class="bi bi-person-badge text-white" style="font-size:1.6rem;"></i>
               </span>
             </div>
             <h4 class="font-serif mb-2">Parent Portal Access</h4>
-            <p class="text-muted small mb-0">Real-time attendance logs, session notes, and direct messaging with your child's assigned coach.</p>
+            <p class="text-muted small mb-0">Real-time attendance logs, session notes, and direct messaging with your
+              child's assigned coach.</p>
           </div>
         </div>
         <!-- Perk 4 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card card-custom text-center h-100 border-0" style="background-color: var(--section-light-bg);">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card card-custom text-center h-100 border-0 w-100"
+            style="background-color: var(--section-light-bg);">
             <div class="mb-3">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
+              <span
+                style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
                 <i class="bi bi-arrow-repeat text-white" style="font-size:1.6rem;"></i>
               </span>
             </div>
             <h4 class="font-serif mb-2">Makeup Sessions</h4>
-            <p class="text-muted small mb-0">Missed a class? Reschedule up to 2 makeup sessions per month at no additional charge.</p>
+            <p class="text-muted small mb-0">Missed a class? Reschedule up to 2 makeup sessions per month at no
+              additional charge.</p>
           </div>
         </div>
         <!-- Perk 5 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card card-custom text-center h-100 border-0" style="background-color: var(--section-light-bg);">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card card-custom text-center h-100 border-0 w-100"
+            style="background-color: var(--section-light-bg);">
             <div class="mb-3">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
+              <span
+                style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
                 <i class="bi bi-droplet-half text-white" style="font-size:1.6rem;"></i>
               </span>
             </div>
             <h4 class="font-serif mb-2">Heated Pool Facility</h4>
-            <p class="text-muted small mb-0">Year-round temperature-controlled pools maintained at optimal comfort for all age groups.</p>
+            <p class="text-muted small mb-0">Year-round temperature-controlled pools maintained at optimal comfort for
+              all age groups.</p>
           </div>
         </div>
         <!-- Perk 6 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card card-custom text-center h-100 border-0" style="background-color: var(--section-light-bg);">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="card card-custom text-center h-100 border-0 w-100"
+            style="background-color: var(--section-light-bg);">
             <div class="mb-3">
-              <span style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
+              <span
+                style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg, #0DCAF0 0%, #0A2540 100%);">
                 <i class="bi bi-award text-white" style="font-size:1.6rem;"></i>
               </span>
             </div>
             <h4 class="font-serif mb-2">Level-Up Certificates</h4>
-            <p class="text-muted small mb-0">Swimmers receive a signed certificate and badge upon completing each of the 7 progression levels.</p>
+            <p class="text-muted small mb-0">Swimmers receive a signed certificate and badge upon completing each of the
+              7 progression levels.</p>
           </div>
         </div>
       </div>
@@ -282,10 +323,12 @@
     <div class="container">
       <div class="text-center mb-4">
         <h2 class="font-serif">Find Your Perfect Fit</h2>
-        <p class="lead text-muted mx-auto" style="max-width: 600px;">Compare features side by side to see which plan matches your swimmer's goals and schedule.</p>
+        <p class="lead text-muted mx-auto" style="max-width: 600px;">Compare features side by side to see which plan
+          matches your swimmer's goals and schedule.</p>
       </div>
       <div class="table-responsive">
-        <table class="table align-middle text-center" style="border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: var(--border-radius-custom); border: 1px solid var(--card-border);">
+        <table class="table align-middle text-center"
+          style="border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: var(--border-radius-custom); border: 1px solid var(--card-border);">
           <thead>
             <tr style="background: linear-gradient(135deg, #0A2540 0%, #0d3a5c 100%); color: #fff;">
               <th class="text-start ps-4 py-3" style="width: 40%; border: none;">Feature</th>
@@ -328,13 +371,15 @@
             <tr class="compare-alt-row">
               <td class="text-start ps-4 py-3 fw-bold compare-feature">Priority Batch Selection</td>
               <td class="py-3"><i class="bi bi-x-lg text-danger"></i></td>
-              <td class="py-3 compare-highlight-bg"><i class="bi bi-check-lg text-success fw-bold" style="font-size:1.2rem;"></i></td>
+              <td class="py-3 compare-highlight-bg"><i class="bi bi-check-lg text-success fw-bold"
+                  style="font-size:1.2rem;"></i></td>
               <td class="py-3"><i class="bi bi-check-lg text-success fw-bold" style="font-size:1.2rem;"></i></td>
             </tr>
             <tr>
               <td class="text-start ps-4 py-3 fw-bold compare-feature">Free Swim Gear Kit</td>
               <td class="py-3"><i class="bi bi-x-lg text-danger"></i></td>
-              <td class="py-3 compare-highlight-bg"><i class="bi bi-check-lg text-success fw-bold" style="font-size:1.2rem;"></i></td>
+              <td class="py-3 compare-highlight-bg"><i class="bi bi-check-lg text-success fw-bold"
+                  style="font-size:1.2rem;"></i></td>
               <td class="py-3"><i class="bi bi-check-lg text-success fw-bold" style="font-size:1.2rem;"></i></td>
             </tr>
             <tr class="compare-alt-row">
@@ -353,54 +398,71 @@
         </table>
       </div>
       <div class="text-center mt-4">
-        <p class="text-muted small"><i class="bi bi-info-circle me-1"></i> Still unsure? <a href="contact.html" class="text-decoration-none" style="color: var(--secondary-color); font-weight: 500;">Talk to our team</a> and we'll help you pick the right plan.</p>
+        <p class="text-muted small"><i class="bi bi-info-circle me-1"></i> Still unsure? <a href="contact.html"
+            class="text-decoration-none" style="color: var(--secondary-color); font-weight: 500;">Talk to our team</a>
+          and we'll help you pick the right plan.</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-5 border-top border-secondary border-opacity-10">
+  <footer class="footer-custom py-5 border-top border-secondary border-opacity-10">
     <div class="container py-4">
       <div class="row g-4">
         <div class="col-lg-4">
           <a class="navbar-brand logo-container mb-3" href="#">
-            <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+            <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif"
+              alt="SwimPro Logo" class="logo-image">
             <span class="logo-text">SWIMPRO</span>
           </a>
-          <p class="text-light opacity-50 small mt-2">Nurturing safe, confident, and outstanding swimmers through customized training plans and state-of-the-art facilities.</p>
+          <p class="footer-text opacity-75 small mt-2">Nurturing safe, confident, and outstanding swimmers through
+            customized training plans and state-of-the-art facilities.</p>
+          <div class="d-flex gap-3 fs-5 mt-4">
+            <a href="#" class="social-icon-link"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-link"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-link"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-icon-link"><i class="bi bi-twitter-x"></i></a>
+          </div>
         </div>
-        
+
         <div class="col-6 col-lg-2 offset-lg-1">
           <h6 class="fw-bold mb-3">Quick Links</h6>
           <ul class="list-unstyled d-flex flex-column gap-2 small">
-            <li><a href="about.html" class="text-light opacity-75 text-decoration-none">About Academy</a></li>
-            <li><a href="services.html" class="text-light opacity-75 text-decoration-none">Swim Programs</a></li>
-            <li><a href="pricing.html" class="text-light opacity-75 text-decoration-none">Levels & Fees</a></li>
-            <li><a href="booking.html" class="text-light opacity-75 text-decoration-none">Timetable</a></li>
+            <li><a href="about.html" class="footer-link text-decoration-none">About Academy</a></li>
+            <li><a href="services.html" class="footer-link text-decoration-none">Swim Programs</a></li>
+            <li><a href="pricing.html" class="footer-link text-decoration-none">Levels & Fees</a></li>
+            <li><a href="booking.html" class="footer-link text-decoration-none">Timetable</a></li>
           </ul>
         </div>
-        
+
         <div class="col-6 col-lg-2">
           <h6 class="fw-bold mb-3">Portals</h6>
           <ul class="list-unstyled d-flex flex-column gap-2 small">
-            <li><a href="parent-dashboard.html" class="text-light opacity-75 text-decoration-none">Parent Portal</a></li>
-            <li><a href="coach-dashboard.html" class="text-light opacity-75 text-decoration-none">Coach Portal</a></li>
-            <li><a href="admin-dashboard.html" class="text-light opacity-75 text-decoration-none">Administrator</a></li>
+            <li><a href="parent-dashboard.html" class="footer-link text-decoration-none">Parent Portal</a>
+            </li>
+            <li><a href="coach-dashboard.html" class="footer-link text-decoration-none">Coach Portal</a></li>
+            <li><a href="admin-dashboard.html" class="footer-link text-decoration-none">Administrator</a></li>
           </ul>
         </div>
-        
+
         <div class="col-lg-3">
           <h6 class="fw-bold mb-3">Contact Support</h6>
-          <ul class="list-unstyled d-flex flex-column gap-2 small text-light opacity-75">
+          <ul class="list-unstyled d-flex flex-column gap-2 small footer-text opacity-75">
             <li><i class="bi bi-geo-alt me-2"></i>120 Ocean Lane, Marina District</li>
             <li><i class="bi bi-telephone me-2"></i>+1 (555) SWIM-PRO</li>
             <li><i class="bi bi-envelope me-2"></i>info@swimproacademy.com</li>
+            <li><i class="bi bi-whatsapp me-2"></i>+1 (555) 902-7946</li>
           </ul>
         </div>
       </div>
-      
-      <div class="border-top border-secondary border-opacity-10 mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
-        <p class="mb-0 small text-light opacity-50">&copy; 2026 SwimPro Academy. All rights reserved.</p>
+
+      <div
+        class="border-top border-secondary border-opacity-10 mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 small footer-text opacity-75">&copy; 2026 SwimPro Academy. All rights reserved.</p>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="footer-link opacity-75 text-decoration-none">Privacy Policy</a>
+          <a href="#" class="footer-link opacity-75 text-decoration-none">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -410,4 +472,5 @@
   <!-- Custom JavaScript -->
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

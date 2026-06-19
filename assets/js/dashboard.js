@@ -36,6 +36,15 @@ function initDashboardNavigation() {
         if (targetSec) {
           targetSec.classList.remove('d-none');
         }
+        
+        // Auto-close offcanvas mobile menu if it is open
+        const offcanvasEl = this.closest('.sidebar-nav');
+        if (offcanvasEl && offcanvasEl.classList.contains('show') && typeof bootstrap !== 'undefined') {
+          const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+          if (bsOffcanvas) {
+            bsOffcanvas.hide();
+          }
+        }
       });
     });
   }

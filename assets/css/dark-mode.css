@@ -9,7 +9,7 @@ body.dark-mode {
   --section-dark-bg: #030d1a;
   --section-navy-bg: #020c1b;
   --card-bg: #112240;
-  --card-border: rgba(255, 255, 255, 0.08);
+  --card-border: rgba(255, 255, 255, 0.25);
   --text-primary: #F8F9FA;
   --text-muted: #ADB5BD;
   --border-color: rgba(255, 255, 255, 0.08);
@@ -59,6 +59,29 @@ body.dark-mode .form-select {
   border-color: rgba(255, 255, 255, 0.15);
   color: var(--text-primary);
 }
+
+body.dark-mode .form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ADB5BD' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .form-select:hover {
+  background-color: #1a3050;
+  border-color: rgba(13, 202, 240, 0.4);
+}
+
+body.dark-mode .form-select option {
+  background-color: #172A45;
+  color: #F8F9FA;
+  padding: 12px;
+}
+
+body.dark-mode .form-select option:checked {
+  background-color: #1e3a5f;
+  color: #0DCAF0;
+}
+
 body.dark-mode .form-control:focus,
 body.dark-mode .form-select:focus {
   background-color: #1e3a5f;
@@ -106,11 +129,17 @@ body.dark-mode .attendance-future {
 
 /* Table styling in dark mode */
 body.dark-mode .table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--text-primary);
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.04);
+  --bs-table-striped-color: var(--text-primary);
   color: var(--text-primary);
   border-color: rgba(255, 255, 255, 0.08);
 }
-body.dark-mode .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(255, 255, 255, 0.02);
+body.dark-mode .table > :not(caption) > * > * {
+  background-color: var(--bs-table-bg);
+  color: var(--bs-table-color);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Alerts */
@@ -155,4 +184,83 @@ body.dark-mode #plan-comparison table.table tbody {
 body.dark-mode #plan-comparison table.table > :not(caption) > * > * {
   background-color: transparent;
   box-shadow: none;
+}
+
+/* Ensure placeholder text is always fully visible in dark mode */
+body.dark-mode ::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 1 !important;
+}
+body.dark-mode ::-webkit-input-placeholder {
+  color: var(--text-muted) !important;
+  opacity: 1 !important;
+}
+body.dark-mode ::-moz-placeholder {
+  color: var(--text-muted) !important;
+  opacity: 1 !important;
+}
+
+/* Accordion styling in dark mode */
+body.dark-mode .accordion-item {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+body.dark-mode .accordion-button {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+  background-color: rgba(13, 202, 240, 0.1);
+  color: var(--secondary-color);
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.125);
+}
+
+body.dark-mode .accordion-button::after {
+  filter: invert(1) brightness(200%);
+}
+
+body.dark-mode .accordion-body {
+  color: var(--text-muted);
+}
+
+/* Fix Bootstrap Utility Backgrounds in Dark Mode */
+body.dark-mode .bg-white,
+body.dark-mode .bg-light {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode header.bg-white {
+  background-color: var(--navbar-bg) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Fix table headers that use table-light */
+body.dark-mode .table-light,
+body.dark-mode .table-light th,
+body.dark-mode .table-light td {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: var(--text-primary) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Ensure text forced to dark by utility classes turns white in dark mode */
+body.dark-mode .text-dark {
+  color: var(--text-primary) !important;
+}
+
+/* Fix List Groups in Dark Mode */
+body.dark-mode .list-group-item {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Make active sidebar link pop in dark mode */
+body.dark-mode .sidebar-nav .nav-link.active {
+  background-color: var(--bs-info) !important; /* cyan */
+  color: var(--bs-dark) !important; /* dark text for contrast */
+  box-shadow: 0 4px 6px rgba(13, 202, 240, 0.2);
 }

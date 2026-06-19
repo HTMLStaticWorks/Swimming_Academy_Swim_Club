@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
   initBackToTop();
   initFormValidation();
   initTrialBooking();
+  initVideoOverlay();
+  initMobileMenuFixes();
 });
 
 // Theme Management (Light / Dark)
 function initTheme() {
-  const themeToggle = document.getElementById('theme-toggle');
+  const themeToggles = document.querySelectorAll('#theme-toggle, .theme-toggle');
   const body = document.body;
   
   // Check local storage or system preference
@@ -26,42 +28,52 @@ function initTheme() {
     updateThemeToggleUI(false);
   }
 
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function() {
-      const isDark = body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      updateThemeToggleUI(isDark);
+  if (themeToggles.length > 0) {
+    themeToggles.forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const isDark = body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeToggleUI(isDark);
+      });
     });
   }
 }
 
 function updateThemeToggleUI(isDark) {
-  const icon = document.querySelector('#theme-toggle i');
-  const text = document.querySelector('#theme-toggle span');
+  const icons = document.querySelectorAll('#theme-toggle i, .theme-toggle i');
+  const texts = document.querySelectorAll('#theme-toggle span, .theme-toggle span');
   
-  if (icon) {
+  icons.forEach(icon => {
     if (isDark) {
       icon.className = 'bi bi-sun-fill';
-      if (text) text.textContent = 'Light Mode';
     } else {
       icon.className = 'bi bi-moon-fill';
-      if (text) text.textContent = 'Dark Mode';
     }
-  }
+  });
+  
+  texts.forEach(text => {
+    if (isDark) {
+      text.textContent = 'Light Mode';
+    } else {
+      text.textContent = 'Dark Mode';
+    }
+  });
 }
 
 // RTL Layout Management
 function initRTL() {
-  const rtlToggle = document.getElementById('rtl-toggle');
+  const rtlToggles = document.querySelectorAll('#rtl-toggle, .rtl-toggle');
   const htmlElement = document.documentElement;
   
   const currentRTL = localStorage.getItem('rtl') === 'true';
   setRTLMode(currentRTL);
 
-  if (rtlToggle) {
-    rtlToggle.addEventListener('click', function() {
-      const isRTL = htmlElement.getAttribute('dir') !== 'rtl';
-      setRTLMode(isRTL);
+  if (rtlToggles.length > 0) {
+    rtlToggles.forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const isRTL = htmlElement.getAttribute('dir') !== 'rtl';
+        setRTLMode(isRTL);
+      });
     });
   }
 }
@@ -69,7 +81,7 @@ function initRTL() {
 function setRTLMode(enable) {
   const htmlElement = document.documentElement;
   const bootstrapLink = document.getElementById('bootstrap-link');
-  const rtlToggleText = document.querySelector('#rtl-toggle span');
+  const rtlToggleTexts = document.querySelectorAll('#rtl-toggle span, .rtl-toggle span');
 
   if (enable) {
     htmlElement.setAttribute('dir', 'rtl');
@@ -78,7 +90,7 @@ function setRTLMode(enable) {
     if (bootstrapLink) {
       bootstrapLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css';
     }
-    if (rtlToggleText) rtlToggleText.textContent = 'LTR';
+    rtlToggleTexts.forEach(text => text.textContent = 'LTR');
   } else {
     htmlElement.removeAttribute('dir');
     htmlElement.setAttribute('lang', 'en');
@@ -86,7 +98,7 @@ function setRTLMode(enable) {
     if (bootstrapLink) {
       bootstrapLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css';
     }
-    if (rtlToggleText) rtlToggleText.textContent = 'RTL';
+    rtlToggleTexts.forEach(text => text.textContent = 'RTL');
   }
 }
 
@@ -151,3 +163,86 @@ function initTrialBooking() {
     });
   }
 }
+
+// Video Overlay Interaction
+function initVideoOverlay() {
+  const video = document.getElementById('advantageVideo');
+  const playBtn = document.getElementById('playBtnOverlay');
+  
+  if (video && playBtn) {
+    playBtn.addEventListener('click', function() {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+    
+    video.addEventListener('play', function() {
+      playBtn.style.display = 'none';
+    });
+    
+    video.addEventListener('pause', function() {
+      playBtn.style.display = 'flex';
+    });
+  }
+}
+
+// Mobile Menu Fixes
+function initMobileMenuFixes() {
+  const navbarCollapse = document.getElementById('mainNavbar');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  
+  if (navbarCollapse && navbarToggler) {
+    // 1. Add Close Button inside the menu
+    const closeBtn = document.createElement('button');
+    closeBtn.innerHTML = '<i class="bi bi-x-lg"></i>';
+    closeBtn.className = 'btn text-dark position-absolute d-xl-none';
+    closeBtn.style.top = '10px';
+    closeBtn.style.right = '15px';
+    closeBtn.style.fontSize = '1.5rem';
+    closeBtn.style.zIndex = '1060';
+    closeBtn.setAttribute('aria-label', 'Close Menu');
+
+    // Handle theme toggle for close button text color
+    if (document.body.classList.contains('dark-mode')) {
+      closeBtn.classList.replace('text-dark', 'text-white');
+    }
+    const themeToggles = document.querySelectorAll('#theme-toggle, .theme-toggle');
+    themeToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        setTimeout(() => {
+          if (document.body.classList.contains('dark-mode')) {
+            closeBtn.classList.replace('text-dark', 'text-white');
+          } else {
+            closeBtn.classList.replace('text-white', 'text-dark');
+          }
+        }, 50);
+      });
+    });
+
+    navbarCollapse.insertBefore(closeBtn, navbarCollapse.firstChild);
+
+    // Close when clicking the new close button
+    closeBtn.addEventListener('click', () => {
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (bsCollapse) bsCollapse.hide();
+    });
+
+    // 2. Close menu when any link or action is clicked
+    const menuLinks = navbarCollapse.querySelectorAll('a, button');
+    menuLinks.forEach(link => {
+      // Don't close if it's the theme/rtl toggler or the close button itself
+      if (link.closest('.toggle-btn') || link === closeBtn) {
+        return;
+      }
+      link.addEventListener('click', () => {
+        if (navbarCollapse.classList.contains('show')) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (bsCollapse) bsCollapse.hide();
+        }
+      });
+    });
+  }
+}
+

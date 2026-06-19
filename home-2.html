@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>SwimPro Academy | Premium Swim School & Swim Club</title>
-  <link rel="icon" type="image/gif" href="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
   <meta name="description" content="Structured level progression and transparent parent communication tools to professionalize your child's swim journey. Book a free trial today!">
   
   <!-- Bootstrap 5 CDN -->
   <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -58,18 +58,21 @@
     </div>
   </header>
 
-  <!-- Centered Classic Hero Section -->
-  <section class="py-6 hero-section-classic text-center d-flex align-items-center position-relative" style="background: linear-gradient(rgba(240, 244, 248, 0.4), rgba(240, 244, 248, 0.5)), url('assets/img/home_2_hero.jpg') center/cover no-repeat; min-height: 80vh;">
-    <div class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
+  <!-- Split Classic Hero Section -->
+  <section class="bg-dark-blue d-flex align-items-center position-relative" style="min-height: calc(100vh - 86px);">
+    <div class="container py-4">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 text-center">
           <span class="badge bg-info text-dark px-3 py-2 rounded-pill mb-3 text-uppercase fw-bold tracking-wider">Premium Swim School</span>
-          <h1 class="display-3 font-serif mb-3 hero-text-shadow">Dive Into Excellence</h1>
-          <p class="lead mb-5 hero-text-shadow">Providing top-tier facilities, internationally certified lifesavers, and structured levels to build lifelong aquatic safety and racing skills.</p>
+          <h1 class="display-4 font-serif mb-3">Dive Into Excellence</h1>
+          <p class="lead mb-4 opacity-75">Providing top-tier facilities, internationally certified lifesavers, and structured levels to build lifelong aquatic safety and racing skills.</p>
           <div class="d-flex justify-content-center gap-3">
-            <a href="booking.html" class="btn btn-custom-primary px-4 py-3">Book Free Trial</a>
-            <a href="about.html" class="btn btn-custom-secondary px-4 py-3">Explore Facilities</a>
+            <a href="booking.html" class="btn btn-custom-primary px-4 py-2">Book Free Trial</a>
+            <a href="about.html" class="btn btn-custom-secondary px-4 py-2">Explore Facilities</a>
           </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="assets/img/facility_olympic_pool.png" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 400px; object-fit: cover; border: 4px solid var(--site-bg);" alt="Olympic Swimming Pool">
         </div>
       </div>
     </div>
@@ -79,22 +82,22 @@
   <section class="py-6 bg-light-gray">
     <div class="container py-5">
       <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card p-4 border-0 shadow-sm text-center">
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card p-4 border-0 shadow-sm text-center w-100">
             <div class="text-info fs-1 mb-3"><i class="bi bi-shield-lock-fill"></i></div>
             <h4 class="font-serif">Uncompromised Safety</h4>
             <p class="text-muted small">We prioritize small swimmer-to-coach groups, maintaining active guards on the pool deck at all times.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card p-4 border-0 shadow-sm text-center">
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card p-4 border-0 shadow-sm text-center w-100">
             <div class="text-info fs-1 mb-3"><i class="bi bi-thermometer-half"></i></div>
             <h4 class="font-serif">Climate Controlled Pools</h4>
             <p class="text-muted small">Both our learn-to-swim and competitive lanes are temperature-regulated all year long.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card p-4 border-0 shadow-sm text-center">
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card p-4 border-0 shadow-sm text-center w-100">
             <div class="text-info fs-1 mb-3"><i class="bi bi-calendar-event-fill"></i></div>
             <h4 class="font-serif">Flexible Scheduling</h4>
             <p class="text-muted small">We accommodate busy households with weekday evening sessions and morning weekend slots.</p>
@@ -137,8 +140,8 @@
 
       <div class="row g-4 justify-content-center">
         <!-- Coach 1 -->
-        <div class="col-md-4">
-          <div class="card card-custom text-center p-4">
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card card-custom text-center p-4 w-100">
             <div class="mx-auto mb-3 rounded-circle border border-info border-3 p-1" style="width: 120px; height: 120px; overflow: hidden;">
               <img src="assets/img/coach_emma.jpg" alt="Coach Emma" class="w-100 h-100 object-fit-cover rounded-circle">
             </div>
@@ -148,8 +151,8 @@
           </div>
         </div>
         <!-- Coach 2 -->
-        <div class="col-md-4">
-          <div class="card card-custom text-center p-4">
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card card-custom text-center p-4 w-100">
             <div class="mx-auto mb-3 rounded-circle border border-info border-3 p-1" style="width: 120px; height: 120px; overflow: hidden;">
               <img src="assets/img/coach_liam.jpg" alt="Coach Liam" class="w-100 h-100 object-fit-cover rounded-circle">
             </div>
@@ -159,8 +162,8 @@
           </div>
         </div>
         <!-- Coach 3 -->
-        <div class="col-md-4">
-          <div class="card card-custom text-center p-4">
+        <div class="col-md-4 d-flex align-items-stretch">
+          <div class="card card-custom text-center p-4 w-100">
             <div class="mx-auto mb-3 rounded-circle border border-info border-3 p-1" style="width: 120px; height: 120px; overflow: hidden;">
               <img src="assets/img/coach_sarah.jpg" alt="Coach Sarah" class="w-100 h-100 object-fit-cover rounded-circle">
             </div>
@@ -271,45 +274,48 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-5 border-top border-secondary border-opacity-10">
+  <footer class="footer-custom py-5 border-top border-secondary border-opacity-10">
     <div class="container py-4">
       <div class="row g-4">
         <div class="col-lg-4">
           <a class="navbar-brand logo-container mb-3" href="#">
-            <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image">
+            <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif"
+              alt="SwimPro Logo" class="logo-image">
             <span class="logo-text">SWIMPRO</span>
           </a>
-          <p class="text-light opacity-50 small mt-2">Nurturing safe, confident, and outstanding swimmers through customized training plans and state-of-the-art facilities.</p>
+          <p class="footer-text opacity-75 small mt-2">Nurturing safe, confident, and outstanding swimmers through
+            customized training plans and state-of-the-art facilities.</p>
           <div class="d-flex gap-3 fs-5 mt-4">
-            <a href="#" class="text-info"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-info"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-info"><i class="bi bi-youtube"></i></a>
-            <a href="#" class="text-info"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-icon-link"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-link"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-link"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-icon-link"><i class="bi bi-twitter-x"></i></a>
           </div>
         </div>
-        
+
         <div class="col-6 col-lg-2 offset-lg-1">
           <h6 class="fw-bold mb-3">Quick Links</h6>
           <ul class="list-unstyled d-flex flex-column gap-2 small">
-            <li><a href="about.html" class="text-light opacity-75 text-decoration-none">About Academy</a></li>
-            <li><a href="services.html" class="text-light opacity-75 text-decoration-none">Swim Programs</a></li>
-            <li><a href="pricing.html" class="text-light opacity-75 text-decoration-none">Levels & Fees</a></li>
-            <li><a href="booking.html" class="text-light opacity-75 text-decoration-none">Timetable</a></li>
+            <li><a href="about.html" class="footer-link text-decoration-none">About Academy</a></li>
+            <li><a href="services.html" class="footer-link text-decoration-none">Swim Programs</a></li>
+            <li><a href="pricing.html" class="footer-link text-decoration-none">Levels & Fees</a></li>
+            <li><a href="booking.html" class="footer-link text-decoration-none">Timetable</a></li>
           </ul>
         </div>
-        
+
         <div class="col-6 col-lg-2">
           <h6 class="fw-bold mb-3">Portals</h6>
           <ul class="list-unstyled d-flex flex-column gap-2 small">
-            <li><a href="parent-dashboard.html" class="text-light opacity-75 text-decoration-none">Parent Portal</a></li>
-            <li><a href="coach-dashboard.html" class="text-light opacity-75 text-decoration-none">Coach Portal</a></li>
-            <li><a href="admin-dashboard.html" class="text-light opacity-75 text-decoration-none">Administrator</a></li>
+            <li><a href="parent-dashboard.html" class="footer-link text-decoration-none">Parent Portal</a>
+            </li>
+            <li><a href="coach-dashboard.html" class="footer-link text-decoration-none">Coach Portal</a></li>
+            <li><a href="admin-dashboard.html" class="footer-link text-decoration-none">Administrator</a></li>
           </ul>
         </div>
-        
+
         <div class="col-lg-3">
           <h6 class="fw-bold mb-3">Contact Support</h6>
-          <ul class="list-unstyled d-flex flex-column gap-2 small text-light opacity-75">
+          <ul class="list-unstyled d-flex flex-column gap-2 small footer-text opacity-75">
             <li><i class="bi bi-geo-alt me-2"></i>120 Ocean Lane, Marina District</li>
             <li><i class="bi bi-telephone me-2"></i>+1 (555) SWIM-PRO</li>
             <li><i class="bi bi-envelope me-2"></i>info@swimproacademy.com</li>
@@ -317,12 +323,13 @@
           </ul>
         </div>
       </div>
-      
-      <div class="border-top border-secondary border-opacity-10 mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
-        <p class="mb-0 small text-light opacity-50">&copy; 2026 SwimPro Academy. All rights reserved.</p>
+
+      <div
+        class="border-top border-secondary border-opacity-10 mt-5 pt-4 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 small footer-text opacity-75">&copy; 2026 SwimPro Academy. All rights reserved.</p>
         <div class="d-flex gap-3 small">
-          <a href="#" class="text-light opacity-50 text-decoration-none">Privacy Policy</a>
-          <a href="#" class="text-light opacity-50 text-decoration-none">Terms of Service</a>
+          <a href="#" class="footer-link opacity-75 text-decoration-none">Privacy Policy</a>
+          <a href="#" class="footer-link opacity-75 text-decoration-none">Terms of Service</a>
         </div>
       </div>
     </div>
@@ -334,3 +341,4 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
