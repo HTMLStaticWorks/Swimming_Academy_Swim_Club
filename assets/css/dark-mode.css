@@ -264,3 +264,10 @@ body.dark-mode .sidebar-nav .nav-link.active {
   color: var(--bs-dark) !important; /* dark text for contrast */
   box-shadow: 0 4px 6px rgba(13, 202, 240, 0.2);
 }
+
+/* Fix for primary buttons on hover in dark mode */
+body.dark-mode .btn-custom-primary:hover {
+  background-color: transparent;
+  color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+}

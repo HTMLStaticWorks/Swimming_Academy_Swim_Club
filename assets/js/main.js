@@ -194,46 +194,11 @@ function initMobileMenuFixes() {
   const navbarToggler = document.querySelector('.navbar-toggler');
   
   if (navbarCollapse && navbarToggler) {
-    // 1. Add Close Button inside the menu
-    const closeBtn = document.createElement('button');
-    closeBtn.innerHTML = '<i class="bi bi-x-lg"></i>';
-    closeBtn.className = 'btn text-dark position-absolute d-xl-none';
-    closeBtn.style.top = '10px';
-    closeBtn.style.right = '15px';
-    closeBtn.style.fontSize = '1.5rem';
-    closeBtn.style.zIndex = '1060';
-    closeBtn.setAttribute('aria-label', 'Close Menu');
-
-    // Handle theme toggle for close button text color
-    if (document.body.classList.contains('dark-mode')) {
-      closeBtn.classList.replace('text-dark', 'text-white');
-    }
-    const themeToggles = document.querySelectorAll('#theme-toggle, .theme-toggle');
-    themeToggles.forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        setTimeout(() => {
-          if (document.body.classList.contains('dark-mode')) {
-            closeBtn.classList.replace('text-dark', 'text-white');
-          } else {
-            closeBtn.classList.replace('text-white', 'text-dark');
-          }
-        }, 50);
-      });
-    });
-
-    navbarCollapse.insertBefore(closeBtn, navbarCollapse.firstChild);
-
-    // Close when clicking the new close button
-    closeBtn.addEventListener('click', () => {
-      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-      if (bsCollapse) bsCollapse.hide();
-    });
-
-    // 2. Close menu when any link or action is clicked
+    // Close menu when any link or action is clicked
     const menuLinks = navbarCollapse.querySelectorAll('a, button');
     menuLinks.forEach(link => {
-      // Don't close if it's the theme/rtl toggler or the close button itself
-      if (link.closest('.toggle-btn') || link === closeBtn) {
+      // Don't close if it's the theme/rtl toggler
+      if (link.closest('.toggle-btn')) {
         return;
       }
       link.addEventListener('click', () => {

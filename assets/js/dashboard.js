@@ -37,6 +37,9 @@ function initDashboardNavigation() {
           targetSec.classList.remove('d-none');
         }
         
+        // Scroll to the top of the page when changing tabs
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
         // Auto-close offcanvas mobile menu if it is open
         const offcanvasEl = this.closest('.sidebar-nav');
         if (offcanvasEl && offcanvasEl.classList.contains('show') && typeof bootstrap !== 'undefined') {
@@ -158,26 +161,26 @@ function initDashboardCharts() {
           points="50,140 100,135 150,120 200,90 250,75 300,50 350,30" />
         
         <!-- Data dots -->
-        <circle cx="50" cy="140" r="5" fill="#0A2540" />
-        <circle cx="100" cy="135" r="5" fill="#0A2540" />
-        <circle cx="150" cy="120" r="5" fill="#0A2540" />
-        <circle cx="200" cy="90" r="5" fill="#0A2540" />
-        <circle cx="250" cy="75" r="5" fill="#0A2540" />
-        <circle cx="300" cy="50" r="5" fill="#0A2540" />
-        <circle cx="350" cy="30" r="5" fill="#0DCAF0" />
+        <circle cx="50" cy="140" r="5" fill="#0A2540" stroke="#0DCAF0" stroke-width="2" />
+        <circle cx="100" cy="135" r="5" fill="#0A2540" stroke="#0DCAF0" stroke-width="2" />
+        <circle cx="150" cy="120" r="5" fill="#0A2540" stroke="#0DCAF0" stroke-width="2" />
+        <circle cx="200" cy="90" r="5" fill="#0A2540" stroke="#0DCAF0" stroke-width="2" />
+        <circle cx="250" cy="75" r="5" fill="#0A2540" stroke="#0DCAF0" stroke-width="2" />
+        <circle cx="300" cy="50" r="5" fill="#0A2540" stroke="#0DCAF0" stroke-width="2" />
+        <circle cx="350" cy="30" r="5" fill="#0DCAF0" stroke="#ffffff" stroke-width="2" />
         
         <!-- Labels -->
-        <text x="50" y="175" font-size="10" text-anchor="middle">L1</text>
-        <text x="100" y="175" font-size="10" text-anchor="middle">L2</text>
-        <text x="150" y="175" font-size="10" text-anchor="middle">L3</text>
-        <text x="200" y="175" font-size="10" text-anchor="middle">L4</text>
-        <text x="250" y="175" font-size="10" text-anchor="middle">L5</text>
-        <text x="300" y="175" font-size="10" text-anchor="middle">L6</text>
-        <text x="350" y="175" font-size="10" text-anchor="middle">L7</text>
+        <text x="50" y="175" font-size="10" text-anchor="middle" fill="currentColor">L1</text>
+        <text x="100" y="175" font-size="10" text-anchor="middle" fill="currentColor">L2</text>
+        <text x="150" y="175" font-size="10" text-anchor="middle" fill="currentColor">L3</text>
+        <text x="200" y="175" font-size="10" text-anchor="middle" fill="currentColor">L4</text>
+        <text x="250" y="175" font-size="10" text-anchor="middle" fill="currentColor">L5</text>
+        <text x="300" y="175" font-size="10" text-anchor="middle" fill="currentColor">L6</text>
+        <text x="350" y="175" font-size="10" text-anchor="middle" fill="currentColor">L7</text>
         
-        <text x="40" y="143" font-size="10" text-anchor="end">Jan</text>
-        <text x="40" y="93" font-size="10" text-anchor="end">Apr</text>
-        <text x="40" y="43" font-size="10" text-anchor="end">Jun</text>
+        <text x="40" y="143" font-size="10" text-anchor="end" fill="currentColor">Jan</text>
+        <text x="40" y="93" font-size="10" text-anchor="end" fill="currentColor">Apr</text>
+        <text x="40" y="43" font-size="10" text-anchor="end" fill="currentColor">Jun</text>
       </svg>
     `;
   }
@@ -187,25 +190,25 @@ function initDashboardCharts() {
     adminChart.innerHTML = `
       <svg viewBox="0 0 500 200" class="w-100 h-auto">
         <!-- Bars -->
-        <rect x="50" y="80" width="30" height="70" fill="#0A2540" rx="3" />
-        <rect x="110" y="60" width="30" height="90" fill="#0DCAF0" rx="3" />
-        <rect x="170" y="50" width="30" height="100" fill="#0A2540" rx="3" />
-        <rect x="230" y="40" width="30" height="110" fill="#0DCAF0" rx="3" />
-        <rect x="290" y="30" width="30" height="120" fill="#0A2540" rx="3" />
-        <rect x="350" y="20" width="30" height="130" fill="#0DCAF0" rx="3" />
-        <rect x="410" y="10" width="30" height="140" fill="#20c997" rx="3" />
+        <rect x="50" y="80" width="30" height="70" fill="#0A2540" rx="3" stroke="#0DCAF0" stroke-width="1" />
+        <rect x="110" y="60" width="30" height="90" fill="#0DCAF0" rx="3" stroke="#0DCAF0" stroke-width="1" />
+        <rect x="170" y="50" width="30" height="100" fill="#0A2540" rx="3" stroke="#0DCAF0" stroke-width="1" />
+        <rect x="230" y="40" width="30" height="110" fill="#0DCAF0" rx="3" stroke="#0DCAF0" stroke-width="1" />
+        <rect x="290" y="30" width="30" height="120" fill="#0A2540" rx="3" stroke="#0DCAF0" stroke-width="1" />
+        <rect x="350" y="20" width="30" height="130" fill="#0DCAF0" rx="3" stroke="#0DCAF0" stroke-width="1" />
+        <rect x="410" y="10" width="30" height="140" fill="#20c997" rx="3" stroke="#20c997" stroke-width="1" />
         
         <!-- Baseline -->
         <line x1="30" y1="150" x2="480" y2="150" stroke="#bbb" stroke-width="1" />
         
         <!-- X Labels -->
-        <text x="65" y="170" font-size="11" text-anchor="middle">Dec</text>
-        <text x="125" y="170" font-size="11" text-anchor="middle">Jan</text>
-        <text x="185" y="170" font-size="11" text-anchor="middle">Feb</text>
-        <text x="245" y="170" font-size="11" text-anchor="middle">Mar</text>
-        <text x="305" y="170" font-size="11" text-anchor="middle">Apr</text>
-        <text x="365" y="170" font-size="11" text-anchor="middle">May</text>
-        <text x="425" y="170" font-size="11" text-anchor="middle">Jun</text>
+        <text x="65" y="170" font-size="11" text-anchor="middle" fill="currentColor">Dec</text>
+        <text x="125" y="170" font-size="11" text-anchor="middle" fill="currentColor">Jan</text>
+        <text x="185" y="170" font-size="11" text-anchor="middle" fill="currentColor">Feb</text>
+        <text x="245" y="170" font-size="11" text-anchor="middle" fill="currentColor">Mar</text>
+        <text x="305" y="170" font-size="11" text-anchor="middle" fill="currentColor">Apr</text>
+        <text x="365" y="170" font-size="11" text-anchor="middle" fill="currentColor">May</text>
+        <text x="425" y="170" font-size="11" text-anchor="middle" fill="currentColor">Jun</text>
       </svg>
     `;
   }

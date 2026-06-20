@@ -1,102 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Portal | SwimPro Academy</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
-  
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+
   <!-- Bootstrap 5 CDN -->
-  <link id="bootstrap-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link id="bootstrap-link" rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  
+
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dark-mode.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
+
 <body>
 
   <!-- Top Header -->
-  <header class="d-flex justify-content-between align-items-center px-4 py-2 border-bottom sticky-top bg-white z-3 shadow-sm flex-wrap gap-2">
+  <header
+    class="d-flex justify-content-between align-items-center px-4 py-2 border-bottom sticky-top bg-white z-3 shadow-sm flex-wrap gap-2">
     <!-- Logo -->
-    
+
     <a href="index.html" class="logo-container d-flex align-items-center text-decoration-none">
-      <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif" alt="SwimPro Logo" class="logo-image" style="height: 40px; width: auto; object-fit: contain;">
+      <img src="https://cdnl.iconscout.com/lottie/premium/thumb/swimming-animation-gif-download-7973737.gif"
+        alt="SwimPro Logo" class="logo-image" style="height: 40px; width: auto; object-fit: contain;">
       <span class="logo-text text-dark ms-2 fw-bold fs-5">SWIMPRO</span>
     </a>
-    
-    
+
+
     <!-- Welcome Text -->
-    <div class="fw-bold fs-5 text-dark d-none d-md-block">
+    <div class="fw-bold fs-4 text-dark d-none d-md-block">
       Welcome, System Admin
     </div>
-    
+
     <!-- Actions -->
     <div class="d-none d-md-flex align-items-center gap-2">
-      <button id="theme-toggle" class="btn btn-outline-secondary d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" aria-label="Toggle Theme">
+      <button id="theme-toggle" class="btn btn-outline-secondary d-flex align-items-center justify-content-center"
+        style="width: 40px; height: 40px;" aria-label="Toggle Theme">
         <i class="bi bi-moon-fill"></i>
       </button>
-      <button id="rtl-toggle" class="btn btn-outline-secondary fw-bold" style="height: 40px;" aria-label="Toggle Layout Direction">
+      <button id="rtl-toggle" class="btn btn-outline-secondary fw-bold" style="height: 40px;"
+        aria-label="Toggle Layout Direction">
         RTL
       </button>
-      <a href="index.html" class="btn btn-outline-danger ms-1 ms-sm-3 d-flex align-items-center justify-content-center" style="height: 40px;">
+      <a href="index.html" class="btn btn-outline-danger ms-1 ms-sm-3 d-flex align-items-center justify-content-center"
+        style="height: 40px;">
         <i class="bi bi-box-arrow-right me-sm-2"></i> <span class="d-none d-sm-inline">Logout</span>
       </a>
     </div>
-  
+
     <!-- Mobile Hamburger Menu Button -->
-    <button class="btn btn-outline-secondary d-md-none border-0 ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
+    <button class="btn btn-outline-secondary d-md-none border-0 ms-auto" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#sidebarMenu" aria-controls="sidebarMenu">
       <i class="bi bi-list fs-2"></i>
     </button>
   </header>
-<div class="container-fluid p-0">
+  <div class="container-fluid p-0">
     <div class="row g-0">
-      
+
       <!-- Dashboard Sidebar Navigation -->
-      <nav id="sidebarMenu" class="offcanvas-md offcanvas-end col-md-3 col-xl-2 d-md-block sidebar-nav border-end px-3 py-4">
+      <nav id="sidebarMenu"
+        class="offcanvas-md offcanvas-end col-md-3 col-xl-2 d-md-block sidebar-nav border-end px-3 py-4">
         <div class="offcanvas-header d-md-none border-bottom">
           <h5 class="offcanvas-title font-serif fw-bold text-primary" id="sidebarMenuLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
+            aria-label="Close"></button>
         </div>
         <div class="offcanvas-body flex-column h-100">
-          
-        <!-- User Summary -->
-        <div class="text-center py-3 mb-4 bg-light bg-opacity-50 rounded">
-          <div class="rounded-circle mx-auto mb-2" style="width: 60px; height: 60px; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop') center/cover;"></div>
-          <h6 class="mb-0 fw-bold">System Admin</h6>
-          <small class="text-muted">Operations Manager</small>
-        </div>
-        
-        <ul class="nav flex-column gap-2">
-          <li class="nav-item"><a class="nav-link active" href="#" data-section="section-metrics"><i class="bi bi-bar-chart-fill me-2"></i> Overview</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" data-section="section-students"><i class="bi bi-people-fill me-2"></i> Students</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" data-section="section-coaches"><i class="bi bi-award-fill me-2"></i> Coaches</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" data-section="section-finances"><i class="bi bi-cash-stack me-2"></i> Fees</a></li>
-        </ul>
-        
-        
-          
-        <!-- Mobile Actions (Theme, RTL, Logout) -->
-        <div class="d-md-none mt-auto pt-4 border-top">
-          <div class="d-flex justify-content-around">
-            <button id="theme-toggle-mobile" class="btn btn-outline-secondary theme-toggle" title="Toggle Theme"><i class="bi bi-moon-fill"></i></button>
-            <button id="rtl-toggle-mobile" class="btn btn-outline-secondary rtl-toggle" title="Toggle RTL">RTL</button>
-            <a href="portal.html" class="btn btn-outline-danger"><i class="bi bi-box-arrow-right"></i> Logout</a>
+
+          <!-- User Summary -->
+          <div class="text-center py-3 mb-4 bg-light bg-opacity-50 rounded">
+            <div class="rounded-circle mx-auto mb-2"
+              style="width: 60px; height: 60px; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop&crop=faces') top center / cover;">
+            </div>
+            <h6 class="mb-0 fw-bold">System Admin</h6>
+            <small class="text-muted">Operations Manager</small>
           </div>
+
+          <ul class="nav flex-column gap-2">
+            <li class="nav-item"><a class="nav-link active" href="#" data-section="section-metrics"><i
+                  class="bi bi-bar-chart-fill me-2"></i> Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-section="section-students"><i
+                  class="bi bi-people-fill me-2"></i> Students</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-section="section-coaches"><i
+                  class="bi bi-award-fill me-2"></i> Coaches</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-section="section-finances"><i
+                  class="bi bi-cash-stack me-2"></i> Pricing</a></li>
+          </ul>
+
+
+
+          <!-- Mobile Actions (Theme, RTL, Logout) -->
+          <div class="d-md-none mt-auto pt-4 border-top">
+            <div class="d-flex justify-content-around">
+              <button id="theme-toggle-mobile" class="btn btn-outline-secondary theme-toggle" title="Toggle Theme"><i
+                  class="bi bi-moon-fill"></i></button>
+              <button id="rtl-toggle-mobile" class="btn btn-outline-secondary rtl-toggle"
+                title="Toggle RTL">RTL</button>
+              <a href="portal.html" class="btn btn-outline-danger"><i class="bi bi-box-arrow-right"></i> Logout</a>
+            </div>
+          </div>
+
         </div>
-        
-        </div>
-        </nav>
+      </nav>
 
       <!-- Dashboard Main Content Panel -->
       <main class="col-md-9 ms-sm-auto col-xl-10 px-md-4 py-4 dashboard-main">
-        
+
         <!-- SECTION 1: OVERVIEW METRICS -->
         <div class="dashboard-section" id="section-metrics">
           <h2 class="h3 font-serif mb-4">Operations Control Center</h2>
-          
+
           <div class="row g-3 mb-4">
             <div class="col-6 col-lg-3">
               <div class="card p-3 border-0 shadow-sm text-center h-100 d-flex flex-column justify-content-center">
@@ -127,7 +147,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="card p-4 border-0 shadow-sm mb-4">
             <h5 class="fw-bold mb-3">Revenue Generation Trend</h5>
             <div id="admin-revenue-chart"></div>
@@ -137,13 +157,14 @@
         <!-- SECTION 2: STUDENT MANAGEMENT -->
         <div class="dashboard-section d-none" id="section-students">
           <h2 class="h3 font-serif mb-4">Manage Swimmers</h2>
-          
+
           <div class="card p-4 border-0 shadow-sm">
             <div class="d-flex justify-content-between align-items-center mb-3">
               <h5 class="fw-bold mb-0">Registered Students</h5>
-              <button class="btn btn-sm btn-info text-dark" onclick="alert('Student creation modal triggered...')"><i class="bi bi-plus-circle me-1"></i> Add Swimmer</button>
+              <button class="btn btn-sm btn-info text-dark" onclick="alert('Student creation modal triggered...')"><i
+                  class="bi bi-plus-circle me-1"></i> Add Swimmer</button>
             </div>
-            
+
             <div class="table-responsive">
               <table class="table table-bordered align-middle bg-white">
                 <thead class="table-light">
@@ -195,7 +216,7 @@
         <!-- SECTION 3: COACH ALLOCATION -->
         <div class="dashboard-section d-none" id="section-coaches">
           <h2 class="h3 font-serif mb-4">Coach Batch Allocations</h2>
-          
+
           <div class="card p-4 border-0 shadow-sm">
             <div class="table-responsive">
               <table class="table table-bordered align-middle bg-white">
@@ -214,14 +235,16 @@
                     <td>Level 2 Certification</td>
                     <td>Learn to Swim L1-L4</td>
                     <td>Mon/Wed/Fri (3-5 PM), Sat (8-10 AM)</td>
-                    <td><button class="btn btn-sm btn-outline-info" onclick="alert('Modifying Emma\'s allocations...')">Assign Slot</button></td>
+                    <td><button class="btn btn-sm btn-outline-info"
+                        onclick="alert('Modifying Emma\'s allocations...')">Assign Slot</button></td>
                   </tr>
                   <tr>
                     <td>Liam Davis</td>
                     <td>Level 3 Certification</td>
                     <td>Competitive Squad / fly Specialist</td>
                     <td>Mon/Wed/Fri (6-8 AM), Tue/Thu (7-9 AM)</td>
-                    <td><button class="btn btn-sm btn-outline-info" onclick="alert('Modifying Liam\'s allocations...')">Assign Slot</button></td>
+                    <td><button class="btn btn-sm btn-outline-info"
+                        onclick="alert('Modifying Liam\'s allocations...')">Assign Slot</button></td>
                   </tr>
                 </tbody>
               </table>
@@ -232,7 +255,7 @@
         <!-- SECTION 4: FINANCES -->
         <div class="dashboard-section d-none" id="section-finances">
           <h2 class="h3 font-serif mb-4">Fee Tracking & Reconciliation</h2>
-          
+
           <div class="card p-4 border-0 shadow-sm">
             <div class="table-responsive">
               <table class="table table-bordered align-middle bg-white">
@@ -251,7 +274,8 @@
                     <td>Pro Term Plan</td>
                     <td>$240.00</td>
                     <td><span class="badge bg-danger">Pending Dues</span></td>
-                    <td><button class="btn btn-sm btn-info text-dark" onclick="alert('Sending notification alert to Sarah Jenkins...')">Remind Parent</button></td>
+                    <td><button class="btn btn-custom-primary px-2 py-1 fs-6" style="min-width: 120px;"
+                        onclick="alert('Sending notification alert to Sarah Jenkins...')">Remind Parent</button></td>
                   </tr>
                   <tr>
                     <td>Marcus Thorne</td>
@@ -276,4 +300,5 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/dashboard.js"></script>
 </body>
+
 </html>
