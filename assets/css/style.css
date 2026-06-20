@@ -298,10 +298,11 @@ body.dark-mode .navbar-custom .navbar-toggler-icon {
 
 .card-custom-img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
-  border-radius: calc(var(--border-radius-custom) - 1px);
-  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+  border-radius: calc(var(--border-radius-custom) - 1px) calc(var(--border-radius-custom) - 1px) 0 0;
+  margin-bottom: 0;
 }
 
 .card-custom .card-cta {
@@ -853,6 +854,7 @@ body.dark-mode .hero-text-shadow {
   height: 100%;
   min-height: 400px;
 }
+
 @media (max-width: 991.98px) {
   .gallery-featured-img {
     height: auto;
